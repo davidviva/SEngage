@@ -16,7 +16,18 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AvayaLogoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="6Vf-0a-YGC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Vf-0a-YGC" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Ewn-vw-fBM"/>
+                            <constraint firstItem="6Vf-0a-YGC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nOk-3l-l3w"/>
+                            <constraint firstAttribute="trailing" secondItem="6Vf-0a-YGC" secondAttribute="trailing" id="thQ-Je-jkh"/>
+                            <constraint firstItem="6Vf-0a-YGC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uli-Cc-kOU"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -24,4 +35,7 @@
             <point key="canvasLocation" x="193" y="304"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AvayaLogoBackground" width="640" height="480"/>
+    </resources>
 </document>

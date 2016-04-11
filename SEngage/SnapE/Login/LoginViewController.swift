@@ -30,9 +30,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let background = UIImage(named: "AvayaLogoBackground.png")
-        self.view.backgroundColor = UIColor(patternImage: background!)
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(LoginViewController.handleTap(_:))))
+        
+//        let background = UIImage(named: "AvayaLogoBackground.png")
+//        self.view.backgroundColor = UIColor(patternImage: background!)
         
         // Get the size of the screen
         let mainSize = UIScreen.mainScreen().bounds.size
@@ -167,10 +169,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
-    func textFieldShouldReturn(textField: UITextField) -> Bool        // called when 'return' key pressed. return NO to ignore.
-    {
+    // Hide the keyboard when click ‘return’
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true;
+    }
+    
+    // Hide the keyboard when click the blank
+    func handleTap(sender: UITapGestureRecognizer) {
+        if sender.state == .Ended {
+            print("hide the keyboard")
+            txtUser.resignFirstResponder()
+            txtPwd.resignFirstResponder()
+        }
+        sender.cancelsTouchesInView = false
     }
     
     override func didReceiveMemoryWarning() {
