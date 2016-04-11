@@ -19,6 +19,7 @@
 		2485E78A1CBC1253006D92A2 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7891CBC1253006D92A2 /* AppSettings.swift */; };
 		2485E78F1CBC1C7A006D92A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2485E78D1CBC1C7A006D92A2 /* Main.storyboard */; };
 		2485E7911CBC2076006D92A2 /* PublicMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7901CBC2076006D92A2 /* PublicMethods.swift */; };
+		2485E7941CBC302F006D92A2 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7931CBC302F006D92A2 /* UserInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		2485E7891CBC1253006D92A2 /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppSettings.swift; path = SnapE/Resources/AppSettings.swift; sourceTree = "<group>"; };
 		2485E78E1CBC1C7A006D92A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2485E7901CBC2076006D92A2 /* PublicMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PublicMethods.swift; path = SnapE/Service/PublicMethods.swift; sourceTree = "<group>"; };
+		2485E7931CBC302F006D92A2 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfo.swift; path = SnapE/Login/Model/UserInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		2485E77F1CBBFE3B006D92A2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				2485E7921CBC2FAF006D92A2 /* Model */,
 				2485E7801CBC01E9006D92A2 /* LoginViewController.swift */,
 			);
 			name = Login;
@@ -170,6 +173,14 @@
 				2485E7901CBC2076006D92A2 /* PublicMethods.swift */,
 			);
 			name = Service;
+			sourceTree = "<group>";
+		};
+		2485E7921CBC2FAF006D92A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2485E7931CBC302F006D92A2 /* UserInfo.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +323,7 @@
 				2485E7541CBBF577006D92A2 /* ViewController.swift in Sources */,
 				2485E7911CBC2076006D92A2 /* PublicMethods.swift in Sources */,
 				2485E78A1CBC1253006D92A2 /* AppSettings.swift in Sources */,
+				2485E7941CBC302F006D92A2 /* UserInfo.swift in Sources */,
 				2485E7521CBBF577006D92A2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
