@@ -167,6 +167,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
+    func textFieldShouldReturn(textField: UITextField) -> Bool        // called when 'return' key pressed. return NO to ignore.
+    {
+        textField.resignFirstResponder()
+        return true;
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
