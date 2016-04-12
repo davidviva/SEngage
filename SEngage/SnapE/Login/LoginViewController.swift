@@ -10,22 +10,22 @@ import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
-    //用户密码输入框
+    // Identify the text fields
     var txtUser:UITextField!
     var txtPwd:UITextField!
     
-    //左手离脑袋的距离
+    //
     var offsetLeftHand:CGFloat = 60
     
-    //左手图片,右手图片(遮眼睛的)
+    // Identify the images (hide eye)
     var imgLeftHand:UIImageView!
     var imgRightHand:UIImageView!
     
-    //左手图片,右手图片(圆形的)
+    // Identify the images (unhide eye)
     var imgLeftHandGone:UIImageView!
     var imgRightHandGone:UIImageView!
     
-    //登录框状态
+    // The status of the input area
     var showType:LoginShowType = LoginShowType.NONE
     
     override func viewDidLoad() {
@@ -45,40 +45,41 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         imgLogin.layer.masksToBounds = true
         self.view.addSubview(imgLogin)
         
-        //猫头鹰左手(遮眼睛的)
+        // left-hand （hide eye）
         let rectLeftHand = CGRectMake(61 - offsetLeftHand, 90, 40, 65)
         imgLeftHand = UIImageView(frame:rectLeftHand)
         imgLeftHand.image = UIImage(named:"owl-login-arm-left")
         imgLogin.addSubview(imgLeftHand)
         
-        //猫头鹰右手(遮眼睛的)
+        // right-hand (hide eye)
         let rectRightHand = CGRectMake(imgLogin.frame.size.width / 2 + 60, 90, 40, 65)
         imgRightHand = UIImageView(frame:rectRightHand)
         imgRightHand.image = UIImage(named:"owl-login-arm-right")
         imgLogin.addSubview(imgRightHand)
         
-        //登录框背景
+        // The frame of input area
         let vLogin =  UIView(frame:CGRectMake(15, 200, mainSize.width - 30, 160))
         vLogin.layer.borderWidth = 0.5
         vLogin.layer.borderColor = UIColor.lightGrayColor().CGColor
         vLogin.backgroundColor = UIColor.whiteColor()
+        vLogin.layer.cornerRadius = 10
         self.view.addSubview(vLogin)
         
-        //猫头鹰左手(圆形的)
+        // left hand (unhide eye)
         let rectLeftHandGone = CGRectMake(mainSize.width / 2 - 100,
                                           vLogin.frame.origin.y - 22, 40, 40)
         imgLeftHandGone = UIImageView(frame:rectLeftHandGone)
         imgLeftHandGone.image = UIImage(named:"icon_hand")
         self.view.addSubview(imgLeftHandGone)
         
-        //猫头鹰右手(圆形的)
+        // right hand (unhide eye)
         let rectRightHandGone = CGRectMake(mainSize.width / 2 + 62,
                                            vLogin.frame.origin.y - 22, 40, 40)
         imgRightHandGone = UIImageView(frame:rectRightHandGone)
         imgRightHandGone.image = UIImage(named:"icon_hand")
         self.view.addSubview(imgRightHandGone)
         
-        //用户名输入框
+        // Settings for userName text field
         txtUser = UITextField(frame:CGRectMake(30, 30, vLogin.frame.size.width - 60, 44))
         txtUser.delegate = self
         txtUser.layer.cornerRadius = 5
@@ -87,13 +88,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         txtUser.leftView = UIView(frame:CGRectMake(0, 0, 44, 44))
         txtUser.leftViewMode = UITextFieldViewMode.Always
         
-        //用户名输入框左侧图标
+        // Image for userName text field
         let imgUser =  UIImageView(frame:CGRectMake(11, 11, 22, 22))
         imgUser.image = UIImage(named:"iconfont-user")
         txtUser.leftView!.addSubview(imgUser)
         vLogin.addSubview(txtUser)
         
-        //密码输入框
+        // Settings for the password text field
         txtPwd = UITextField(frame:CGRectMake(30, 90, vLogin.frame.size.width - 60, 44))
         txtPwd.delegate = self
         txtPwd.layer.cornerRadius = 5
@@ -103,17 +104,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         txtPwd.leftView = UIView(frame:CGRectMake(0, 0, 44, 44))
         txtPwd.leftViewMode = UITextFieldViewMode.Always
         
-        //密码输入框左侧图标
+        // Image for password text field
         let imgPwd =  UIImageView(frame:CGRectMake(11, 11, 22, 22))
         imgPwd.image = UIImage(named:"iconfont-password")
         txtPwd.leftView!.addSubview(imgPwd)
         vLogin.addSubview(txtPwd)
     }
     
-    //输入框获取焦点开始编辑
+    // Settings for editing the text fields
     func textFieldDidBeginEditing(textField:UITextField)
     {
-        //如果当前是用户名输入
+        // While the user is eidting the username
         if textField.isEqual(txtUser){
             if (showType != LoginShowType.PASS)
             {
@@ -122,7 +123,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
             showType = LoginShowType.USER
             
-            //播放不遮眼动画
+            // Show the unhide eye images
             UIView.animateWithDuration(0.5, animations: { () -> Void in
                 self.imgLeftHand.frame = CGRectMake(
                     self.imgLeftHand.frame.origin.x - self.offsetLeftHand,
@@ -140,7 +141,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     self.imgRightHandGone.frame.origin.y, 40, 40)
             })
         }
-            //如果当前是密码名输入
+        
+        // While the user is editing the password
         else if textField.isEqual(txtPwd){
             if (showType == LoginShowType.PASS)
             {
@@ -149,7 +151,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
             showType = LoginShowType.PASS
             
-            //播放遮眼动画
+            // Show the hide eye images
             UIView.animateWithDuration(0.5, animations: { () -> Void in
                 self.imgLeftHand.frame = CGRectMake(
                     self.imgLeftHand.frame.origin.x + self.offsetLeftHand,
@@ -167,6 +169,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     self.imgRightHandGone.frame.origin.y, 0, 0)
             })
         }
+    }
+    
+    // The status of the input area
+    enum LoginShowType {
+        case NONE
+        case USER
+        case PASS
     }
 
     // Hide the keyboard when click ‘return’
@@ -189,14 +198,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    //登录框状态枚举
-    enum LoginShowType {
-        case NONE
-        case USER
-        case PASS
-    }
 
+    @IBAction func loginAction(sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 
