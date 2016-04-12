@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2485E7521CBBF577006D92A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7511CBBF577006D92A2 /* AppDelegate.swift */; };
-		2485E7541CBBF577006D92A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7531CBBF577006D92A2 /* ViewController.swift */; };
 		2485E7591CBBF577006D92A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2485E7581CBBF577006D92A2 /* Assets.xcassets */; };
 		2485E75C1CBBF577006D92A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2485E75A1CBBF577006D92A2 /* LaunchScreen.storyboard */; };
 		2485E7671CBBF577006D92A2 /* SEngageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7661CBBF577006D92A2 /* SEngageTests.swift */; };
@@ -46,7 +45,6 @@
 /* Begin PBXFileReference section */
 		2485E74E1CBBF576006D92A2 /* SEngage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SEngage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2485E7511CBBF577006D92A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2485E7531CBBF577006D92A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2485E7581CBBF577006D92A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2485E75B1CBBF577006D92A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2485E75D1CBBF577006D92A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 				2485E7821CBC0466006D92A2 /* Resources */,
 				2485E77F1CBBFE3B006D92A2 /* Login */,
 				2485E7511CBBF577006D92A2 /* AppDelegate.swift */,
-				2485E7531CBBF577006D92A2 /* ViewController.swift */,
 				2485E7581CBBF577006D92A2 /* Assets.xcassets */,
 				2485E75A1CBBF577006D92A2 /* LaunchScreen.storyboard */,
 				2485E75D1CBBF577006D92A2 /* Info.plist */,
@@ -341,7 +338,6 @@
 				2485E7811CBC01E9006D92A2 /* LoginViewController.swift in Sources */,
 				2485E79D1CBC380C006D92A2 /* CommonEx.swift in Sources */,
 				2485E7841CBC11C2006D92A2 /* AppTheme.swift in Sources */,
-				2485E7541CBBF577006D92A2 /* ViewController.swift in Sources */,
 				2485E7911CBC2076006D92A2 /* PublicMethods.swift in Sources */,
 				2485E79B1CBC380C006D92A2 /* CGRectEx.swift in Sources */,
 				2485E78A1CBC1253006D92A2 /* AppSettings.swift in Sources */,
