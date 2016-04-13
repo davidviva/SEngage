@@ -8,13 +8,15 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
 
     // Identify the text fields
-    var txtUser:UITextField!
-    var txtPwd:UITextField!
+    @IBOutlet var txtUser:UITextField!
+    @IBOutlet var txtPwd:UITextField!
+    @IBOutlet weak var scrollView: UIScrollView!
+    var loginButtonPosition:CGPoint?
     
-    //
+    // The distance hands to the head of owl
     var offsetLeftHand:CGFloat = 60
     
     // Identify the images (hide eye)
@@ -30,16 +32,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Register the gesture for dismissing the keyboard
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(LoginViewController.handleTap(_:))))
-        
-//        let background = UIImage(named: "AvayaLogoBackground.png")
-//        self.view.backgroundColor = UIColor(patternImage: background!)
+        initialPanel()
+    }
+    
+    func initialPanel() {
         
         // Get the size of the screen
         let mainSize = UIScreen.mainScreen().bounds.size
-        
         // Get the image of owl
         let imgLogin =  UIImageView(frame:CGRectMake(mainSize.width/2-211/2, 100, 211, 109))
         imgLogin.image = UIImage(named:"owl-login")
@@ -83,10 +84,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Settings for userName text field
         txtUser = UITextField(frame:CGRectMake(30, 30, vLogin.frame.size.width - 60, 44))
         txtUser.delegate = self
-        txtUser.layer.cornerRadius = 5
+        txtUser.layer.cornerRadius = 10
         txtUser.layer.borderColor = UIColor.lightGrayColor().CGColor
         txtUser.layer.borderWidth = 0.5
-        txtUser.placeholder = "User Name"
+        txtUser.placeholder = "Global Handle"
         txtUser.leftView = UIView(frame:CGRectMake(0, 0, 44, 44))
         txtUser.leftViewMode = UITextFieldViewMode.Always
         
@@ -99,7 +100,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Settings for the password text field
         txtPwd = UITextField(frame:CGRectMake(30, 90, vLogin.frame.size.width - 60, 44))
         txtPwd.delegate = self
-        txtPwd.layer.cornerRadius = 5
+        txtPwd.layer.cornerRadius = 10
         txtPwd.layer.borderColor = UIColor.lightGrayColor().CGColor
         txtPwd.layer.borderWidth = 0.5
         txtPwd.placeholder = "Password"
@@ -112,6 +113,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         imgPwd.image = UIImage(named:"iconfont-password")
         txtPwd.leftView!.addSubview(imgPwd)
         vLogin.addSubview(txtPwd)
+        
+        // Add UIButton to the view
+        let loginButton:UIButton = UIButton(frame: CGRectMake(40, 380, mainSize.width - 80, 39))
+        loginButton.layer.borderColor = UIColor.lightGrayColor().CGColor
+        loginButton.backgroundColor = UIColor.whiteColor()
+        loginButton.layer.cornerRadius = 10
+        loginButton.setTitle("SIGN IN", forState: UIControlState.Normal)
+        loginButton.setTitleColor(PublicMethods.getAvayaRed(), forState: UIControlState.Normal)
+        loginButton.setTitleColor(UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.5), forState: UIControlState.Highlighted)
+        loginButton.titleLabel!.font = UIFont(name: "Helvetica Bold", size: 14)
+        loginButton.addTarget(self, action: #selector(LoginViewController.loginAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        self.loginButtonPosition = loginButton.center
+        self.view.addSubview(loginButton)
     }
     
     // Settings for editing the text fields
@@ -202,8 +216,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func loginAction(sender: UIButton) {
-        print("Success!")
-        self.presentViewController(RootViewController(), animated: true, completion: nil)
+        if 1001 == 1001{
+            self.performSegueWithIdentifier("Login", sender: self)
+        }else{
+            print("login fail")
+        }
     }
     
     /*

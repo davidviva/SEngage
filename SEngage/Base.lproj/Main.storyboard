@@ -17,40 +17,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AvayaLogoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="6Vf-0a-YGC">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="NTz-RW-eRr">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAf-hA-rDq">
-                                <rect key="frame" x="143" y="340" width="314" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AvayaLogoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="6Vf-0a-YGC">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="314" id="N0z-q6-DcX"/>
+                                    <constraint firstItem="6Vf-0a-YGC" firstAttribute="leading" secondItem="NTz-RW-eRr" secondAttribute="leading" id="F2x-XS-kLo"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Vf-0a-YGC" secondAttribute="bottom" id="Gk1-9X-1fe"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Vf-0a-YGC" secondAttribute="trailing" id="HOT-Qa-uTZ"/>
+                                    <constraint firstItem="6Vf-0a-YGC" firstAttribute="top" secondItem="NTz-RW-eRr" secondAttribute="top" id="IdL-2u-EEn"/>
+                                    <constraint firstItem="6Vf-0a-YGC" firstAttribute="centerX" secondItem="NTz-RW-eRr" secondAttribute="centerX" id="amf-QB-qr3"/>
+                                    <constraint firstItem="6Vf-0a-YGC" firstAttribute="centerY" secondItem="NTz-RW-eRr" secondAttribute="centerY" id="bov-ii-cK7"/>
                                 </constraints>
-                                <state key="normal" title="Sign In">
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="Sign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oI0-tQ-mph"/>
-                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TAg-WG-EnB"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6Vf-0a-YGC" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Ewn-vw-fBM"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AAf-hA-rDq" secondAttribute="bottom" constant="230" id="Sbu-Ne-wZd"/>
-                            <constraint firstItem="AAf-hA-rDq" firstAttribute="centerX" secondItem="6Vf-0a-YGC" secondAttribute="centerX" constant="0.5" id="hRN-sL-26j"/>
-                            <constraint firstItem="6Vf-0a-YGC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nOk-3l-l3w"/>
-                            <constraint firstAttribute="trailing" secondItem="6Vf-0a-YGC" secondAttribute="trailing" id="thQ-Je-jkh"/>
-                            <constraint firstItem="6Vf-0a-YGC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uli-Cc-kOU"/>
+                            <constraint firstItem="NTz-RW-eRr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VF0-fA-w3Y"/>
+                            <constraint firstAttribute="trailing" secondItem="NTz-RW-eRr" secondAttribute="trailing" id="VIC-dZ-qlD"/>
+                            <constraint firstItem="NTz-RW-eRr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wMg-Dl-P8A"/>
+                            <constraint firstItem="NTz-RW-eRr" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="xaD-m0-2rV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="12k-h3-1Zo" kind="show" identifier="Login" id="Tje-6o-sK3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
