@@ -23,6 +23,10 @@
 		2485E79B1CBC380C006D92A2 /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7981CBC380C006D92A2 /* CGRectEx.swift */; };
 		2485E79C1CBC380C006D92A2 /* ColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7991CBC380C006D92A2 /* ColorEx.swift */; };
 		2485E79D1CBC380C006D92A2 /* CommonEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E79A1CBC380C006D92A2 /* CommonEx.swift */; };
+		2485E7A61CBD7CB6006D92A2 /* MeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2485E7A51CBD7CB6006D92A2 /* MeSB.storyboard */; };
+		2485E7A81CBD7D57006D92A2 /* MeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7A71CBD7D57006D92A2 /* MeTableViewController.swift */; };
+		2485E7AA1CBD8B4E006D92A2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7A91CBD8B4E006D92A2 /* RootViewController.swift */; };
+		2485E7AC1CBD8F78006D92A2 /* PublicStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7AB1CBD8F78006D92A2 /* PublicStrings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,10 @@
 		2485E7981CBC380C006D92A2 /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGRectEx.swift; path = SnapE/Extension/CGRectEx.swift; sourceTree = "<group>"; };
 		2485E7991CBC380C006D92A2 /* ColorEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorEx.swift; path = SnapE/Extension/ColorEx.swift; sourceTree = "<group>"; };
 		2485E79A1CBC380C006D92A2 /* CommonEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommonEx.swift; path = SnapE/Extension/CommonEx.swift; sourceTree = "<group>"; };
+		2485E7A51CBD7CB6006D92A2 /* MeSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MeSB.storyboard; path = SnapE/Me/MeSB.storyboard; sourceTree = "<group>"; };
+		2485E7A71CBD7D57006D92A2 /* MeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeTableViewController.swift; path = SnapE/Me/MeTableViewController.swift; sourceTree = "<group>"; };
+		2485E7A91CBD8B4E006D92A2 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = SnapE/Login/RootViewController.swift; sourceTree = "<group>"; };
+		2485E7AB1CBD8F78006D92A2 /* PublicStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PublicStrings.swift; path = SnapE/Service/PublicStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,16 +123,13 @@
 		2485E7501CBBF576006D92A2 /* SEngage */ = {
 			isa = PBXGroup;
 			children = (
+				2485E7A21CBD7C8C006D92A2 /* Me */,
+				2485E7A11CBD780C006D92A2 /* Supports */,
 				2485E7951CBC3714006D92A2 /* Config */,
-				2485E78D1CBC1C7A006D92A2 /* Main.storyboard */,
 				2485E78C1CBC1564006D92A2 /* Service */,
 				2485E78B1CBC1266006D92A2 /* Extension */,
 				2485E7821CBC0466006D92A2 /* Resources */,
 				2485E77F1CBBFE3B006D92A2 /* Login */,
-				2485E7511CBBF577006D92A2 /* AppDelegate.swift */,
-				2485E7581CBBF577006D92A2 /* Assets.xcassets */,
-				2485E75A1CBBF577006D92A2 /* LaunchScreen.storyboard */,
-				2485E75D1CBBF577006D92A2 /* Info.plist */,
 			);
 			path = SEngage;
 			sourceTree = "<group>";
@@ -151,7 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				2485E7921CBC2FAF006D92A2 /* Model */,
+				2485E7A91CBD8B4E006D92A2 /* RootViewController.swift */,
 				2485E7801CBC01E9006D92A2 /* LoginViewController.swift */,
+				2485E78D1CBC1C7A006D92A2 /* Main.storyboard */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -180,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				2485E7901CBC2076006D92A2 /* PublicMethods.swift */,
+				2485E7AB1CBD8F78006D92A2 /* PublicStrings.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -198,6 +206,42 @@
 				2485E7961CBC3744006D92A2 /* ServiceConfig.swift */,
 			);
 			name = Config;
+			sourceTree = "<group>";
+		};
+		2485E7A11CBD780C006D92A2 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				2485E75A1CBBF577006D92A2 /* LaunchScreen.storyboard */,
+				2485E75D1CBBF577006D92A2 /* Info.plist */,
+				2485E7511CBBF577006D92A2 /* AppDelegate.swift */,
+				2485E7581CBBF577006D92A2 /* Assets.xcassets */,
+			);
+			name = Supports;
+			sourceTree = "<group>";
+		};
+		2485E7A21CBD7C8C006D92A2 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				2485E7A71CBD7D57006D92A2 /* MeTableViewController.swift */,
+				2485E7A41CBD7C99006D92A2 /* View */,
+				2485E7A31CBD7C93006D92A2 /* Model */,
+				2485E7A51CBD7CB6006D92A2 /* MeSB.storyboard */,
+			);
+			name = Me;
+			sourceTree = "<group>";
+		};
+		2485E7A31CBD7C93006D92A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2485E7A41CBD7C99006D92A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +354,7 @@
 				2485E75C1CBBF577006D92A2 /* LaunchScreen.storyboard in Resources */,
 				2485E7591CBBF577006D92A2 /* Assets.xcassets in Resources */,
 				2485E7881CBC1237006D92A2 /* FontAwesome.otf in Resources */,
+				2485E7A61CBD7CB6006D92A2 /* MeSB.storyboard in Resources */,
 				2485E78F1CBC1C7A006D92A2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,8 +382,11 @@
 			files = (
 				2485E7811CBC01E9006D92A2 /* LoginViewController.swift in Sources */,
 				2485E79D1CBC380C006D92A2 /* CommonEx.swift in Sources */,
+				2485E7AA1CBD8B4E006D92A2 /* RootViewController.swift in Sources */,
+				2485E7AC1CBD8F78006D92A2 /* PublicStrings.swift in Sources */,
 				2485E7841CBC11C2006D92A2 /* AppTheme.swift in Sources */,
 				2485E7911CBC2076006D92A2 /* PublicMethods.swift in Sources */,
+				2485E7A81CBD7D57006D92A2 /* MeTableViewController.swift in Sources */,
 				2485E79B1CBC380C006D92A2 /* CGRectEx.swift in Sources */,
 				2485E78A1CBC1253006D92A2 /* AppSettings.swift in Sources */,
 				2485E79C1CBC380C006D92A2 /* ColorEx.swift in Sources */,

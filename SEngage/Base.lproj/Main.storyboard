@@ -54,7 +54,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="193" y="304"/>
+            <point key="canvasLocation" x="-72" y="291"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="jCs-If-XJv">
+            <objects>
+                <tabBarController id="12k-h3-1Zo" customClass="RootViewController" customModule="SEngage" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="lDT-OB-whE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9jR-DH-FUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="611" y="291"/>
         </scene>
     </scenes>
     <resources>

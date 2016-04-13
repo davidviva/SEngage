@@ -31,6 +31,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Register the gesture for dismissing the keyboard
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(LoginViewController.handleTap(_:))))
         
 //        let background = UIImage(named: "AvayaLogoBackground.png")
@@ -85,6 +86,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         txtUser.layer.cornerRadius = 5
         txtUser.layer.borderColor = UIColor.lightGrayColor().CGColor
         txtUser.layer.borderWidth = 0.5
+        txtUser.placeholder = "User Name"
         txtUser.leftView = UIView(frame:CGRectMake(0, 0, 44, 44))
         txtUser.leftViewMode = UITextFieldViewMode.Always
         
@@ -100,6 +102,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         txtPwd.layer.cornerRadius = 5
         txtPwd.layer.borderColor = UIColor.lightGrayColor().CGColor
         txtPwd.layer.borderWidth = 0.5
+        txtPwd.placeholder = "Password"
         txtPwd.secureTextEntry = true
         txtPwd.leftView = UIView(frame:CGRectMake(0, 0, 44, 44))
         txtPwd.leftViewMode = UITextFieldViewMode.Always
@@ -177,7 +180,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         case USER
         case PASS
     }
-
+    
     // Hide the keyboard when click ‘return’
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -187,7 +190,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // Hide the keyboard when click the blank
     func handleTap(sender: UITapGestureRecognizer) {
         if sender.state == .Ended {
-            print("hide the keyboard")
             txtUser.resignFirstResponder()
             txtPwd.resignFirstResponder()
         }
@@ -200,6 +202,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func loginAction(sender: UIButton) {
+        print("Success!")
+        self.presentViewController(RootViewController(), animated: true, completion: nil)
     }
     
     /*
