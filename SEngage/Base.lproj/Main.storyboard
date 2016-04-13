@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="SEngage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AvayaLogoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="6Vf-0a-YGC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAf-hA-rDq">
+                                <rect key="frame" x="143" y="340" width="314" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="314" id="N0z-q6-DcX"/>
+                                </constraints>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="Sign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oI0-tQ-mph"/>
+                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TAg-WG-EnB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Vf-0a-YGC" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Ewn-vw-fBM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AAf-hA-rDq" secondAttribute="bottom" constant="230" id="Sbu-Ne-wZd"/>
+                            <constraint firstItem="AAf-hA-rDq" firstAttribute="centerX" secondItem="6Vf-0a-YGC" secondAttribute="centerX" constant="0.5" id="hRN-sL-26j"/>
+                            <constraint firstItem="6Vf-0a-YGC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nOk-3l-l3w"/>
+                            <constraint firstAttribute="trailing" secondItem="6Vf-0a-YGC" secondAttribute="trailing" id="thQ-Je-jkh"/>
+                            <constraint firstItem="6Vf-0a-YGC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uli-Cc-kOU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-72" y="291"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="jCs-If-XJv">
+            <objects>
+                <tabBarController id="12k-h3-1Zo" customClass="RootViewController" customModule="SEngage" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="lDT-OB-whE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9jR-DH-FUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="611" y="291"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AvayaLogoBackground" width="640" height="480"/>
+    </resources>
+</document>

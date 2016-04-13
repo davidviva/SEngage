@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4CBDC252E9C5A12A451B4BE2355BC1D6F55588E1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "14E9DA1A8CEA50F97D6B9311F1F01AE2189DA191" : 0,
+    "4CBDC252E9C5A12A451B4BE2355BC1D6F55588E1" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9A6CFFC1-918B-4DBB-AD8A-B7C0F3F4A2DF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "14E9DA1A8CEA50F97D6B9311F1F01AE2189DA191" : "snapengage-ios-old\/",
+    "4CBDC252E9C5A12A451B4BE2355BC1D6F55588E1" : "SEngage\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SEngage",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SEngage.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/git.dr.avaya.com\/itinnovation\/snapengage-ios-old.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "14E9DA1A8CEA50F97D6B9311F1F01AE2189DA191"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/davidviva\/SEngage.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4CBDC252E9C5A12A451B4BE2355BC1D6F55588E1"
+    }
+  ]
+}

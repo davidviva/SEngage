@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AvayaLogoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="1HJ-Z8-P5S">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="AvayaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="LRZ-ef-HMZ">
+                                <rect key="frame" x="180" y="223" width="240" height="154"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1HJ-Z8-P5S" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="JNE-XC-DKE"/>
+                            <constraint firstItem="1HJ-Z8-P5S" firstAttribute="centerY" secondItem="LRZ-ef-HMZ" secondAttribute="centerY" id="Kkl-Rm-Wcy"/>
+                            <constraint firstItem="1HJ-Z8-P5S" firstAttribute="centerX" secondItem="LRZ-ef-HMZ" secondAttribute="centerX" id="Z05-On-zbV"/>
+                            <constraint firstItem="1HJ-Z8-P5S" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="d6o-N5-n3t"/>
+                            <constraint firstAttribute="trailing" secondItem="1HJ-Z8-P5S" secondAttribute="trailing" id="fEI-ap-CDc"/>
+                            <constraint firstItem="1HJ-Z8-P5S" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="xfy-4Z-spu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AvayaLogo" width="288" height="95"/>
+        <image name="AvayaLogoBackground" width="640" height="480"/>
+    </resources>
+</document>
