@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 class AppSettings{
     class var NOTIFICATION_EXPIRE_TIME : NSTimeInterval {
         return 300; // Five mimutes
