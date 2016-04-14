@@ -121,7 +121,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
         loginButton.layer.cornerRadius = 10
         loginButton.setTitle("SIGN IN", forState: UIControlState.Normal)
         loginButton.setTitleColor(AppTheme.AVAYA_RED_COLOR_LIGHT, forState: UIControlState.Normal)
-        loginButton.setTitleColor(UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.5), forState: UIControlState.Highlighted)
+        loginButton.setTitleColor(AppTheme.AVAYA_GRAY_COLOR, forState: UIControlState.Highlighted)
         loginButton.titleLabel!.font = UIFont(name: "Helvetica Bold", size: 14)
         loginButton.addTarget(self, action: #selector(LoginViewController.loginAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.loginButtonPosition = loginButton.center

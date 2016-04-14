@@ -154,6 +154,7 @@
 		24514FB51CBFF61200299E9B /* VideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514FB11CBFF61200299E9B /* VideoController.swift */; };
 		24514FB81CBFF61C00299E9B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514FB61CBFF61C00299E9B /* MapViewController.swift */; };
 		24514FB91CBFF61C00299E9B /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514FB71CBFF61C00299E9B /* PlaceAnnotation.swift */; };
+		24514FBC1CC01D1700299E9B /* PublicStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514FBB1CC01D1700299E9B /* PublicStrings.swift */; };
 		2485E7521CBBF577006D92A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7511CBBF577006D92A2 /* AppDelegate.swift */; };
 		2485E7591CBBF577006D92A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2485E7581CBBF577006D92A2 /* Assets.xcassets */; };
 		2485E75C1CBBF577006D92A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2485E75A1CBBF577006D92A2 /* LaunchScreen.storyboard */; };
@@ -166,14 +167,12 @@
 		2485E78F1CBC1C7A006D92A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2485E78D1CBC1C7A006D92A2 /* Main.storyboard */; };
 		2485E7911CBC2076006D92A2 /* PublicMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7901CBC2076006D92A2 /* PublicMethods.swift */; };
 		2485E7941CBC302F006D92A2 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7931CBC302F006D92A2 /* UserInfo.swift */; };
-		2485E7971CBC3744006D92A2 /* ServiceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7961CBC3744006D92A2 /* ServiceConfig.swift */; };
 		2485E79B1CBC380C006D92A2 /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7981CBC380C006D92A2 /* CGRectEx.swift */; };
 		2485E79C1CBC380C006D92A2 /* ColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7991CBC380C006D92A2 /* ColorEx.swift */; };
 		2485E79D1CBC380C006D92A2 /* CommonEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E79A1CBC380C006D92A2 /* CommonEx.swift */; };
 		2485E7A61CBD7CB6006D92A2 /* MeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2485E7A51CBD7CB6006D92A2 /* MeSB.storyboard */; };
 		2485E7A81CBD7D57006D92A2 /* MeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7A71CBD7D57006D92A2 /* MeTableViewController.swift */; };
 		2485E7AA1CBD8B4E006D92A2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7A91CBD8B4E006D92A2 /* RootViewController.swift */; };
-		2485E7AC1CBD8F78006D92A2 /* PublicStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7AB1CBD8F78006D92A2 /* PublicStrings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -341,6 +340,7 @@
 		24514FB11CBFF61200299E9B /* VideoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoController.swift; path = SnapE/Chats/Video/VideoController.swift; sourceTree = "<group>"; };
 		24514FB61CBFF61C00299E9B /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = SnapE/Chats/MapKit/MapViewController.swift; sourceTree = "<group>"; };
 		24514FB71CBFF61C00299E9B /* PlaceAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceAnnotation.swift; path = SnapE/Chats/MapKit/PlaceAnnotation.swift; sourceTree = "<group>"; };
+		24514FBB1CC01D1700299E9B /* PublicStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PublicStrings.swift; path = SnapE/Resources/PublicStrings.swift; sourceTree = "<group>"; };
 		2485E74E1CBBF576006D92A2 /* SEngage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SEngage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2485E7511CBBF577006D92A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2485E7581CBBF577006D92A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -359,14 +359,12 @@
 		2485E78E1CBC1C7A006D92A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2485E7901CBC2076006D92A2 /* PublicMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PublicMethods.swift; path = SnapE/Service/PublicMethods.swift; sourceTree = "<group>"; };
 		2485E7931CBC302F006D92A2 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfo.swift; path = SnapE/Login/Model/UserInfo.swift; sourceTree = "<group>"; };
-		2485E7961CBC3744006D92A2 /* ServiceConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceConfig.swift; path = SnapE/Config/ServiceConfig.swift; sourceTree = "<group>"; };
 		2485E7981CBC380C006D92A2 /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGRectEx.swift; path = SnapE/Extension/CGRectEx.swift; sourceTree = "<group>"; };
 		2485E7991CBC380C006D92A2 /* ColorEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorEx.swift; path = SnapE/Extension/ColorEx.swift; sourceTree = "<group>"; };
 		2485E79A1CBC380C006D92A2 /* CommonEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommonEx.swift; path = SnapE/Extension/CommonEx.swift; sourceTree = "<group>"; };
 		2485E7A51CBD7CB6006D92A2 /* MeSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MeSB.storyboard; path = SnapE/Me/MeSB.storyboard; sourceTree = "<group>"; };
 		2485E7A71CBD7D57006D92A2 /* MeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeTableViewController.swift; path = SnapE/Me/MeTableViewController.swift; sourceTree = "<group>"; };
 		2485E7A91CBD8B4E006D92A2 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = SnapE/Login/RootViewController.swift; sourceTree = "<group>"; };
-		2485E7AB1CBD8F78006D92A2 /* PublicStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PublicStrings.swift; path = SnapE/Service/PublicStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -699,7 +697,6 @@
 				24514E791CBFEC1200299E9B /* Contacts */,
 				2485E7A21CBD7C8C006D92A2 /* Me */,
 				2485E7A11CBD780C006D92A2 /* Supports */,
-				2485E7951CBC3714006D92A2 /* Config */,
 				2485E78C1CBC1564006D92A2 /* Service */,
 				2485E78B1CBC1266006D92A2 /* Extension */,
 				2485E7821CBC0466006D92A2 /* Resources */,
@@ -740,6 +737,7 @@
 		2485E7821CBC0466006D92A2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				24514FBB1CC01D1700299E9B /* PublicStrings.swift */,
 				2485E7871CBC1237006D92A2 /* FontAwesome.otf */,
 				2485E7831CBC11C2006D92A2 /* AppTheme.swift */,
 				2485E7891CBC1253006D92A2 /* AppSettings.swift */,
@@ -761,7 +759,6 @@
 			isa = PBXGroup;
 			children = (
 				2485E7901CBC2076006D92A2 /* PublicMethods.swift */,
-				2485E7AB1CBD8F78006D92A2 /* PublicStrings.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -772,14 +769,6 @@
 				2485E7931CBC302F006D92A2 /* UserInfo.swift */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		2485E7951CBC3714006D92A2 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				2485E7961CBC3744006D92A2 /* ServiceConfig.swift */,
-			);
-			name = Config;
 			sourceTree = "<group>";
 		};
 		2485E7A11CBD780C006D92A2 /* Supports */ = {
@@ -1083,7 +1072,6 @@
 				2485E7AA1CBD8B4E006D92A2 /* RootViewController.swift in Sources */,
 				24514EA31CBFF3EB00299E9B /* ChatList.swift in Sources */,
 				24514EC21CBFF52A00299E9B /* ChatBaseCell.swift in Sources */,
-				2485E7AC1CBD8F78006D92A2 /* PublicStrings.swift in Sources */,
 				24514EB11CBFF4BC00299E9B /* ChatViewController.swift in Sources */,
 				2485E7841CBC11C2006D92A2 /* AppTheme.swift in Sources */,
 				24514E9F1CBFF3E000299E9B /* ChatListBaseCell.swift in Sources */,
@@ -1102,8 +1090,8 @@
 				2485E79C1CBC380C006D92A2 /* ColorEx.swift in Sources */,
 				24514E7F1CBFEF0000299E9B /* ContactDetailViewController.swift in Sources */,
 				24514EBA1CBFF4EC00299E9B /* ToolBarView.swift in Sources */,
+				24514FBC1CC01D1700299E9B /* PublicStrings.swift in Sources */,
 				24514EA41CBFF3EB00299E9B /* ChatListCellModel.swift in Sources */,
-				2485E7971CBC3744006D92A2 /* ServiceConfig.swift in Sources */,
 				24514FB21CBFF61200299E9B /* AVPlayView.swift in Sources */,
 				24514E9E1CBFF3E000299E9B /* ButtonView.swift in Sources */,
 				2485E7941CBC302F006D92A2 /* UserInfo.swift in Sources */,

@@ -55,7 +55,7 @@ class AudioRecorder: NSObject, AVAudioRecorderDelegate {
     
     func startRecord() {
         startTime = NSDate().timeIntervalSince1970
-        performSelector("readyStartRecord", withObject: self, afterDelay: 0.5)
+        performSelector(#selector(AudioRecorder.readyStartRecord), withObject: self, afterDelay: 0.5)
     }
     
     func readyStartRecord() {
@@ -85,11 +85,11 @@ class AudioRecorder: NSObject, AVAudioRecorderDelegate {
         endTimer = NSDate().timeIntervalSince1970
         timeInterval = nil
         if (endTimer - startTime) < 0.5 {
-            NSObject.cancelPreviousPerformRequestsWithTarget(self, selector: "readyStartRecord", object: self)
+            NSObject.cancelPreviousPerformRequestsWithTarget(self, selector: #selector(AudioRecorder.readyStartRecord), object: self)
         } else {
             timeInterval = NSNumber(int: NSNumber(double: recorder.currentTime).intValue)
             if timeInterval.intValue < 1 {
-                performSelector("readyStopRecord", withObject: self, afterDelay: 0.4)
+                performSelector(#selector(AudioRecorder.readyStopRecord), withObject: self, afterDelay: 0.4)
             } else {
                 readyStopRecord()
             }
