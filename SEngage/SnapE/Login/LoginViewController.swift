@@ -120,7 +120,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
         loginButton.backgroundColor = UIColor.whiteColor()
         loginButton.layer.cornerRadius = 10
         loginButton.setTitle("SIGN IN", forState: UIControlState.Normal)
-        loginButton.setTitleColor(PublicMethods.getAvayaRed(), forState: UIControlState.Normal)
+        loginButton.setTitleColor(AppTheme.AVAYA_RED_COLOR_LIGHT, forState: UIControlState.Normal)
         loginButton.setTitleColor(UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.5), forState: UIControlState.Highlighted)
         loginButton.titleLabel!.font = UIFont(name: "Helvetica Bold", size: 14)
         loginButton.addTarget(self, action: #selector(LoginViewController.loginAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
@@ -219,7 +219,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
         if 1001 == 1001{
             self.performSegueWithIdentifier("Login", sender: self)
         }else{
-            print("login fail")
+            
         }
     }
     

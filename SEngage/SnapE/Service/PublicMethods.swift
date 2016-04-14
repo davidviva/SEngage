@@ -124,61 +124,7 @@ class PublicMethods{
         return view
     }
     
-    class func getAvayaRed() ->UIColor {
-        //red="0.79215685999999996" green="0.1254902" blue="0.15294118000000001" alpha="1"
-        return UIColor(red: 0.79215686, green: 0.12549, blue: 0.15294118, alpha: 1)
-    }
-    
-//    class func makeScopiaHttpLink(extensionStr:String)->String?{
-//        if(extensionStr.characters.count>4){
-//            if(extensionStr[extensionStr.startIndex] == "+"){
-//                return PublicStrings.SCOPIA_PREFIX_HTTP + extensionStr.substringFromIndex(extensionStr.startIndex.advancedBy(1))
-//            }else{
-//                return PublicStrings.SCOPIA_PREFIX_HTTP + extensionStr
-//            }
-//        }else{
-//            return nil
-//        }
-//    }
-//    class func makeScopiaLink(extensionStr:String)->String?{
-//        if(extensionStr.characters.count>4){
-//            if(extensionStr[extensionStr.startIndex] == "+"){
-//                return PublicStrings.SCOPIA_PREFIX +  extensionStr.substringFromIndex(extensionStr.startIndex.advancedBy(1))
-//            }else{
-//                return PublicStrings.SCOPIA_PREFIX + extensionStr
-//            }
-//        }else{
-//            return nil
-//        }
-//    }
-    
-//    class func enterScopiaRoomWithExtension(extensionStr:String) {
-//        // Process the extension string first
-//        var scopiaLink:String = "";
-//        var httpLink:String = ""
-//        if(extensionStr.characters.count>4){
-//            if(extensionStr[extensionStr.startIndex] == "+"){
-//                scopiaLink = PublicStrings.SCOPIA_PREFIX +  extensionStr.substringFromIndex(extensionStr.startIndex.advancedBy(1))
-//                httpLink = PublicStrings.SCOPIA_PREFIX_HTTP +  extensionStr.substringFromIndex(extensionStr.startIndex.advancedBy(1))
-//            }else{
-//                scopiaLink = PublicStrings.SCOPIA_PREFIX + extensionStr
-//                httpLink = PublicStrings.SCOPIA_PREFIX_HTTP + extensionStr
-//            }
-//        }else{
-//            scopiaLink = PublicStrings.SCOPIA_PREFIX
-//            httpLink = PublicStrings.SCOPIA_PREFIX_HTTP
-//        }
-//        if (UIApplication.sharedApplication().canOpenURL(NSURL(string: scopiaLink)!)){
-//            UIApplication.sharedApplication().openURL(NSURL(string: scopiaLink)!)
-//        } else{
-//            UIApplication.sharedApplication().openURL(NSURL(string: httpLink)!)
-//        }
-//    }
-    
-//    class func enterScopiaRoomWithMeetingId(meetingId:String) {
-//        let linkStr = PublicStrings.SCOPIA_PREFIX_HTTP_FORWARD + meetingId;
-//        enterScopiaRoomWithHttpLink(linkStr)
-//    }
+
     
     class func enterScopiaRoomWithHttpLink(linkStr:String) {
         if(linkStr.characters.count > 4){
