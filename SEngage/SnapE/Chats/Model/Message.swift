@@ -6,6 +6,14 @@
 //  Copyright © 2016 Avaya. All rights reserved.
 //
 
+//
+//  Message.swift
+//  SnapE-v1
+//
+//  Created by Yan Wu on 3/28/16.
+//  Copyright © 2016 Avaya. All rights reserved.
+//
+
 import Foundation
 import UIKit
 

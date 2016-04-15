@@ -181,7 +181,13 @@
 		24F6440C1CC14DA900491504 /* MsgBase.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F644081CC14DA900491504 /* MsgBase.proto.swift */; };
 		24F6440D1CC14DA900491504 /* Request.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F644091CC14DA900491504 /* Request.proto.swift */; };
 		24F6440E1CC14DA900491504 /* Response.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F6440A1CC14DA900491504 /* Response.proto.swift */; };
-		24F644111CC1608A00491504 /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F644101CC1608A00491504 /* MessageType.swift */; };
+		24F644131CC17F4300491504 /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F644121CC17F4300491504 /* ServerConfig.swift */; };
+		24F6441B1CC1807000491504 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F644151CC1807000491504 /* Closure.swift */; };
+		24F6441C1CC1807000491504 /* TCPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F644161CC1807000491504 /* TCPRequest.swift */; };
+		24F6441D1CC1807000491504 /* TCPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F644171CC1807000491504 /* TCPResponse.swift */; };
+		24F6441E1CC1807000491504 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F644181CC1807000491504 /* ysocket.swift */; };
+		24F6441F1CC1807000491504 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 24F644191CC1807000491504 /* ytcpsocket.c */; };
+		24F644201CC1807000491504 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F6441A1CC1807000491504 /* ytcpsocket.swift */; };
 		E4A23221B35D332BF7CAA173 /* Pods_SEngage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D72D75F1A90E0B5174B299E7 /* Pods_SEngage.framework */; };
 /* End PBXBuildFile section */
 
@@ -384,7 +390,14 @@
 		24F644081CC14DA900491504 /* MsgBase.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MsgBase.proto.swift; path = SnapE/ProtoEntry/MsgBase.proto.swift; sourceTree = "<group>"; };
 		24F644091CC14DA900491504 /* Request.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Request.proto.swift; path = SnapE/ProtoEntry/Request.proto.swift; sourceTree = "<group>"; };
 		24F6440A1CC14DA900491504 /* Response.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Response.proto.swift; path = SnapE/ProtoEntry/Response.proto.swift; sourceTree = "<group>"; };
-		24F644101CC1608A00491504 /* MessageType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageType.swift; path = SnapE/Resources/MessageType.swift; sourceTree = "<group>"; };
+		24F644121CC17F4300491504 /* ServerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServerConfig.swift; path = SnapE/Resources/ServerConfig.swift; sourceTree = "<group>"; };
+		24F644141CC1806F00491504 /* SEngage-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SEngage-Bridging-Header.h"; sourceTree = "<group>"; };
+		24F644151CC1807000491504 /* Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Closure.swift; path = SnapE/Service/Closure.swift; sourceTree = "<group>"; };
+		24F644161CC1807000491504 /* TCPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TCPRequest.swift; path = SnapE/Service/TCPRequest.swift; sourceTree = "<group>"; };
+		24F644171CC1807000491504 /* TCPResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TCPResponse.swift; path = SnapE/Service/TCPResponse.swift; sourceTree = "<group>"; };
+		24F644181CC1807000491504 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ysocket.swift; path = SnapE/Service/ysocket.swift; sourceTree = "<group>"; };
+		24F644191CC1807000491504 /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ytcpsocket.c; path = SnapE/Service/ytcpsocket.c; sourceTree = "<group>"; };
+		24F6441A1CC1807000491504 /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ytcpsocket.swift; path = SnapE/Service/ytcpsocket.swift; sourceTree = "<group>"; };
 		4400BEC86E5A07CEDB7EF617 /* Pods-SEngage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SEngage.release.xcconfig"; path = "Pods/Target Support Files/Pods-SEngage/Pods-SEngage.release.xcconfig"; sourceTree = "<group>"; };
 		D72D75F1A90E0B5174B299E7 /* Pods_SEngage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SEngage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -768,7 +781,7 @@
 				2485E7831CBC11C2006D92A2 /* AppTheme.swift */,
 				2485E7891CBC1253006D92A2 /* AppSettings.swift */,
 				24514FC01CC02A7000299E9B /* PublicMethods.swift */,
-				24F644101CC1608A00491504 /* MessageType.swift */,
+				24F644121CC17F4300491504 /* ServerConfig.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -845,6 +858,13 @@
 		24F6440F1CC14E2200491504 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				24F644151CC1807000491504 /* Closure.swift */,
+				24F644161CC1807000491504 /* TCPRequest.swift */,
+				24F644171CC1807000491504 /* TCPResponse.swift */,
+				24F644181CC1807000491504 /* ysocket.swift */,
+				24F644191CC1807000491504 /* ytcpsocket.c */,
+				24F6441A1CC1807000491504 /* ytcpsocket.swift */,
+				24F644141CC1806F00491504 /* SEngage-Bridging-Header.h */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -1168,10 +1188,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F644131CC17F4300491504 /* ServerConfig.swift in Sources */,
 				24514FB41CBFF61200299E9B /* RecordVideoView.swift in Sources */,
 				24514FB31CBFF61200299E9B /* RecordVideoModel.swift in Sources */,
 				24514EC81CBFF55F00299E9B /* EmotionView.swift in Sources */,
-				24F644111CC1608A00491504 /* MessageType.swift in Sources */,
+				24F6441C1CC1807000491504 /* TCPRequest.swift in Sources */,
 				2485E7811CBC01E9006D92A2 /* LoginViewController.swift in Sources */,
 				24514E9A1CBFF3D000299E9B /* ChatListTableViewController.swift in Sources */,
 				24F6440D1CC14DA900491504 /* Request.proto.swift in Sources */,
@@ -1182,8 +1203,10 @@
 				24514EAB1CBFF45200299E9B /* AudioRecorder.swift in Sources */,
 				24514E861CBFEF2000299E9B /* Contact.swift in Sources */,
 				24514EC31CBFF52A00299E9B /* ChatImageCell.swift in Sources */,
+				24F6441F1CC1807000491504 /* ytcpsocket.c in Sources */,
 				24514FB81CBFF61C00299E9B /* MapViewController.swift in Sources */,
 				24514E811CBFEF0000299E9B /* ContactsTableViewController.swift in Sources */,
+				24F6441B1CC1807000491504 /* Closure.swift in Sources */,
 				24514EC51CBFF52A00299E9B /* ChatVideoCell.swift in Sources */,
 				24514FB51CBFF61200299E9B /* VideoController.swift in Sources */,
 				2485E7AA1CBD8B4E006D92A2 /* RootViewController.swift in Sources */,
@@ -1191,6 +1214,7 @@
 				24514EC21CBFF52A00299E9B /* ChatBaseCell.swift in Sources */,
 				24514EB11CBFF4BC00299E9B /* ChatViewController.swift in Sources */,
 				24F6440C1CC14DA900491504 /* MsgBase.proto.swift in Sources */,
+				24F6441D1CC1807000491504 /* TCPResponse.swift in Sources */,
 				2485E7841CBC11C2006D92A2 /* AppTheme.swift in Sources */,
 				24514FC31CC02D4400299E9B /* PhotoViewController.swift in Sources */,
 				24514E9F1CBFF3E000299E9B /* ChatListBaseCell.swift in Sources */,
@@ -1203,9 +1227,11 @@
 				24F6440B1CC14DA900491504 /* Entity.proto.swift in Sources */,
 				24514EB81CBFF4EC00299E9B /* RecordIndicatorView.swift in Sources */,
 				24514E831CBFEF0F00299E9B /* ContactsTableViewCell.swift in Sources */,
+				24F6441E1CC1807000491504 /* ysocket.swift in Sources */,
 				24514EB91CBFF4EC00299E9B /* ShareMoreView.swift in Sources */,
 				2485E79B1CBC380C006D92A2 /* CGRectEx.swift in Sources */,
 				24514EC41CBFF52A00299E9B /* ChatTextCell.swift in Sources */,
+				24F644201CC1807000491504 /* ytcpsocket.swift in Sources */,
 				2485E78A1CBC1253006D92A2 /* AppSettings.swift in Sources */,
 				2485E79C1CBC380C006D92A2 /* ColorEx.swift in Sources */,
 				24514E7F1CBFEF0000299E9B /* ContactDetailViewController.swift in Sources */,
@@ -1360,10 +1386,13 @@
 			baseConfigurationReference = 12C54ED6513D81B96056A17E /* Pods-SEngage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SEngage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Avaya.SEngage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SEngage/SEngage-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1372,10 +1401,12 @@
 			baseConfigurationReference = 4400BEC86E5A07CEDB7EF617 /* Pods-SEngage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SEngage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Avaya.SEngage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SEngage/SEngage-Bridging-Header.h";
 			};
 			name = Release;
 		};

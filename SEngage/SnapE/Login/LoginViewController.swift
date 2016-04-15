@@ -8,12 +8,20 @@
 
 import UIKit
 
+// Requird information for global contacts search request
+var sessionReceived: Session = Session()
+var userReceived: User = User()
+var token: String = ""
+var sessionId: String = ""
+var handle: String = ""
+
 class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
 
     // Identify the text fields
     var txtUser:UITextField!
     var txtPwd:UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
+    var loginButton: UIButton!
     var loginButtonPosition:CGPoint?
     
     // The distance hands to the head of owl
@@ -31,6 +39,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
     
     // The status of the input area
     var showType:LoginShowType = LoginShowType.NONE
+    
+    // Username and password
+    var username = ""
+    var password = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,7 +128,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
         vLogin.addSubview(txtPwd)
         
         // Add UIButton to the view
-        let loginButton:UIButton = UIButton(frame: CGRectMake(40, 380, mainSize.width - 80, 39))
+        loginButton = UIButton(frame: CGRectMake(40, 380, mainSize.width - 80, 39))
         loginButton.layer.borderColor = UIColor.lightGrayColor().CGColor
         loginButton.backgroundColor = UIColor.whiteColor()
         loginButton.layer.cornerRadius = 10
@@ -217,10 +229,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
     }
 
     @IBAction func loginAction(sender: UIButton) {
-        if 1001 == 1001{
-            self.performSegueWithIdentifier("Login", sender: self)
-        }else{
-            
+        self.username = self.txtUser.text ?? ""
+        self.password = self.txtPwd.text ?? ""
+        waitImage()
+        dispatch_async(reqQueue) { () -> Void in
+            tcpRequest.login(self.username, password: self.password)
+            tcpResponse.LoginClosure(self.processResult)
         }
     }
     
@@ -233,5 +247,63 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    // Only portrait view
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+    
+    // Alert for result of login
+    func alertToggle(msg: String) {
+        let alert = UIAlertController(title: "Error!" , message: msg, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    let imageView = UIImageView(frame: CGRectMake(0, 20, 600, 900))
+    
+    func waitImage() {
+        self.imageView.image = UIImage(named: "launch.png")
+        self.txtUser.resignFirstResponder()
+        self.txtPwd.resignFirstResponder()
+        self.view.addSubview(imageView)
+    }
+    
+    func processResult(content: LoginResponse) {
+        dispatch_async(dispatch_get_main_queue(), {
+            if content.success {
+                self.imageView.removeFromSuperview()
+                print("\(content)")
+                userReceived = content.user
+                sessionReceived = content.session
+                token = sessionReceived.token
+                sessionId = sessionReceived.sessionId
+                handle = userReceived.username
+                //self.skipToMainScreen()
+                self.performSegueWithIdentifier("Login", sender: self)
+            } else {
+                self.resultLogin(content.errtype)
+                self.imageView.removeFromSuperview()
+            }
+        })
+    }
+    
+    func skipToMainScreen() {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let skip = sb.instantiateViewControllerWithIdentifier("MainScreen") as! UITabBarController
+        self.presentViewController(skip, animated: true, completion: nil)
+    }
+    
+    // Error type
+    func resultLogin(code: LoginResponse.ErrType) {
+        switch code {
+        case LoginResponse.ErrType.BadRequest:
+            alertToggle("Bad request")
+        case LoginResponse.ErrType.NoUser:
+            alertToggle("Username is invalid!")
+        case LoginResponse.ErrType.AuthenticationFailure:
+            alertToggle("Password is invalid!")
+        default: alertToggle("Unknown error!")
+        }
+    }
 }
