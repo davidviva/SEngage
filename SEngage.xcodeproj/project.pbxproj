@@ -156,6 +156,7 @@
 		24514FB91CBFF61C00299E9B /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514FB71CBFF61C00299E9B /* PlaceAnnotation.swift */; };
 		24514FBC1CC01D1700299E9B /* PublicStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514FBB1CC01D1700299E9B /* PublicStrings.swift */; };
 		24514FC11CC02A7000299E9B /* PublicMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514FC01CC02A7000299E9B /* PublicMethods.swift */; };
+		24514FC31CC02D4400299E9B /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514FC21CC02D4400299E9B /* PhotoViewController.swift */; };
 		2485E7521CBBF577006D92A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7511CBBF577006D92A2 /* AppDelegate.swift */; };
 		2485E7591CBBF577006D92A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2485E7581CBBF577006D92A2 /* Assets.xcassets */; };
 		2485E75C1CBBF577006D92A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2485E75A1CBBF577006D92A2 /* LaunchScreen.storyboard */; };
@@ -342,6 +343,7 @@
 		24514FB71CBFF61C00299E9B /* PlaceAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceAnnotation.swift; path = SnapE/Chats/MapKit/PlaceAnnotation.swift; sourceTree = "<group>"; };
 		24514FBB1CC01D1700299E9B /* PublicStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PublicStrings.swift; path = SnapE/Resources/PublicStrings.swift; sourceTree = "<group>"; };
 		24514FC01CC02A7000299E9B /* PublicMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PublicMethods.swift; path = SnapE/Resources/PublicMethods.swift; sourceTree = "<group>"; };
+		24514FC21CC02D4400299E9B /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoViewController.swift; path = SnapE/Me/PhotoViewController.swift; sourceTree = "<group>"; };
 		2485E74E1CBBF576006D92A2 /* SEngage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SEngage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2485E7511CBBF577006D92A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2485E7581CBBF577006D92A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -777,10 +779,11 @@
 		2485E7A21CBD7C8C006D92A2 /* Me */ = {
 			isa = PBXGroup;
 			children = (
-				2485E7A71CBD7D57006D92A2 /* MeTableViewController.swift */,
 				2485E7A41CBD7C99006D92A2 /* View */,
 				2485E7A31CBD7C93006D92A2 /* Model */,
 				2485E7A51CBD7CB6006D92A2 /* MeSB.storyboard */,
+				2485E7A71CBD7D57006D92A2 /* MeTableViewController.swift */,
+				24514FC21CC02D4400299E9B /* PhotoViewController.swift */,
 			);
 			name = Me;
 			sourceTree = "<group>";
@@ -1067,6 +1070,7 @@
 				24514EC21CBFF52A00299E9B /* ChatBaseCell.swift in Sources */,
 				24514EB11CBFF4BC00299E9B /* ChatViewController.swift in Sources */,
 				2485E7841CBC11C2006D92A2 /* AppTheme.swift in Sources */,
+				24514FC31CC02D4400299E9B /* PhotoViewController.swift in Sources */,
 				24514E9F1CBFF3E000299E9B /* ChatListBaseCell.swift in Sources */,
 				24514EAA1CBFF45200299E9B /* AudioPlayer.swift in Sources */,
 				24514EAD1CBFF45200299E9B /* Observable.swift in Sources */,

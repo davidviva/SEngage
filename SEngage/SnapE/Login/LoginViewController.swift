@@ -11,8 +11,8 @@ import UIKit
 class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
 
     // Identify the text fields
-    @IBOutlet var txtUser:UITextField!
-    @IBOutlet var txtPwd:UITextField!
+    var txtUser:UITextField!
+    var txtPwd:UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     var loginButtonPosition:CGPoint?
     
@@ -27,6 +27,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
     var imgLeftHandGone:UIImageView!
     var imgRightHandGone:UIImageView!
     
+    var imgLogin:UIImageView!
+    
     // The status of the input area
     var showType:LoginShowType = LoginShowType.NONE
     
@@ -38,11 +40,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
     }
     
     func initialPanel() {
-        
         // Get the size of the screen
         let mainSize = UIScreen.mainScreen().bounds.size
         // Get the image of owl
-        let imgLogin =  UIImageView(frame:CGRectMake(mainSize.width/2-211/2, 100, 211, 109))
+        imgLogin =  UIImageView(frame:CGRectMake(mainSize.width/2-211/2, 100, 211, 109))
         imgLogin.image = UIImage(named:"owl-login")
         imgLogin.layer.masksToBounds = true
         self.view.addSubview(imgLogin)
