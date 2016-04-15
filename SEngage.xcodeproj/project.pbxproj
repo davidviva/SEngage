@@ -173,6 +173,16 @@
 		2485E7A61CBD7CB6006D92A2 /* MeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2485E7A51CBD7CB6006D92A2 /* MeSB.storyboard */; };
 		2485E7A81CBD7D57006D92A2 /* MeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7A71CBD7D57006D92A2 /* MeTableViewController.swift */; };
 		2485E7AA1CBD8B4E006D92A2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7A91CBD8B4E006D92A2 /* RootViewController.swift */; };
+		24F644021CC14C7A00491504 /* Entity.proto in Resources */ = {isa = PBXBuildFile; fileRef = 24F643FE1CC14C7A00491504 /* Entity.proto */; };
+		24F644031CC14C7A00491504 /* MsgBase.proto in Resources */ = {isa = PBXBuildFile; fileRef = 24F643FF1CC14C7A00491504 /* MsgBase.proto */; };
+		24F644041CC14C7A00491504 /* Request.proto in Resources */ = {isa = PBXBuildFile; fileRef = 24F644001CC14C7A00491504 /* Request.proto */; };
+		24F644051CC14C7A00491504 /* Response.proto in Resources */ = {isa = PBXBuildFile; fileRef = 24F644011CC14C7A00491504 /* Response.proto */; };
+		24F6440B1CC14DA900491504 /* Entity.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F644071CC14DA900491504 /* Entity.proto.swift */; };
+		24F6440C1CC14DA900491504 /* MsgBase.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F644081CC14DA900491504 /* MsgBase.proto.swift */; };
+		24F6440D1CC14DA900491504 /* Request.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F644091CC14DA900491504 /* Request.proto.swift */; };
+		24F6440E1CC14DA900491504 /* Response.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F6440A1CC14DA900491504 /* Response.proto.swift */; };
+		24F644111CC1608A00491504 /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F644101CC1608A00491504 /* MessageType.swift */; };
+		E4A23221B35D332BF7CAA173 /* Pods_SEngage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D72D75F1A90E0B5174B299E7 /* Pods_SEngage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +203,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12C54ED6513D81B96056A17E /* Pods-SEngage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SEngage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SEngage/Pods-SEngage.debug.xcconfig"; sourceTree = "<group>"; };
 		24514E7C1CBFEF0000299E9B /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactDetailViewController.swift; path = SnapE/Contacts/ContactDetailViewController.swift; sourceTree = "<group>"; };
 		24514E7D1CBFEF0000299E9B /* contactsSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = contactsSB.storyboard; path = SnapE/Contacts/contactsSB.storyboard; sourceTree = "<group>"; };
 		24514E7E1CBFEF0000299E9B /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsTableViewController.swift; path = SnapE/Contacts/ContactsTableViewController.swift; sourceTree = "<group>"; };
@@ -365,6 +376,17 @@
 		2485E7A51CBD7CB6006D92A2 /* MeSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MeSB.storyboard; path = SnapE/Me/MeSB.storyboard; sourceTree = "<group>"; };
 		2485E7A71CBD7D57006D92A2 /* MeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeTableViewController.swift; path = SnapE/Me/MeTableViewController.swift; sourceTree = "<group>"; };
 		2485E7A91CBD8B4E006D92A2 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = SnapE/Login/RootViewController.swift; sourceTree = "<group>"; };
+		24F643FE1CC14C7A00491504 /* Entity.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Entity.proto; path = Proto/Entity.proto; sourceTree = "<group>"; };
+		24F643FF1CC14C7A00491504 /* MsgBase.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MsgBase.proto; path = Proto/MsgBase.proto; sourceTree = "<group>"; };
+		24F644001CC14C7A00491504 /* Request.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Request.proto; path = Proto/Request.proto; sourceTree = "<group>"; };
+		24F644011CC14C7A00491504 /* Response.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Response.proto; path = Proto/Response.proto; sourceTree = "<group>"; };
+		24F644071CC14DA900491504 /* Entity.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entity.proto.swift; path = SnapE/ProtoEntry/Entity.proto.swift; sourceTree = "<group>"; };
+		24F644081CC14DA900491504 /* MsgBase.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MsgBase.proto.swift; path = SnapE/ProtoEntry/MsgBase.proto.swift; sourceTree = "<group>"; };
+		24F644091CC14DA900491504 /* Request.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Request.proto.swift; path = SnapE/ProtoEntry/Request.proto.swift; sourceTree = "<group>"; };
+		24F6440A1CC14DA900491504 /* Response.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Response.proto.swift; path = SnapE/ProtoEntry/Response.proto.swift; sourceTree = "<group>"; };
+		24F644101CC1608A00491504 /* MessageType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageType.swift; path = SnapE/Resources/MessageType.swift; sourceTree = "<group>"; };
+		4400BEC86E5A07CEDB7EF617 /* Pods-SEngage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SEngage.release.xcconfig"; path = "Pods/Target Support Files/Pods-SEngage/Pods-SEngage.release.xcconfig"; sourceTree = "<group>"; };
+		D72D75F1A90E0B5174B299E7 /* Pods_SEngage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SEngage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +399,7 @@
 				24514E8D1CBFF33400299E9B /* Photos.framework in Frameworks */,
 				24514E8B1CBFF32B00299E9B /* MapKit.framework in Frameworks */,
 				24514E891CBFF31500299E9B /* AudioToolbox.framework in Frameworks */,
+				E4A23221B35D332BF7CAA173 /* Pods_SEngage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,6 +689,7 @@
 		2485E7451CBBF576006D92A2 = {
 			isa = PBXGroup;
 			children = (
+				24F643FD1CC14C4400491504 /* Proto */,
 				24514E901CBFF34E00299E9B /* AVFoundation.framework */,
 				24514E8E1CBFF34600299E9B /* VideoToolbox.framework */,
 				24514E8C1CBFF33400299E9B /* Photos.framework */,
@@ -675,6 +699,8 @@
 				2485E7651CBBF577006D92A2 /* SEngageTests */,
 				2485E7701CBBF577006D92A2 /* SEngageUITests */,
 				2485E74F1CBBF576006D92A2 /* Products */,
+				2F9AF01FEF86122469A28741 /* Pods */,
+				7516C90848B9B561BE8FA0EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -691,6 +717,8 @@
 		2485E7501CBBF576006D92A2 /* SEngage */ = {
 			isa = PBXGroup;
 			children = (
+				24F6440F1CC14E2200491504 /* Service */,
+				24F644061CC14D5100491504 /* ProtoEntry */,
 				24514EA51CBFF44300299E9B /* Utilities */,
 				24514E941CBFF37C00299E9B /* ChatList */,
 				24514E931CBFF37400299E9B /* Chats */,
@@ -740,6 +768,7 @@
 				2485E7831CBC11C2006D92A2 /* AppTheme.swift */,
 				2485E7891CBC1253006D92A2 /* AppSettings.swift */,
 				24514FC01CC02A7000299E9B /* PublicMethods.swift */,
+				24F644101CC1608A00491504 /* MessageType.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -791,6 +820,52 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		24F643FD1CC14C4400491504 /* Proto */ = {
+			isa = PBXGroup;
+			children = (
+				24F643FE1CC14C7A00491504 /* Entity.proto */,
+				24F643FF1CC14C7A00491504 /* MsgBase.proto */,
+				24F644001CC14C7A00491504 /* Request.proto */,
+				24F644011CC14C7A00491504 /* Response.proto */,
+			);
+			name = Proto;
+			sourceTree = "<group>";
+		};
+		24F644061CC14D5100491504 /* ProtoEntry */ = {
+			isa = PBXGroup;
+			children = (
+				24F644071CC14DA900491504 /* Entity.proto.swift */,
+				24F644081CC14DA900491504 /* MsgBase.proto.swift */,
+				24F644091CC14DA900491504 /* Request.proto.swift */,
+				24F6440A1CC14DA900491504 /* Response.proto.swift */,
+			);
+			name = ProtoEntry;
+			sourceTree = "<group>";
+		};
+		24F6440F1CC14E2200491504 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		2F9AF01FEF86122469A28741 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12C54ED6513D81B96056A17E /* Pods-SEngage.debug.xcconfig */,
+				4400BEC86E5A07CEDB7EF617 /* Pods-SEngage.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7516C90848B9B561BE8FA0EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D72D75F1A90E0B5174B299E7 /* Pods_SEngage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -798,9 +873,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2485E7761CBBF577006D92A2 /* Build configuration list for PBXNativeTarget "SEngage" */;
 			buildPhases = (
+				FA2871147A977180AA6080FE /* Check Pods Manifest.lock */,
 				2485E74A1CBBF576006D92A2 /* Sources */,
 				2485E74B1CBBF576006D92A2 /* Frameworks */,
 				2485E74C1CBBF576006D92A2 /* Resources */,
+				658FC57EBD7BE587B5808215 /* Embed Pods Frameworks */,
+				A63F91243D9FECB4CEC81102 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -929,6 +1007,7 @@
 				24514F5D1CBFF5EC00299E9B /* Expression_27@2x.png in Resources */,
 				24514F901CBFF5EC00299E9B /* Expression_78@2x.png in Resources */,
 				24514F881CBFF5EC00299E9B /* Expression_70@2x.png in Resources */,
+				24F644021CC14C7A00491504 /* Entity.proto in Resources */,
 				24514F891CBFF5EC00299E9B /* Expression_71@2x.png in Resources */,
 				24514F9E1CBFF5EC00299E9B /* Expression_92@2x.png in Resources */,
 				24514F761CBFF5EC00299E9B /* Expression_52@2x.png in Resources */,
@@ -936,6 +1015,7 @@
 				24514F961CBFF5EC00299E9B /* Expression_84@2x.png in Resources */,
 				24514FAA1CBFF5EC00299E9B /* Expression_104@2x.png in Resources */,
 				24514F5E1CBFF5EC00299E9B /* Expression_28@2x.png in Resources */,
+				24F644051CC14C7A00491504 /* Response.proto in Resources */,
 				24514F621CBFF5EC00299E9B /* Expression_32@2x.png in Resources */,
 				24514F471CBFF5EC00299E9B /* Expression_5@2x.png in Resources */,
 				24514F691CBFF5EC00299E9B /* Expression_39@2x.png in Resources */,
@@ -948,6 +1028,7 @@
 				24514F9D1CBFF5EC00299E9B /* Expression_91@2x.png in Resources */,
 				24514F751CBFF5EC00299E9B /* Expression_51@2x.png in Resources */,
 				24514F981CBFF5EC00299E9B /* Expression_86@2x.png in Resources */,
+				24F644031CC14C7A00491504 /* MsgBase.proto in Resources */,
 				24514FA81CBFF5EC00299E9B /* Expression_102@2x.png in Resources */,
 				24514F411CBFF5EC00299E9B /* DeleteEmoticonBtn@2x.png in Resources */,
 				24514F921CBFF5EC00299E9B /* Expression_80@2x.png in Resources */,
@@ -961,6 +1042,7 @@
 				24514F6A1CBFF5EC00299E9B /* Expression_40@2x.png in Resources */,
 				24514F7E1CBFF5EC00299E9B /* Expression_60@2x.png in Resources */,
 				24514F661CBFF5EC00299E9B /* Expression_36@2x.png in Resources */,
+				24F644041CC14C7A00491504 /* Request.proto in Resources */,
 				24514F801CBFF5EC00299E9B /* Expression_62@2x.png in Resources */,
 				24514F641CBFF5EC00299E9B /* Expression_34@2x.png in Resources */,
 				24514F671CBFF5EC00299E9B /* Expression_37@2x.png in Resources */,
@@ -1033,6 +1115,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		658FC57EBD7BE587B5808215 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SEngage/Pods-SEngage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A63F91243D9FECB4CEC81102 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SEngage/Pods-SEngage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA2871147A977180AA6080FE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2485E74A1CBBF576006D92A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1041,8 +1171,10 @@
 				24514FB41CBFF61200299E9B /* RecordVideoView.swift in Sources */,
 				24514FB31CBFF61200299E9B /* RecordVideoModel.swift in Sources */,
 				24514EC81CBFF55F00299E9B /* EmotionView.swift in Sources */,
+				24F644111CC1608A00491504 /* MessageType.swift in Sources */,
 				2485E7811CBC01E9006D92A2 /* LoginViewController.swift in Sources */,
 				24514E9A1CBFF3D000299E9B /* ChatListTableViewController.swift in Sources */,
+				24F6440D1CC14DA900491504 /* Request.proto.swift in Sources */,
 				2485E79D1CBC380C006D92A2 /* CommonEx.swift in Sources */,
 				24514EA01CBFF3E000299E9B /* ChatListCell.swift in Sources */,
 				24514FC11CC02A7000299E9B /* PublicMethods.swift in Sources */,
@@ -1058,14 +1190,17 @@
 				24514EA31CBFF3EB00299E9B /* ChatList.swift in Sources */,
 				24514EC21CBFF52A00299E9B /* ChatBaseCell.swift in Sources */,
 				24514EB11CBFF4BC00299E9B /* ChatViewController.swift in Sources */,
+				24F6440C1CC14DA900491504 /* MsgBase.proto.swift in Sources */,
 				2485E7841CBC11C2006D92A2 /* AppTheme.swift in Sources */,
 				24514FC31CC02D4400299E9B /* PhotoViewController.swift in Sources */,
 				24514E9F1CBFF3E000299E9B /* ChatListBaseCell.swift in Sources */,
+				24F6440E1CC14DA900491504 /* Response.proto.swift in Sources */,
 				24514EAA1CBFF45200299E9B /* AudioPlayer.swift in Sources */,
 				24514EAD1CBFF45200299E9B /* Observable.swift in Sources */,
 				24514FB91CBFF61C00299E9B /* PlaceAnnotation.swift in Sources */,
 				2485E7A81CBD7D57006D92A2 /* MeTableViewController.swift in Sources */,
 				24514EAC1CBFF45200299E9B /* EmotionManager.swift in Sources */,
+				24F6440B1CC14DA900491504 /* Entity.proto.swift in Sources */,
 				24514EB81CBFF4EC00299E9B /* RecordIndicatorView.swift in Sources */,
 				24514E831CBFEF0F00299E9B /* ContactsTableViewCell.swift in Sources */,
 				24514EB91CBFF4EC00299E9B /* ShareMoreView.swift in Sources */,
@@ -1222,6 +1357,7 @@
 		};
 		2485E7771CBBF577006D92A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12C54ED6513D81B96056A17E /* Pods-SEngage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SEngage/Info.plist;
@@ -1233,6 +1369,7 @@
 		};
 		2485E7781CBBF577006D92A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4400BEC86E5A07CEDB7EF617 /* Pods-SEngage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SEngage/Info.plist;

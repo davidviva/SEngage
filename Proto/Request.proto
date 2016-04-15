@@ -1,0 +1,90 @@
+message LoginRequest {
+optional string username = 1;
+optional string password = 2;
+}
+
+message ConnectRequest {
+optional string username = 1;
+optional string token = 2;
+optional string sessionId = 3;
+}
+
+message ContactUpdateRequest {
+optional string username = 1;
+}
+
+message UserTeamUpdateRequest {
+optional string username = 1;
+}
+
+message TeamUpdateRequest {
+optional string teamKey = 1;
+}
+
+message GetUserAvatarRequest {
+optional string username = 1;
+}
+
+message GetTeamAvatarRequest {
+optional string teamKey = 1;
+}
+
+message UserAvatarChangeRequest {
+optional string user = 1;
+optional bytes avatar = 2;
+}
+message SearchContactRequest {
+optional string keyword = 1;
+optional int32 pageNum = 2;
+}
+
+message ContactAddRequest {
+optional string username = 1;
+}
+
+message ContactRemoveRequest {
+optional string username = 1;
+}
+
+message StatusChangeRequest {
+optional int32 status = 1;
+}
+
+message ChatMessageOutboundRequest {
+optional string receiver = 1;
+optional bytes content = 2;
+optional string msgKey = 3;
+}
+
+message MessageRemoveRequest {
+optional string msgKey = 1;
+optional bool isTeam = 2;
+optional string sender = 3;
+optional string receiver = 4;
+}
+
+message GroupCreateRequest {
+optional string teamName = 1;
+repeated string members = 2;
+optional bytes avatar = 3;
+}
+
+message GroupRemoveRequest {
+optional string teamKey = 1;
+}
+
+message GroupAddMemberRequest {
+optional string teamKey = 1;
+optional string member = 2;
+}
+
+message GroupRemoveMemberRequest {
+optional string teamKey = 1;
+optional string member = 2;
+}
+
+message GroupMessageOutboundRequest {
+optional string teamKey = 1;
+optional bytes content = 2;
+optional string msgKey = 3;
+}

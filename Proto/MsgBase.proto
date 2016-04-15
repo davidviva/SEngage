@@ -1,0 +1,73 @@
+message Msg {
+    enum Type {
+        // MessageType defined for interaction with Client
+        UNKNOWN = 0;
+        LOGIN = 1;
+        LOGIN_RESP = 2;
+        CONNECT = 3;
+        CONNECT_RESP = 4;
+        LOGOUT = 5;
+
+        CONTACT_UPDATE = 6;
+        CONTACT_UPDATE_RESP = 7;
+        USER_TEAM_UPDATE = 8;
+        USER_TEAM_UPDATE_RESP = 9;
+        GET_USER_AVATAR = 10;
+        USER_AVATAR_NOTICE = 11;
+        GET_TEAM_AVATAR = 12;
+        TEAM_AVATAR_NOTICE = 13;
+        USER_AVATAR_CHANGE = 14;
+        USER_AVATAR_CHANGE_RESP = 15;
+        TEAM_AVATAR_CHANGE = 16;
+        TEAM_AVATAR_CHANGE_RESP = 17;
+        TEAM_UPDATE = 18;
+        TEAM_UPDATE_RESP = 19;
+
+        CONTACT_ADD = 200;
+        CONTACT_ADD_RESP = 201;
+        CONTACT_REMOVE = 202;
+        CONTACT_REMOVE_RESP = 203;
+
+        GROUP_CREATE = 211;
+        GROUP_CREATE_RESP = 212;
+        GROUP_REMOVE = 213;
+        GROUP_REMOVE_RESP = 214;
+        GROUP_ADD_MEMBER = 219;
+        GROUP_ADD_MEMBER_RESP = 220;
+        GROUP_REMOVE_MEMBER = 221;
+        GROUP_REMOVE_MEMBER_RESP = 222;
+
+        SEARCH_CONTACT = 230;
+        SEARCH_CONTACT_RESULT = 231;
+
+        // General Message: Peers
+        CHAT_MESSAGE_OUTBOUND = 121;
+        CHAT_MESSAGE_OUTBOUND_RESP = 122;
+        CHAT_MESSAGE_INBOUND = 123;
+
+        // General Message: Group
+        GROUP_MESSAGE_OUTBOUND = 125;
+        GROUP_MESSAGE_OUTBOUND_RESP = 126;
+        GROUP_MESSAGE_INBOUND = 127;
+
+        // Message Process
+        // MESSAGE_FLAG = 129;
+        // CANCEL_MESSAGE_FLAG = 131;
+
+        MESSAGE_REMOVE = 135;
+        MESSAGE_REMOVE_RESP = 136;
+        MESSAGE_UPDATE = 137;
+        MESSAGE_UPDATE_RESP = 138;
+
+        // App Operations
+        // APP_ADD = 251;
+        // APP_ADD_RESP = 252;
+        // APP_REMOVE = 253;
+        // APP_REMOVE_RESP = 254;
+
+        STATUS_NOTICE = 500;
+        STATUS_CHANGE = 501;
+    }
+    required Type msgtype = 1;
+    required bytes body = 2;
+}

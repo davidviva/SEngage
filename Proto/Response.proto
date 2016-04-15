@@ -1,0 +1,133 @@
+import "Entity.proto";
+
+message Status {
+    enum Type {
+        option allow_alias = true;
+
+        DEFAULT_SUCCESS = 0;
+        CONNECT_SUCCESS = 0;
+        DEFAULT_FAILURE = -1;
+        CONNECT_FAILED = 1;
+        CONNECT_ILLEGAL = 2;
+        CONNECT_SESSION_EXPIRED = 3;
+
+        CONTACT_CREATED = 0;
+        CONTACT_UPDATED = 1;
+
+        CONTACT_REMOVED = 0;
+        CONTACT_REMOVE_FAILED = 1;
+
+        DISCONNECT_SUCCESS = 7;
+        DISCONNECT_FAILED = 8;
+
+        APP_NOT_FOUND = 1;
+        APP_ADD_ALREADY_EXIXTS = 2;
+        APP_REMOVE_ALREADY_DELETED = 2;
+    }
+    optional Type type = 1;
+}
+
+message LoginResponse {
+    enum ErrType {
+        UNKNWON = 0;
+        BAD_REQUEST = 1;
+        INVALID_USERNAME = 2;
+        INVALID_PASSWORD = 3;
+        NO_USER = 4;
+        AUTHENTICATION_FAILURE = 5;
+        DEFAULT_FAILURE = 6;
+    }
+    optional ErrType errtype = 1;
+    optional bool success = 2;
+    optional Session session = 3;
+    optional User user = 4;
+}
+
+message ConnectResponse {
+optional Status status = 1;
+optional User user = 2;
+}
+
+
+message ContactUpdateResponse {
+    repeated User contacts = 1;
+}
+
+message UserTeamUpdateResponse {
+    repeated SimpleTeam teams = 1;
+}
+
+message TeamUpdateResponse {
+    optional Team team = 1;
+}
+
+message UserAvatarNoticeResponse {
+    optional string username = 1;
+    optional bytes avatar = 2;
+}
+
+message TeamAvatarNoticeResponse {
+    optional string teamKey = 1;
+    optional bytes avatar = 2;
+}
+
+message SearchContactResponse {
+    repeated User results = 1;
+}
+
+message UserAvatarChangeResponse {
+    optional Status status = 1;
+}
+
+message ContactAddResponse {
+    optional Status status = 1;
+    optional User user = 2;
+}
+
+message ContactRemoveResponse {
+    optional Status status = 1;
+    optional string username = 2;
+}
+
+message StatusNoticeResponse {
+    optional int32 status = 1;
+    optional string username = 2;
+}
+
+message ChatMessageResponse {
+    optional Status status = 1;
+    optional string sender = 2;
+    optional bytes content = 3;
+    optional string msgKey = 4;
+}
+
+message MessageRemoveResponse {
+    optional Status status = 1;
+    optional string msgKey = 2;
+    optional bool isTeam = 3;
+    optional string sender = 4;
+    optional string receiver = 5;
+}
+
+message GroupCreateResponse {
+    optional Status status = 1;
+    optional Team team = 2;
+    optional bytes avatar = 3;
+}
+
+message GroupRemoveResponse {
+    optional Status status = 1;
+    optional string teamKey = 2;
+}
+
+message GroupAddMemberResponse {
+    optional Status status = 1;
+    optional string teamKey = 2;
+    optional User member = 3;
+}
+
+message GroupRemoveMemberResponse {
+    optional Status status = 1;
+    optional string teamKey = 2;
+    optional string member = 3;
+}
