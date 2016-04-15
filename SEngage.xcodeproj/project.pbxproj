@@ -167,7 +167,6 @@
 		2485E7881CBC1237006D92A2 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2485E7871CBC1237006D92A2 /* FontAwesome.otf */; };
 		2485E78A1CBC1253006D92A2 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7891CBC1253006D92A2 /* AppSettings.swift */; };
 		2485E78F1CBC1C7A006D92A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2485E78D1CBC1C7A006D92A2 /* Main.storyboard */; };
-		2485E7941CBC302F006D92A2 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7931CBC302F006D92A2 /* UserInfo.swift */; };
 		2485E79B1CBC380C006D92A2 /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7981CBC380C006D92A2 /* CGRectEx.swift */; };
 		2485E79C1CBC380C006D92A2 /* ColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7991CBC380C006D92A2 /* ColorEx.swift */; };
 		2485E79D1CBC380C006D92A2 /* CommonEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E79A1CBC380C006D92A2 /* CommonEx.swift */; };
@@ -360,7 +359,6 @@
 		2485E7871CBC1237006D92A2 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = SnapE/Resources/FontAwesome.otf; sourceTree = "<group>"; };
 		2485E7891CBC1253006D92A2 /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppSettings.swift; path = SnapE/Resources/AppSettings.swift; sourceTree = "<group>"; };
 		2485E78E1CBC1C7A006D92A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2485E7931CBC302F006D92A2 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfo.swift; path = SnapE/Login/Model/UserInfo.swift; sourceTree = "<group>"; };
 		2485E7981CBC380C006D92A2 /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGRectEx.swift; path = SnapE/Extension/CGRectEx.swift; sourceTree = "<group>"; };
 		2485E7991CBC380C006D92A2 /* ColorEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorEx.swift; path = SnapE/Extension/ColorEx.swift; sourceTree = "<group>"; };
 		2485E79A1CBC380C006D92A2 /* CommonEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommonEx.swift; path = SnapE/Extension/CommonEx.swift; sourceTree = "<group>"; };
@@ -727,7 +725,6 @@
 		2485E77F1CBBFE3B006D92A2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				2485E7921CBC2FAF006D92A2 /* Model */,
 				2485E7A91CBD8B4E006D92A2 /* RootViewController.swift */,
 				2485E7801CBC01E9006D92A2 /* LoginViewController.swift */,
 				2485E78D1CBC1C7A006D92A2 /* Main.storyboard */,
@@ -755,14 +752,6 @@
 				2485E79A1CBC380C006D92A2 /* CommonEx.swift */,
 			);
 			name = Extension;
-			sourceTree = "<group>";
-		};
-		2485E7921CBC2FAF006D92A2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				2485E7931CBC302F006D92A2 /* UserInfo.swift */,
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 		2485E7A11CBD780C006D92A2 /* Supports */ = {
@@ -1090,7 +1079,6 @@
 				24514EA41CBFF3EB00299E9B /* ChatListCellModel.swift in Sources */,
 				24514FB21CBFF61200299E9B /* AVPlayView.swift in Sources */,
 				24514E9E1CBFF3E000299E9B /* ButtonView.swift in Sources */,
-				2485E7941CBC302F006D92A2 /* UserInfo.swift in Sources */,
 				2485E7521CBBF577006D92A2 /* AppDelegate.swift in Sources */,
 				24514EC61CBFF52A00299E9B /* ChatVoiceCell.swift in Sources */,
 			);
