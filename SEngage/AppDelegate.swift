@@ -8,6 +8,15 @@
 
 import UIKit
 
+
+// Establish TCP channel
+var tcpsocket = TCPClient(addr: ServerConfig.addr, port: ServerConfig.port)
+var tcpRequest = TCPRequest()
+var tcpResponse = TCPResponse()
+
+var reqQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+var respQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -17,52 +26,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var socketErrMsg: String = ""
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        // TODO: Initialize socket connector
-        (self.socketConnection, self.socketErrMsg) = tcpsocket.connect(timeout: 5)
-        if self.socketConnection {
-            print("Connection success!")
-        } else {
-            print("Socket Connected Error: \(self.socketErrMsg)")
-        }
-        
+        connectSocket()
         runThread()
-        
         return true
-    }
-    
-    func runThread() {
-        dispatch_async(respQueue) { () -> Void in
-            print("Thread Go!")
-            while self.socketConnection {
-                //Connect
-                let msg: Msg = tcpResponse.readResponse()
-                if msg.hasMsgtype {
-                    dispatch_async(dispatch_get_main_queue(), {
-                        //                        print("ok")
-                        tcpResponse.processRespMsg(msg)
-                    })
-                } else {
-                    print("empty")
-                }
-            }
-        }
     }
     
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-        // socket connector.disconnect()
-        let (success, errmsg) = tcpsocket.close()
-        if success {
-            //Submission
-            print("Socket Close!")
-            self.socketConnection = false
-        } else {
-            print("Socket Closed Error: \(errmsg)")
-        }
         
-        
+        closeSocket()
     }
     
     func applicationDidEnterBackground(application: UIApplication) {
@@ -72,15 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-        // Socket connector.connect()
-        (self.socketConnection, self.socketErrMsg) = tcpsocket.connect(timeout: 5)
-        if self.socketConnection {
-            //Submission
-            print("Connection success!")
-        } else {
-            print("Socket Closed Error: \(self.socketErrMsg)")
-        }
-        
+        connectSocket()
         runThread()
     }
     
@@ -91,21 +56,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        closeSocket()
+    }
+    
+    func runThread() {
+        dispatch_async(respQueue) { () -> Void in
+            print("Thread Go!")
+            while self.socketConnection {
+                //Connect
+                let msg: Msg = tcpResponse.readResponse()
+                if msg.hasMsgtype {
+                    dispatch_async(dispatch_get_main_queue(), {
+                        tcpResponse.processRespMsg(msg)
+                    })
+                } else {
+                    print("empty")
+                }
+            }
+        }
+    }
+    
+    // Initialize socket connector
+    func connectSocket() {
+        (self.socketConnection, self.socketErrMsg) = tcpsocket.connect(timeout: 5)
+        if self.socketConnection {
+            print("Connection success!")
+        } else {
+            print("Socket Connected Error: \(self.socketErrMsg)")
+        }
+    }
+    
+    func closeSocket() {
+        // socket connector.disconnect()
         let (success, errmsg) = tcpsocket.close()
         if success {
-            //Submission
-            print("Socket Close!")
-            self.socketConnection = false
+        //Submission
+        print("Socket Close!")
+        self.socketConnection = false
         } else {
-            print("Socket Closed Error: \(errmsg)")
+        print("Socket Closed Error: \(errmsg)")
         }
     }
 }
 
-var tcpsocket = TCPClient(addr: ServerConfig.addr, port: ServerConfig.port) // Establish TCP channel
-var tcpRequest = TCPRequest() // TCP request object
-var tcpResponse = TCPResponse() // TCP response object
-var reqQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
-var respQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 
 

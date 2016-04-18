@@ -117,7 +117,7 @@ class TCPResponse {
     var connectClosure: Closure.ConnectClosure?
     var searchContactClosure: Closure.SearchContactClosure?
     
-    func LoginClosure(closure: Closure.LoginClosure) {
+    func loginClosure(closure: Closure.LoginClosure) {
         self.loginClosure = closure
     }
     

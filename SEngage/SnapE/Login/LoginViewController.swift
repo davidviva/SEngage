@@ -231,10 +231,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
     @IBAction func loginAction(sender: UIButton) {
         self.username = self.txtUser.text ?? ""
         self.password = self.txtPwd.text ?? ""
-        waitImage()
+//        waitImage()
         dispatch_async(reqQueue) { () -> Void in
             tcpRequest.login(self.username, password: self.password)
-            tcpResponse.LoginClosure(self.processResult)
+            tcpResponse.loginClosure(self.processResult)
         }
     }
     
@@ -260,35 +260,38 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    let imageView = UIImageView(frame: CGRectMake(0, 20, 600, 900))
-    
-    func waitImage() {
-        self.imageView.image = UIImage(named: "launch.png")
-        self.txtUser.resignFirstResponder()
-        self.txtPwd.resignFirstResponder()
-        self.view.addSubview(imageView)
-    }
+//    let imageView = UIImageView(frame: CGRectMake(0, 20, 600, 900))
+//    
+//    func waitImage() {
+//        self.imageView.image = UIImage(named: "launch.png")
+//        self.txtUser.resignFirstResponder()
+//        self.txtPwd.resignFirstResponder()
+//        self.view.addSubview(imageView)
+//    }
     
     func processResult(content: LoginResponse) {
         dispatch_async(dispatch_get_main_queue(), {
             if content.success {
-                self.imageView.removeFromSuperview()
+//                self.imageView.removeFromSuperview()
                 print("\(content)")
                 userReceived = content.user
                 sessionReceived = content.session
                 token = sessionReceived.token
                 sessionId = sessionReceived.sessionId
                 handle = userReceived.username
-                //self.skipToMainScreen()
+                
+                // skip with segue
                 self.performSegueWithIdentifier("Login", sender: self)
+//                self.skipToMainScreen()
             } else {
                 self.resultLogin(content.errtype)
-                self.imageView.removeFromSuperview()
+//                self.imageView.removeFromSuperview()
             }
         })
     }
     
     func skipToMainScreen() {
+        // Skip with storyboard id
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let skip = sb.instantiateViewControllerWithIdentifier("MainScreen") as! UITabBarController
         self.presentViewController(skip, animated: true, completion: nil)
