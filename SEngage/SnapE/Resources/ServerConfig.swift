@@ -9,6 +9,7 @@
 import Foundation
 
 struct ServerConfig {
-    static let addr: String = "135.55.22.44"
+    static let addr: String = "135.55.22.123"
+    // "135.55.22.44"
     static let port: Int = 9014
 }
