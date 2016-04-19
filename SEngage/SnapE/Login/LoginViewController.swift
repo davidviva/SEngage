@@ -54,11 +54,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
     func initialPanel() {
         // Get the size of the screen
         let mainSize = UIScreen.mainScreen().bounds.size
+        
+        // Set the background image
+        let logoBackgroundViewRect:CGRect = CGRect(x: 0.0, y: 0.0 , width: mainSize.width, height:mainSize.height)
+        let logoBackgroundView:UIImageView = UIImageView(frame: logoBackgroundViewRect)
+        logoBackgroundView.image = UIImage(named:"AvayaLogoBackground")
+        self.scrollView.addSubview(logoBackgroundView)
+        
         // Get the image of owl
         imgLogin =  UIImageView(frame:CGRectMake(mainSize.width/2-211/2, 100, 211, 109))
         imgLogin.image = UIImage(named:"owl-login")
         imgLogin.layer.masksToBounds = true
-        self.view.addSubview(imgLogin)
+        self.scrollView.addSubview(imgLogin)
         
         // left-hand （hide eye）
         let rectLeftHand = CGRectMake(61 - offsetLeftHand, 90, 40, 65)
@@ -78,21 +85,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
         vLogin.layer.borderColor = UIColor.lightGrayColor().CGColor
         vLogin.backgroundColor = UIColor.whiteColor()
         vLogin.layer.cornerRadius = 10
-        self.view.addSubview(vLogin)
+        self.scrollView.addSubview(vLogin)
         
         // left hand (unhide eye)
         let rectLeftHandGone = CGRectMake(mainSize.width / 2 - 100,
                                           vLogin.frame.origin.y - 22, 40, 40)
         imgLeftHandGone = UIImageView(frame:rectLeftHandGone)
         imgLeftHandGone.image = UIImage(named:"icon_hand")
-        self.view.addSubview(imgLeftHandGone)
+        self.scrollView.addSubview(imgLeftHandGone)
         
         // right hand (unhide eye)
         let rectRightHandGone = CGRectMake(mainSize.width / 2 + 62,
                                            vLogin.frame.origin.y - 22, 40, 40)
         imgRightHandGone = UIImageView(frame:rectRightHandGone)
         imgRightHandGone.image = UIImage(named:"icon_hand")
-        self.view.addSubview(imgRightHandGone)
+        self.scrollView.addSubview(imgRightHandGone)
         
         // Settings for userName text field
         txtUser = UITextField(frame:CGRectMake(30, 30, vLogin.frame.size.width - 60, 44))
@@ -138,7 +145,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
         loginButton.titleLabel!.font = UIFont(name: "Helvetica Bold", size: 14)
         loginButton.addTarget(self, action: #selector(LoginViewController.loginAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.loginButtonPosition = loginButton.center
-        self.view.addSubview(loginButton)
+        self.scrollView.addSubview(loginButton)
     }
     
     // Settings for editing the text fields
