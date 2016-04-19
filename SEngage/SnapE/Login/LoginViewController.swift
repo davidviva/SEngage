@@ -20,7 +20,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
     // Identify the text fields
     var txtUser:UITextField!
     var txtPwd:UITextField!
-    @IBOutlet weak var scrollView: UIScrollView!
+    var scrollView: UIScrollView!
     var loginButton: UIButton!
     var loginButtonPosition:CGPoint?
     
@@ -54,6 +54,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
     func initialPanel() {
         // Get the size of the screen
         let mainSize = UIScreen.mainScreen().bounds.size
+        
+        // Set the scroll view
+        scrollView=UIScrollView()
+        scrollView.frame=self.view.bounds
+        self.view.addSubview(scrollView)
         
         // Set the background image
         let logoBackgroundViewRect:CGRect = CGRect(x: 0.0, y: 0.0 , width: mainSize.width, height:mainSize.height)

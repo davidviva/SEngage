@@ -16,21 +16,9 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrV-OJ-2LL">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </scrollView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="xrV-OJ-2LL" secondAttribute="trailing" id="UEK-sV-9YQ"/>
-                            <constraint firstItem="xrV-OJ-2LL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YM8-wT-05h"/>
-                            <constraint firstItem="xrV-OJ-2LL" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="jqe-Qd-NLn"/>
-                            <constraint firstItem="xrV-OJ-2LL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yl9-5o-0rq"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="scrollView" destination="xrV-OJ-2LL" id="Qua-OY-BMC"/>
                         <segue destination="MtX-Oa-1Lw" kind="show" identifier="Login" id="Jxj-oT-OHF"/>
                     </connections>
                 </viewController>
