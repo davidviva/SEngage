@@ -253,9 +253,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
                     self.scrollView.setContentOffset(CGPointMake(0, loginCenter.y + keyboardFrame.height + 30 - screenSize.height), animated: true)
                 }
             }
-            //            else {
-            //                self.scrollView.setContentOffset(CGPointMake(0, keyboardFrame.height/6), animated: true)
-            //            }
         }
     }
     func keyboardPullViewDown(notification:NSNotification){
@@ -268,9 +265,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
     }
 
     @IBAction func loginAction(sender: UIButton) {
+        self.txtUser.userInteractionEnabled = false
+        self.txtPwd.userInteractionEnabled = false
+        self.loginButton.enabled = false
+        
         self.username = self.txtUser.text ?? ""
         self.password = self.txtPwd.text ?? ""
-//        waitImage()
         dispatch_async(reqQueue) { () -> Void in
             tcpRequest.login(self.username, password: self.password)
             tcpResponse.loginClosure(self.processResult)
@@ -282,26 +282,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
         return UIInterfaceOrientationMask.Portrait
     }
     
-    // Alert for result of login
-    func alertToggle(msg: String) {
-        let alert = UIAlertController(title: "Error!" , message: msg, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default,handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
-    
-//    let imageView = UIImageView(frame: CGRectMake(0, 20, 600, 900))
-//    
-//    func waitImage() {
-//        self.imageView.image = UIImage(named: "launch.png")
-//        self.txtUser.resignFirstResponder()
-//        self.txtPwd.resignFirstResponder()
-//        self.view.addSubview(imageView)
-//    }
-    
     func processResult(content: LoginResponse) {
         dispatch_async(dispatch_get_main_queue(), {
             if content.success {
-//                self.imageView.removeFromSuperview()
                 print("\(content)")
                 userReceived = content.user
                 sessionReceived = content.session
@@ -314,16 +297,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
 //                self.skipToMainScreen()
             } else {
                 self.resultLogin(content.errtype)
-//                self.imageView.removeFromSuperview()
+                self.txtUser.userInteractionEnabled = true
+                self.txtPwd.userInteractionEnabled = true
+                self.loginButton.enabled = true
             }
         })
-    }
-    
-    func skipToMainScreen() {
-        // Skip with storyboard id
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let skip = sb.instantiateViewControllerWithIdentifier("MainScreen") as! UITabBarController
-        self.presentViewController(skip, animated: true, completion: nil)
     }
     
     // Error type
@@ -337,5 +315,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
             alertToggle("Password is invalid!")
         default: alertToggle("Unknown error!")
         }
+    }
+    
+    
+    // Alert for result of login
+    func alertToggle(msg: String) {
+        let alert = UIAlertController(title: "Error!" , message: msg, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 }
