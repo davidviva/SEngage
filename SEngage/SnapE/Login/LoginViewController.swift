@@ -46,9 +46,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialPanel()
+        
         // Register the gesture for dismissing the keyboard
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(LoginViewController.handleTap(_:))))
-        initialPanel()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(LoginViewController.keyboardPushViewUp(_:)),
+                                                         name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(LoginViewController.keyboardPullViewDown(_:)),name:
+            UIKeyboardWillHideNotification, object: nil);
     }
     
     func initialPanel() {
@@ -235,9 +241,30 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
         sender.cancelsTouchesInView = false
     }
     
+    func keyboardPushViewUp(notification:NSNotification){
+        if let info:NSDictionary = notification.userInfo {
+            let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+            
+            if let loginCenter:CGPoint = self.loginButtonPosition {
+                let screenSize: CGRect = UIScreen.mainScreen().bounds
+                let distance = loginCenter.y + keyboardFrame.height + 30 - screenSize.height
+                
+                if distance > 0 {
+                    self.scrollView.setContentOffset(CGPointMake(0, loginCenter.y + keyboardFrame.height + 30 - screenSize.height), animated: true)
+                }
+            }
+            //            else {
+            //                self.scrollView.setContentOffset(CGPointMake(0, keyboardFrame.height/6), animated: true)
+            //            }
+        }
+    }
+    func keyboardPullViewDown(notification:NSNotification){
+        self.scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func loginAction(sender: UIButton) {
@@ -249,16 +276,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
             tcpResponse.loginClosure(self.processResult)
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     // Only portrait view
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
