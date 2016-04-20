@@ -8,38 +8,63 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController {
+class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    var photo: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.title = "Photo"
-        // Get the size of the screen
-        let mainSize = UIScreen.mainScreen().bounds.size
-        // Get the image of owl
-        photo =  UIImageView(frame:CGRectMake(mainSize.width/2-211/2, 100, 211, 109))
-        photo.image = UIImage(named:"default_photo")
-        photo.layer.masksToBounds = true
-        self.view.addSubview(photo)
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func moreAction(sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: "", message: "Change your profile photo",
+                                                preferredStyle: .ActionSheet)
+        let cameraAction = UIAlertAction(title: "Take Photo", style: .Default, handler:{
+            action in
+            if UIImagePickerController.isSourceTypeAvailable(.Camera){
+                // Create the image picker controller
+                let picker = UIImagePickerController()
+                // Set the delegate
+                picker.delegate = self
+                // Set the source
+                picker.sourceType = UIImagePickerControllerSourceType.Camera
+                picker.allowsEditing = true
+                if UIImagePickerController.isCameraDeviceAvailable(UIImagePickerControllerCameraDevice.Front){
+                    picker.cameraDevice = UIImagePickerControllerCameraDevice.Front
+                }
+                picker.cameraFlashMode = UIImagePickerControllerCameraFlashMode.Auto
+                // Open the camera
+                self.presentViewController(picker, animated: true, completion: { () -> Void in
+                    
+                })
+            }else{
+                print("Cannot find the camera device")
+            }
+        })
+        let pickPhotoAction = UIAlertAction(title: "Choose from Photos", style: .Default, handler: {
+            action in
+            if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary){
+                let picker = UIImagePickerController()
+                picker.delegate = self
+                picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+                picker.allowsEditing = true
+                self.presentViewController(picker, animated: true, completion: {
+                    () -> Void in
+                })
+            }else{
+                print("Cannot access the photo library")
+            }
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        alertController.addAction(cameraAction)
+        alertController.addAction(pickPhotoAction)
+        alertController.addAction(cancelAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
-    */
-
 }

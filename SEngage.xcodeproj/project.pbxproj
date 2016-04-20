@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2413C0FF1CC7CD42005D9AA2 /* MeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2413C0FE1CC7CD42005D9AA2 /* MeSB.storyboard */; };
 		24514E7F1CBFEF0000299E9B /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514E7C1CBFEF0000299E9B /* ContactDetailViewController.swift */; };
 		24514E801CBFEF0000299E9B /* contactsSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24514E7D1CBFEF0000299E9B /* contactsSB.storyboard */; };
 		24514E811CBFEF0000299E9B /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514E7E1CBFEF0000299E9B /* ContactsTableViewController.swift */; };
@@ -170,7 +171,6 @@
 		2485E79B1CBC380C006D92A2 /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7981CBC380C006D92A2 /* CGRectEx.swift */; };
 		2485E79C1CBC380C006D92A2 /* ColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7991CBC380C006D92A2 /* ColorEx.swift */; };
 		2485E79D1CBC380C006D92A2 /* CommonEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E79A1CBC380C006D92A2 /* CommonEx.swift */; };
-		2485E7A61CBD7CB6006D92A2 /* MeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2485E7A51CBD7CB6006D92A2 /* MeSB.storyboard */; };
 		2485E7A81CBD7D57006D92A2 /* MeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7A71CBD7D57006D92A2 /* MeTableViewController.swift */; };
 		2485E7AA1CBD8B4E006D92A2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7A91CBD8B4E006D92A2 /* RootViewController.swift */; };
 		24F644021CC14C7A00491504 /* Entity.proto in Resources */ = {isa = PBXBuildFile; fileRef = 24F643FE1CC14C7A00491504 /* Entity.proto */; };
@@ -210,6 +210,7 @@
 
 /* Begin PBXFileReference section */
 		12C54ED6513D81B96056A17E /* Pods-SEngage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SEngage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SEngage/Pods-SEngage.debug.xcconfig"; sourceTree = "<group>"; };
+		2413C0FE1CC7CD42005D9AA2 /* MeSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MeSB.storyboard; path = SnapE/Me/MeSB.storyboard; sourceTree = "<group>"; };
 		24514E7C1CBFEF0000299E9B /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactDetailViewController.swift; path = SnapE/Contacts/ContactDetailViewController.swift; sourceTree = "<group>"; };
 		24514E7D1CBFEF0000299E9B /* contactsSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = contactsSB.storyboard; path = SnapE/Contacts/contactsSB.storyboard; sourceTree = "<group>"; };
 		24514E7E1CBFEF0000299E9B /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsTableViewController.swift; path = SnapE/Contacts/ContactsTableViewController.swift; sourceTree = "<group>"; };
@@ -379,7 +380,6 @@
 		2485E7981CBC380C006D92A2 /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGRectEx.swift; path = SnapE/Extension/CGRectEx.swift; sourceTree = "<group>"; };
 		2485E7991CBC380C006D92A2 /* ColorEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorEx.swift; path = SnapE/Extension/ColorEx.swift; sourceTree = "<group>"; };
 		2485E79A1CBC380C006D92A2 /* CommonEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommonEx.swift; path = SnapE/Extension/CommonEx.swift; sourceTree = "<group>"; };
-		2485E7A51CBD7CB6006D92A2 /* MeSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MeSB.storyboard; path = SnapE/Me/MeSB.storyboard; sourceTree = "<group>"; };
 		2485E7A71CBD7D57006D92A2 /* MeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeTableViewController.swift; path = SnapE/Me/MeTableViewController.swift; sourceTree = "<group>"; };
 		2485E7A91CBD8B4E006D92A2 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = SnapE/Login/RootViewController.swift; sourceTree = "<group>"; };
 		24F643FE1CC14C7A00491504 /* Entity.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Entity.proto; path = Proto/Entity.proto; sourceTree = "<group>"; };
@@ -810,9 +810,9 @@
 		2485E7A21CBD7C8C006D92A2 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				2413C0FE1CC7CD42005D9AA2 /* MeSB.storyboard */,
 				2485E7A41CBD7C99006D92A2 /* View */,
 				2485E7A31CBD7C93006D92A2 /* Model */,
-				2485E7A51CBD7CB6006D92A2 /* MeSB.storyboard */,
 				2485E7A71CBD7D57006D92A2 /* MeTableViewController.swift */,
 				24514FC21CC02D4400299E9B /* PhotoViewController.swift */,
 			);
@@ -1089,6 +1089,7 @@
 				24514F9B1CBFF5EC00299E9B /* Expression_89@2x.png in Resources */,
 				2485E7881CBC1237006D92A2 /* FontAwesome.otf in Resources */,
 				24514F7A1CBFF5EC00299E9B /* Expression_56@2x.png in Resources */,
+				2413C0FF1CC7CD42005D9AA2 /* MeSB.storyboard in Resources */,
 				24514F491CBFF5EC00299E9B /* Expression_7@2x.png in Resources */,
 				24514F861CBFF5EC00299E9B /* Expression_68@2x.png in Resources */,
 				24514F591CBFF5EC00299E9B /* Expression_23@2x.png in Resources */,
@@ -1102,7 +1103,6 @@
 				24514F8B1CBFF5EC00299E9B /* Expression_73@2x.png in Resources */,
 				24514F481CBFF5EC00299E9B /* Expression_6@2x.png in Resources */,
 				24514F741CBFF5EC00299E9B /* Expression_50@2x.png in Resources */,
-				2485E7A61CBD7CB6006D92A2 /* MeSB.storyboard in Resources */,
 				24514FA71CBFF5EC00299E9B /* Expression_101@2x.png in Resources */,
 				24514F951CBFF5EC00299E9B /* Expression_83@2x.png in Resources */,
 				24514F7F1CBFF5EC00299E9B /* Expression_61@2x.png in Resources */,
