@@ -10,18 +10,17 @@ import UIKit
 
 class Contact {
     // MARK: Properties
-    
     var name: String
-//    var phone: String
-//    var email: String
+    var phone: String
+    var email: String
     var photo: UIImage?
     
     // MARK: Initialization
-    init?(name: String, photo: UIImage?){
+    init?(name: String, photo: UIImage?, email: String, phone: String){
         // Initialize stored properties.
         self.name = name
-//        self.phone = phone
-//        self.email = email
+        self.phone = phone
+        self.email = email
         self.photo = photo
         
         // Initialization should fail if there is no name

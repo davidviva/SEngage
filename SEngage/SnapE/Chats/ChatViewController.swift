@@ -330,9 +330,9 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
     
     func recordClick(button: UIButton) {
         button.setTitle("Release     to end", forState: .Normal)
-        button.addTarget(self, action: "recordComplection:", forControlEvents: .TouchUpInside)
-        button.addTarget(self, action: "recordDragOut:", forControlEvents: .TouchDragOutside)
-        button.addTarget(self, action: "recordCancel:", forControlEvents: .TouchUpOutside)
+        button.addTarget(self, action: #selector(ChatViewController.recordComplection(_:)), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(ChatViewController.recordDragOut(_:)), forControlEvents: .TouchDragOutside)
+        button.addTarget(self, action: #selector(ChatViewController.recordCancel(_:)), forControlEvents: .TouchUpOutside)
         
         let currentTime = NSDate().timeIntervalSinceReferenceDate
         let record = AudioRecorder(fileName: "\(currentTime).wav")

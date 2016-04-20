@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2413C0FF1CC7CD42005D9AA2 /* MeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2413C0FE1CC7CD42005D9AA2 /* MeSB.storyboard */; };
 		2413C1031CC7D548005D9AA2 /* SEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2413C1021CC7D548005D9AA2 /* SEViewController.swift */; };
+		2413C1051CC80C56005D9AA2 /* AddContacTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2413C1041CC80C56005D9AA2 /* AddContacTableViewController.swift */; };
+		2413C1071CC80E08005D9AA2 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2413C1061CC80E08005D9AA2 /* SearchResultTableViewCell.swift */; };
 		24514E7F1CBFEF0000299E9B /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514E7C1CBFEF0000299E9B /* ContactDetailViewController.swift */; };
 		24514E801CBFEF0000299E9B /* contactsSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24514E7D1CBFEF0000299E9B /* contactsSB.storyboard */; };
 		24514E811CBFEF0000299E9B /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514E7E1CBFEF0000299E9B /* ContactsTableViewController.swift */; };
@@ -213,6 +215,8 @@
 		12C54ED6513D81B96056A17E /* Pods-SEngage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SEngage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SEngage/Pods-SEngage.debug.xcconfig"; sourceTree = "<group>"; };
 		2413C0FE1CC7CD42005D9AA2 /* MeSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MeSB.storyboard; path = SnapE/Me/MeSB.storyboard; sourceTree = "<group>"; };
 		2413C1021CC7D548005D9AA2 /* SEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SEViewController.swift; path = SnapE/Resources/SEViewController.swift; sourceTree = "<group>"; };
+		2413C1041CC80C56005D9AA2 /* AddContacTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddContacTableViewController.swift; path = SnapE/Contacts/AddContacTableViewController.swift; sourceTree = "<group>"; };
+		2413C1061CC80E08005D9AA2 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultTableViewCell.swift; path = SnapE/Contacts/View/SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		24514E7C1CBFEF0000299E9B /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactDetailViewController.swift; path = SnapE/Contacts/ContactDetailViewController.swift; sourceTree = "<group>"; };
 		24514E7D1CBFEF0000299E9B /* contactsSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = contactsSB.storyboard; path = SnapE/Contacts/contactsSB.storyboard; sourceTree = "<group>"; };
 		24514E7E1CBFEF0000299E9B /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsTableViewController.swift; path = SnapE/Contacts/ContactsTableViewController.swift; sourceTree = "<group>"; };
@@ -443,6 +447,7 @@
 				24514E7E1CBFEF0000299E9B /* ContactsTableViewController.swift */,
 				24514E7B1CBFEEC400299E9B /* View */,
 				24514E7A1CBFEEBE00299E9B /* Model */,
+				2413C1041CC80C56005D9AA2 /* AddContacTableViewController.swift */,
 			);
 			name = Contacts;
 			sourceTree = "<group>";
@@ -459,6 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				24514E821CBFEF0F00299E9B /* ContactsTableViewCell.swift */,
+				2413C1061CC80E08005D9AA2 /* SearchResultTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1216,9 +1222,11 @@
 				2485E7AA1CBD8B4E006D92A2 /* RootViewController.swift in Sources */,
 				24514EA31CBFF3EB00299E9B /* ChatList.swift in Sources */,
 				24514EC21CBFF52A00299E9B /* ChatBaseCell.swift in Sources */,
+				2413C1051CC80C56005D9AA2 /* AddContacTableViewController.swift in Sources */,
 				24514EB11CBFF4BC00299E9B /* ChatViewController.swift in Sources */,
 				24F6440C1CC14DA900491504 /* MsgBase.proto.swift in Sources */,
 				24F6441D1CC1807000491504 /* TCPResponse.swift in Sources */,
+				2413C1071CC80E08005D9AA2 /* SearchResultTableViewCell.swift in Sources */,
 				2485E7841CBC11C2006D92A2 /* AppTheme.swift in Sources */,
 				24514FC31CC02D4400299E9B /* PhotoViewController.swift in Sources */,
 				24514E9F1CBFF3E000299E9B /* ChatListBaseCell.swift in Sources */,

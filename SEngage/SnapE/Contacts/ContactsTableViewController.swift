@@ -30,10 +30,10 @@ class ContactsTableViewController: UITableViewController {
     
     func loadSampleContacts() {
         let photo1 = UIImage(named: "contact1")!
-        let contact1 = Contact(name: "Yan Wu", photo: photo1)!
+        let contact1 = Contact(name: "Yan Wu", photo: photo1, email: "1", phone: "1")!
         
         let photo2 = UIImage(named: "contact2")!
-        let contact2 = Contact(name: "Hayden Woo", photo: photo2)!
+        let contact2 = Contact(name: "Hayden Woo", photo: photo2, email: "2", phone: "2")!
         
         contacts += [contact1, contact2]
     }

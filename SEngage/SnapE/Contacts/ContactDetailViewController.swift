@@ -25,10 +25,4 @@ class ContactDetailViewController: SEViewController {
             contactPhoto.image = contact.photo
         }
     }
-    
-    // MARK: Navigaiton
-    @IBAction func Back(sender: UIBarButtonItem) {
-        navigationController!.popViewControllerAnimated(true)
-        
-    }
 }
