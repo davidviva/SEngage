@@ -82,10 +82,10 @@ class MapViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        let item = UIBarButtonItem(title: "返回", style: .Plain, target: self, action: "dismissView")
+        let item = UIBarButtonItem(title: "返回", style: .Plain, target: self, action: #selector(MapViewController.dismissView))
         self.navigationItem.leftBarButtonItem = item
         
-        let send = UIBarButtonItem(title: "发送", style: .Plain, target: self, action: "send")
+        let send = UIBarButtonItem(title: "发送", style: .Plain, target: self, action: #selector(MapViewController.send))
         self.navigationItem.rightBarButtonItem = send
     }
     

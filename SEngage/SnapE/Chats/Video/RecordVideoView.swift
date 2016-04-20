@@ -56,10 +56,10 @@ class RecordVideoView: UIView {
             recordButton.layer.borderWidth = 1.5
             recordButton.layer.borderColor = UIColor.orangeColor().CGColor
             recordButton.setTitle("Hold to start", forState: .Normal)
-            recordButton.addTarget(self, action: "buttonTouchDown", forControlEvents: .TouchDown)
-            recordButton.addTarget(self, action: "buttonDragOutside", forControlEvents: .TouchDragOutside)
-            recordButton.addTarget(self, action: "buttonCancel", forControlEvents: .TouchUpOutside)
-            recordButton.addTarget(self, action: "buttonTouchUp", forControlEvents: .TouchUpInside)
+            recordButton.addTarget(self, action: #selector(RecordVideoView.buttonTouchDown), forControlEvents: .TouchDown)
+            recordButton.addTarget(self, action: #selector(RecordVideoView.buttonDragOutside), forControlEvents: .TouchDragOutside)
+            recordButton.addTarget(self, action: #selector(RecordVideoView.buttonCancel), forControlEvents: .TouchUpOutside)
+            recordButton.addTarget(self, action: #selector(RecordVideoView.buttonTouchUp), forControlEvents: .TouchUpInside)
             addSubview(recordButton)
             
             progressView = UIProgressView(frame: CGRectZero)
@@ -113,7 +113,7 @@ class RecordVideoView: UIView {
         self.progressView2.hidden = false
         indicatorView.hidden = false
         indicatorView.text = "Slide up to cancel"
-        recordTimer = NSTimer(timeInterval: 1.0, target: self, selector: "recordTimerUpdate", userInfo: nil, repeats: true)
+        recordTimer = NSTimer(timeInterval: 1.0, target: self, selector: #selector(RecordVideoView.recordTimerUpdate), userInfo: nil, repeats: true)
         NSRunLoop.mainRunLoop().addTimer(recordTimer, forMode: NSRunLoopCommonModes)
     }
     

@@ -153,7 +153,7 @@ class ToolBarView: UIView {
 class InputTextView: UITextView {
     override func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool {
         if (delegate as! ChatViewController).tableView.indexPathForSelectedRow != nil {
-            return action == "copyAction:"
+            return action == #selector(InputTextView.copyAction(_:))
         } else {
             return super.canPerformAction(action, withSender: sender)
         }

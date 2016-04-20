@@ -107,11 +107,11 @@ class RecordVideoModel: NSObject, AVCaptureFileOutputRecordingDelegate {
         captureDevice.subjectAreaChangeMonitoringEnabled = true
         captureDevice.unlockForConfiguration()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "notificateAreChanged:", name: AVCaptureDeviceSubjectAreaDidChangeNotification, object: newCaptureDevice)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RecordVideoModel.notificateAreChanged(_:)), name: AVCaptureDeviceSubjectAreaDidChangeNotification, object: newCaptureDevice)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "notificateSessionError:", name: AVCaptureSessionRuntimeErrorNotification, object: captureSession)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "sessionWasInterrupted:", name: AVCaptureSessionWasInterruptedNotification, object: captureSession)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "sessionInterruptEnd:", name: AVCaptureSessionInterruptionEndedNotification, object: captureSession)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RecordVideoModel.notificateSessionError(_:)), name: AVCaptureSessionRuntimeErrorNotification, object: captureSession)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RecordVideoModel.sessionWasInterrupted(_:)), name: AVCaptureSessionWasInterruptedNotification, object: captureSession)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RecordVideoModel.sessionInterruptEnd(_:)), name: AVCaptureSessionInterruptionEndedNotification, object: captureSession)
     }
     
     func removeNotificationFromDevice(oldCaptureDevice: AVCaptureDevice) {

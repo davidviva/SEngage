@@ -43,7 +43,7 @@ class EmotionView: UIView , UIScrollViewDelegate{
         pageCtrl.currentPage = 0
         
         for i in 0...pageCount-1 {
-            let emojiView = EmojiView(frame: CGRectMake(CGFloat(i) * bounds.width, 0, bounds.width, bounds.height - 30), index: i, parentView: self, selector: "emojiClick:")
+            let emojiView = EmojiView(frame: CGRectMake(CGFloat(i) * bounds.width, 0, bounds.width, bounds.height - 30), index: i, parentView: self, selector: #selector(EmotionView.emojiClick(_:)))
             scrollView.addSubview(emojiView)
         }
     }
@@ -119,7 +119,7 @@ class EmojiView: UIView {
                 if emotionIndex <= emotionCount + 1 {
                     let button = UIButton(type: .Custom)
                     addSubview(button)
-                    button.addTarget(parent, action: "emojiClick:", forControlEvents: .TouchUpInside)
+                    button.addTarget(parent, action: #selector(EmotionView.emojiClick(_:)), forControlEvents: .TouchUpInside)
                     button.frame = CGRectMake(CGFloat(j * buttonH) + CGFloat(horizontalEdge) + CGFloat(j) * horizontalMargin,
                         CGFloat(i * buttonH) + CGFloat(verticalEdge) + CGFloat(i) * CGFloat(verticalEdge),
                         CGFloat(buttonH),

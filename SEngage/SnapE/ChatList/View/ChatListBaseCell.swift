@@ -116,12 +116,12 @@ class ChatListBaseCell: UITableViewCell {
             NSLayoutConstraint(item: cellScrollView, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: cellScrollView, attribute: .Right, relatedBy: .Equal, toItem: self, attribute: .Right, multiplier: 1, constant: 0)])
         
-        tapGesture = UITapGestureRecognizer(target: self, action: "scrollViewTapped:")
+        tapGesture = UITapGestureRecognizer(target: self, action: #selector(ChatListBaseCell.scrollViewTapped(_:)))
         tapGesture.delegate = self
         tapGesture.cancelsTouchesInView = false
         cellScrollView.addGestureRecognizer(tapGesture)
         
-        longPressGesture = UILongPressGestureRecognizer(target: self, action: "scrollViewPress:")
+        longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(ChatListBaseCell.scrollViewPress(_:)))
         longPressGesture.delegate = self
         longPressGesture.cancelsTouchesInView = false
         longPressGesture.minimumPressDuration = 0.15
@@ -130,12 +130,12 @@ class ChatListBaseCell: UITableViewCell {
         leftButtonContainView = UIView()
         leftButtonContainView.tag = 10030
         leftConstraint = NSLayoutConstraint(item: leftButtonContainView, attribute: .Right, relatedBy: .Equal, toItem: self, attribute: .Left, multiplier: 1, constant: 0)
-        leftButtonView = ButtonView(buttons: [UIButton](), parentCell: self, buttonSelector: Selector("leftButtonHandle:"))
+        leftButtonView = ButtonView(buttons: [UIButton](), parentCell: self, buttonSelector: #selector(ChatListBaseCell.leftButtonHandle(_:)))
         
         rightButtonContainView = UIView(frame: bounds)
         rightButtonContainView.tag = 10020
         rightConstraint = NSLayoutConstraint(item: rightButtonContainView, attribute: .Left, relatedBy: .Equal, toItem: self, attribute: .Right, multiplier: 1, constant: 0)
-        rightButtonView = ButtonView(buttons: [UIButton](), parentCell: self, buttonSelector: Selector("rightButtonHandler:"))
+        rightButtonView = ButtonView(buttons: [UIButton](), parentCell: self, buttonSelector: #selector(ChatListBaseCell.rightButtonHandler(_:)))
         
         let containViews = [rightButtonContainView, leftButtonContainView]
         let containLayout = [rightConstraint, leftConstraint]
@@ -259,7 +259,7 @@ class ChatListBaseCell: UITableViewCell {
     
     func shouldHighlight() -> Bool {
         var shouldHighlight = true
-        if containingTableView.delegate!.respondsToSelector("tableView:shouldHighlightRowAtIndexPath:") {
+        if containingTableView.delegate!.respondsToSelector(#selector(UITableViewDelegate.tableView(_:shouldHighlightRowAtIndexPath:))) {
             let cellIndexPath = containingTableView.indexPathForCell(self)
             shouldHighlight = (containingTableView.delegate?.tableView!(containingTableView, shouldHighlightRowAtIndexPath: cellIndexPath!))!
         }
@@ -305,12 +305,12 @@ class ChatListBaseCell: UITableViewCell {
     func selectCell() {
         if cellStatus == .Center {
             var cellIndexPath = containingTableView.indexPathForCell(self)
-            if containingTableView.delegate!.respondsToSelector("tableView:willSelectRowAtIndexPath:") {
+            if containingTableView.delegate!.respondsToSelector(#selector(UITableViewDelegate.tableView(_:willSelectRowAtIndexPath:))) {
                 cellIndexPath = containingTableView.delegate?.tableView!(containingTableView, willSelectRowAtIndexPath: cellIndexPath!)
             }
             if cellIndexPath != nil {
                 containingTableView.selectRowAtIndexPath(cellIndexPath, animated: false, scrollPosition: .None)
-                if containingTableView.delegate!.respondsToSelector("tableView:didSelectRowAtIndexPath:") {
+                if containingTableView.delegate!.respondsToSelector(#selector(UITableViewDelegate.tableView(_:didSelectRowAtIndexPath:))) {
                     containingTableView.delegate?.tableView!(containingTableView, didSelectRowAtIndexPath: cellIndexPath!)
                 }
             }
@@ -320,14 +320,14 @@ class ChatListBaseCell: UITableViewCell {
     func deselectCell() {
         if cellStatus == .Center {
             var cellIndexPath = containingTableView.indexPathForCell(self)
-            if containingTableView.delegate!.respondsToSelector("tableView:willDeselectRowAtIndexPath:") {
+            if containingTableView.delegate!.respondsToSelector(#selector(UITableViewDelegate.tableView(_:willDeselectRowAtIndexPath:))) {
                 cellIndexPath = containingTableView.delegate?.tableView!(containingTableView, willDeselectRowAtIndexPath: cellIndexPath!)
             }
             
             if cellIndexPath != nil {
                 containingTableView.deselectRowAtIndexPath(cellIndexPath!, animated: false)
                 
-                if containingTableView.delegate!.respondsToSelector("tableView:didDeselectRowAtIndexPath:") {
+                if containingTableView.delegate!.respondsToSelector(#selector(UITableViewDelegate.tableView(_:didDeselectRowAtIndexPath:))) {
                     containingTableView.delegate?.tableView!(containingTableView, didDeselectRowAtIndexPath: cellIndexPath!)
                 }
             }

@@ -96,7 +96,7 @@ class RecordIndicatorView: UIView {
         if level > images.count {
             return
         }
-        performSelectorOnMainThread("showIndicatorImage:", withObject: NSNumber(integer: level), waitUntilDone: false)
+        performSelectorOnMainThread(#selector(RecordIndicatorView.showIndicatorImage(_:)), withObject: NSNumber(integer: level), waitUntilDone: false)
     }
     
     func showIndicatorImage(level: NSNumber) {

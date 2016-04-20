@@ -32,7 +32,7 @@ class VideoController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "tapView:"))
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(VideoController.tapView(_:))))
     }
     
     func tapView(gesture: UITapGestureRecognizer) {
@@ -79,7 +79,7 @@ class VideoController: UIViewController {
         layer.player = play
         
         playItem.addObserver(self, forKeyPath: "status", options: .New, context: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "videoPlayDidEnd:", name: AVPlayerItemDidPlayToEndTimeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(VideoController.videoPlayDidEnd(_:)), name: AVPlayerItemDidPlayToEndTimeNotification, object: nil)
     }
     
     
