@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2413C0FF1CC7CD42005D9AA2 /* MeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2413C0FE1CC7CD42005D9AA2 /* MeSB.storyboard */; };
+		2413C1031CC7D548005D9AA2 /* SEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2413C1021CC7D548005D9AA2 /* SEViewController.swift */; };
 		24514E7F1CBFEF0000299E9B /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514E7C1CBFEF0000299E9B /* ContactDetailViewController.swift */; };
 		24514E801CBFEF0000299E9B /* contactsSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24514E7D1CBFEF0000299E9B /* contactsSB.storyboard */; };
 		24514E811CBFEF0000299E9B /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514E7E1CBFEF0000299E9B /* ContactsTableViewController.swift */; };
@@ -211,6 +212,7 @@
 /* Begin PBXFileReference section */
 		12C54ED6513D81B96056A17E /* Pods-SEngage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SEngage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SEngage/Pods-SEngage.debug.xcconfig"; sourceTree = "<group>"; };
 		2413C0FE1CC7CD42005D9AA2 /* MeSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MeSB.storyboard; path = SnapE/Me/MeSB.storyboard; sourceTree = "<group>"; };
+		2413C1021CC7D548005D9AA2 /* SEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SEViewController.swift; path = SnapE/Resources/SEViewController.swift; sourceTree = "<group>"; };
 		24514E7C1CBFEF0000299E9B /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactDetailViewController.swift; path = SnapE/Contacts/ContactDetailViewController.swift; sourceTree = "<group>"; };
 		24514E7D1CBFEF0000299E9B /* contactsSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = contactsSB.storyboard; path = SnapE/Contacts/contactsSB.storyboard; sourceTree = "<group>"; };
 		24514E7E1CBFEF0000299E9B /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsTableViewController.swift; path = SnapE/Contacts/ContactsTableViewController.swift; sourceTree = "<group>"; };
@@ -776,6 +778,7 @@
 		2485E7821CBC0466006D92A2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2413C1021CC7D548005D9AA2 /* SEViewController.swift */,
 				24514FBB1CC01D1700299E9B /* PublicStrings.swift */,
 				2485E7871CBC1237006D92A2 /* FontAwesome.otf */,
 				2485E7831CBC11C2006D92A2 /* AppTheme.swift */,
@@ -1190,6 +1193,7 @@
 			files = (
 				24F644131CC17F4300491504 /* ServerConfig.swift in Sources */,
 				24514FB41CBFF61200299E9B /* RecordVideoView.swift in Sources */,
+				2413C1031CC7D548005D9AA2 /* SEViewController.swift in Sources */,
 				24514FB31CBFF61200299E9B /* RecordVideoModel.swift in Sources */,
 				24514EC81CBFF55F00299E9B /* EmotionView.swift in Sources */,
 				24F6441C1CC1807000491504 /* TCPRequest.swift in Sources */,

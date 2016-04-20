@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContactDetailViewController: UIViewController {
+class ContactDetailViewController: SEViewController {
     
     // MARK: Properties
     @IBOutlet weak var contactNameLabel: UILabel!

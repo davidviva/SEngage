@@ -28,7 +28,7 @@ let messageInSound: SystemSoundID = {
     return soundID
 }()
 
-class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate , UITextViewDelegate {
+class ChatViewController: SEViewController, UITableViewDataSource, UITableViewDelegate , UITextViewDelegate {
 
     var tableView: UITableView!
     var toolBarView: ToolBarView!
