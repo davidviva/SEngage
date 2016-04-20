@@ -81,9 +81,9 @@ class ChatViewController: SEViewController, UITableViewDataSource, UITableViewDe
         emojiView = EmotionView(frame: CGRectMake(0, 0, view.bounds.width, 196))
         emojiView.delegate = self
         
-        shareView = ShareMoreView(frame: CGRectMake(0, 0, view.bounds.width, 196), selector: "shareMoreClick:", target: self)
+        shareView = ShareMoreView(frame: CGRectMake(0, 0, view.bounds.width, 196), selector: #selector(ChatViewController.shareMoreClick(_:)), target: self)
         
-        toolBarView = ToolBarView(taget: self, voiceSelector: "voiceClick:", recordSelector: "recordClick:", emotionSelector: "emotionClick:", moreSelector: "moreClick:")
+        toolBarView = ToolBarView(taget: self, voiceSelector: #selector(ChatViewController.voiceClick(_:)), recordSelector: #selector(ChatViewController.recordClick(_:)), emotionSelector: #selector(ChatViewController.emotionClick(_:)), moreSelector: #selector(ChatViewController.moreClick(_:)))
         toolBarView.textView.delegate = self
         view.addSubview(toolBarView)
         
@@ -156,12 +156,12 @@ class ChatViewController: SEViewController, UITableViewDataSource, UITableViewDe
         }
         
         // add gustureRecognizer to show menu items
-        let action: Selector = "showMenuAction:"
+        let action: Selector = #selector(ChatViewController.showMenuAction(_:))
         let doubleTapGesture = UITapGestureRecognizer(target: self, action: action)
         doubleTapGesture.numberOfTapsRequired = 2
         cell.backgroundImageView.addGestureRecognizer(doubleTapGesture)
         cell.backgroundImageView.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: action))
-        cell.backgroundImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "clickCellAction:"))
+        cell.backgroundImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ChatViewController.clickCellAction(_:))))
         
         if indexPath.row > 0 {
             let preMessage = messageList[indexPath.row - 1]
@@ -243,7 +243,7 @@ class ChatViewController: SEViewController, UITableViewDataSource, UITableViewDe
             let localImageView = gestureRecognizer.view!
             
             menuController.setTargetRect(localImageView.frame, inView: localImageView.superview!)
-            menuController.menuItems = [UIMenuItem(title: "Copy", action: "copyAction:"), UIMenuItem(title: "Forward", action: "transtionAction:"), UIMenuItem(title: "Delete", action: "deleteAction:"), UIMenuItem(title: "More", action: "moreAciton:")]
+            menuController.menuItems = [UIMenuItem(title: "Copy", action: #selector(ChatViewController.copyAction(_:))), UIMenuItem(title: "Forward", action: #selector(ChatViewController.transtionAction(_:))), UIMenuItem(title: "Delete", action: #selector(ChatViewController.deleteAction(_:))), UIMenuItem(title: "More", action: #selector(ChatViewController.moreAciton(_:)))]
             
             menuController.setMenuVisible(true, animated: true)
         }
@@ -439,7 +439,7 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
         videoRecordView = RecordVideoView(frame: CGRectMake(0, view.bounds.height * 0.4, view.bounds.width, view.bounds.height * 0.6))
         videoRecordBakgoundView = UIView(frame: view.bounds)
         videoRecordBakgoundView.backgroundColor = UIColor.blackColor()
-        videoRecordBakgoundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "videoBackgroundViewClick:"))
+        videoRecordBakgoundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ChatViewController.videoBackgroundViewClick(_:))))
         videoRecordBakgoundView.alpha = 0.6
         videoRecordView.alpha = 1.0
         
