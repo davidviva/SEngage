@@ -54,8 +54,8 @@ class ChatListTableViewController: UITableViewController, ChatListBaseCellDelega
     // just for test message
     
     let image = ["icon1", "icon2", "icon3", "icon4", "icon0"]
-    let name = ["招商银行信用卡中心", "微信运动", "just for IOS", "jamy", "腾讯新闻"]
-    let time = ["13:14", "23:45", "昨天", "星期五", "15/10/19"]
+    let name = ["mike", "john", "sunny", "jamy", "peter"]
+    let time = ["13:14", "23:45", "Yesterday", "Friday", "15/10/19"]
     let message = ["iPhone 6s 和 iPhone 6s Plus 可使用中国移动、中国联通或中国电信的网络", "如果你从 apple.com 购买 iPhone，则此 iPhone 为无合约 iPhone。你可以直接联系运营商，了解适用于 iPhone 的服务套餐。", "http://www.apple.com/cn/iphone-6s/", "你是我的眼", "do you know who I am"]
     
     func updateCell() -> ChatListCellModel{

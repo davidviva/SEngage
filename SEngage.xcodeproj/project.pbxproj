@@ -168,8 +168,6 @@
 		2485E7721CBBF577006D92A2 /* SEngageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7711CBBF577006D92A2 /* SEngageUITests.swift */; };
 		2485E7811CBC01E9006D92A2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7801CBC01E9006D92A2 /* LoginViewController.swift */; };
 		2485E7841CBC11C2006D92A2 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7831CBC11C2006D92A2 /* AppTheme.swift */; };
-		2485E7881CBC1237006D92A2 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2485E7871CBC1237006D92A2 /* FontAwesome.otf */; };
-		2485E78A1CBC1253006D92A2 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7891CBC1253006D92A2 /* AppSettings.swift */; };
 		2485E78F1CBC1C7A006D92A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2485E78D1CBC1C7A006D92A2 /* Main.storyboard */; };
 		2485E79B1CBC380C006D92A2 /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7981CBC380C006D92A2 /* CGRectEx.swift */; };
 		2485E79C1CBC380C006D92A2 /* ColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7991CBC380C006D92A2 /* ColorEx.swift */; };
@@ -380,8 +378,6 @@
 		2485E7731CBBF577006D92A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2485E7801CBC01E9006D92A2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = SnapE/Login/LoginViewController.swift; sourceTree = "<group>"; };
 		2485E7831CBC11C2006D92A2 /* AppTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppTheme.swift; path = SnapE/Resources/AppTheme.swift; sourceTree = "<group>"; };
-		2485E7871CBC1237006D92A2 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = SnapE/Resources/FontAwesome.otf; sourceTree = "<group>"; };
-		2485E7891CBC1253006D92A2 /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppSettings.swift; path = SnapE/Resources/AppSettings.swift; sourceTree = "<group>"; };
 		2485E78E1CBC1C7A006D92A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2485E7981CBC380C006D92A2 /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGRectEx.swift; path = SnapE/Extension/CGRectEx.swift; sourceTree = "<group>"; };
 		2485E7991CBC380C006D92A2 /* ColorEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorEx.swift; path = SnapE/Extension/ColorEx.swift; sourceTree = "<group>"; };
@@ -786,9 +782,7 @@
 			children = (
 				2413C1021CC7D548005D9AA2 /* SEViewController.swift */,
 				24514FBB1CC01D1700299E9B /* PublicStrings.swift */,
-				2485E7871CBC1237006D92A2 /* FontAwesome.otf */,
 				2485E7831CBC11C2006D92A2 /* AppTheme.swift */,
-				2485E7891CBC1253006D92A2 /* AppSettings.swift */,
 				24514FC01CC02A7000299E9B /* PublicMethods.swift */,
 				24F644121CC17F4300491504 /* ServerConfig.swift */,
 			);
@@ -1096,7 +1090,6 @@
 				24514F3F1CBFF5EC00299E9B /* around-friends_keybroad@2x.png in Resources */,
 				24514F7D1CBFF5EC00299E9B /* Expression_59@2x.png in Resources */,
 				24514F9B1CBFF5EC00299E9B /* Expression_89@2x.png in Resources */,
-				2485E7881CBC1237006D92A2 /* FontAwesome.otf in Resources */,
 				24514F7A1CBFF5EC00299E9B /* Expression_56@2x.png in Resources */,
 				2413C0FF1CC7CD42005D9AA2 /* MeSB.storyboard in Resources */,
 				24514F491CBFF5EC00299E9B /* Expression_7@2x.png in Resources */,
@@ -1244,7 +1237,6 @@
 				2485E79B1CBC380C006D92A2 /* CGRectEx.swift in Sources */,
 				24514EC41CBFF52A00299E9B /* ChatTextCell.swift in Sources */,
 				24F644201CC1807000491504 /* ytcpsocket.swift in Sources */,
-				2485E78A1CBC1253006D92A2 /* AppSettings.swift in Sources */,
 				2485E79C1CBC380C006D92A2 /* ColorEx.swift in Sources */,
 				24514E7F1CBFEF0000299E9B /* ContactDetailViewController.swift in Sources */,
 				24514EBA1CBFF4EC00299E9B /* ToolBarView.swift in Sources */,

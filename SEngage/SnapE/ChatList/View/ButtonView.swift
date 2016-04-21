@@ -56,7 +56,7 @@ class ButtonView: UIView {
                 }
                 addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[button]|", options: .DirectionLeadingToTrailing, metrics: nil, views: ["button": button]))
                 
-                buttonIndex++
+                buttonIndex += 1
                 let gesture = ButtonTapGestureRecognizer(target: parentCell, action: buttonSelector)
                 gesture.buttonIndex = buttonIndex
                 button.addGestureRecognizer(gesture)
