@@ -82,14 +82,14 @@ class ContactsTableViewController: UITableViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ShowDetail" {
-            let contactDetailViewController = segue.destinationViewController as! ContactDetailViewController
+        if segue.identifier == "showDetail" {
+            let contactDetailTableViewController = segue.destinationViewController as! ContactDetailTableViewController
             
             // Get the cell that generated this segue
             if let selectedContactCell = sender as? ContactsTableViewCell {
                 let indexPath = tableView.indexPathForCell(selectedContactCell)!
                 let selectedContact = contacts[indexPath.row]
-                contactDetailViewController.contact = selectedContact
+                contactDetailTableViewController.contact = selectedContact
             }
         }
         else if segue.identifier == "AddContact" {

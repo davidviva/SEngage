@@ -283,25 +283,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
     }
     
     func processResult(content: LoginResponse) {
-        dispatch_async(dispatch_get_main_queue(), {
-            if content.success {
-                print("\(content)")
-                userReceived = content.user
-                sessionReceived = content.session
-                token = sessionReceived.token
-                sessionId = sessionReceived.sessionId
-                handle = userReceived.username
-                
-                // skip with segue
-                self.performSegueWithIdentifier("Login", sender: self)
-//                self.skipToMainScreen()
-            } else {
-                self.resultLogin(content.errtype)
-                self.txtUser.userInteractionEnabled = true
-                self.txtPwd.userInteractionEnabled = true
-                self.loginButton.enabled = true
-            }
-        })
+        self.performSegueWithIdentifier("Login", sender: self)
+//        dispatch_async(dispatch_get_main_queue(), {
+//            if content.success {
+//                print("\(content)")
+//                userReceived = content.user
+//                sessionReceived = content.session
+//                token = sessionReceived.token
+//                sessionId = sessionReceived.sessionId
+//                handle = userReceived.username
+//                
+//                // skip with segue
+//                self.performSegueWithIdentifier("Login", sender: self)
+////                self.skipToMainScreen()
+//            } else {
+//                self.resultLogin(content.errtype)
+//                self.txtUser.userInteractionEnabled = true
+//                self.txtPwd.userInteractionEnabled = true
+//                self.loginButton.enabled = true
+//            }
+//        })
     }
     
     // Error type
