@@ -6,12 +6,11 @@
 //  Copyright © 2016 Avaya. All rights reserved.
 //
 
-import CoreData
 import UIKit
 
 class PublicMethods {
     // Scopia
-    class func makeScopiaHttpLink(extensionStr:String)->String?{
+    static func makeScopiaHttpLink(extensionStr:String)->String?{
         if(extensionStr.characters.count>4){
             if(extensionStr[extensionStr.startIndex] == "+"){
                 return PublicStrings.SCOPIA_PREFIX_HTTP + extensionStr.substringFromIndex(extensionStr.startIndex.advancedBy(1))
@@ -22,7 +21,7 @@ class PublicMethods {
             return nil
         }
     }
-    class func makeScopiaLink(extensionStr:String)->String?{
+    static func makeScopiaLink(extensionStr:String)->String?{
         if(extensionStr.characters.count>4){
             if(extensionStr[extensionStr.startIndex] == "+"){
                 return PublicStrings.SCOPIA_PREFIX +  extensionStr.substringFromIndex(extensionStr.startIndex.advancedBy(1))
@@ -34,7 +33,7 @@ class PublicMethods {
         }
     }
     
-    class func enterScopiaRoomWithExtension(extensionStr:String) {
+    static func enterScopiaRoomWithExtension(extensionStr:String) {
         // Process the extension string first
         var scopiaLink:String = "";
         var httpLink:String = ""
@@ -57,12 +56,12 @@ class PublicMethods {
         }
     }
     
-    class func enterScopiaRoomWithMeetingId(meetingId:String) {
+    static func enterScopiaRoomWithMeetingId(meetingId:String) {
         let linkStr = PublicStrings.SCOPIA_PREFIX_HTTP_FORWARD + meetingId;
         enterScopiaRoomWithHttpLink(linkStr)
     }
     
-    class func enterScopiaRoomWithHttpLink(linkStr:String) {
+    static func enterScopiaRoomWithHttpLink(linkStr:String) {
         if(linkStr.characters.count > 4){
             let scopiaLink:String = "scopia:" + linkStr;
             if(UIApplication.sharedApplication().canOpenURL(NSURL(string: scopiaLink)!)){

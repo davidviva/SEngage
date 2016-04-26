@@ -1,4 +1,5 @@
 PODS:
+  - MJRefresh (3.1.0)
   - ProtocolBuffers-Swift (2.4.3)
   - Realm (0.98.7):
     - Realm/Headers (= 0.98.7)
@@ -7,10 +8,12 @@ PODS:
     - Realm (= 0.98.7)
 
 DEPENDENCIES:
+  - MJRefresh
   - ProtocolBuffers-Swift
   - RealmSwift
 
 SPEC CHECKSUMS:
+  MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   ProtocolBuffers-Swift: afbdde78be3c6af8a610d2c257d6bc88e8c7c5d4
   Realm: 46df2178359b6b57812e6cf957956febaba513a5
   RealmSwift: 3056e6d7ad30ed50dd866185a615fccea73db5f5

@@ -21,21 +21,9 @@ class ContactsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.title = "Contacts"
-//        view.backgroundColor = UIColor.groupTableViewBackgroundColor()
         
-        loadSampleContacts()
+        contacts = GenerateData.generateContacts(10)
         contacts.sortInPlace({$0.name < $1.name})
-    }
-    
-    func loadSampleContacts() {
-        let photo1 = UIImage(named: "contact1")!
-        let contact1 = Contact(name: "Yan Wu", photo: photo1, email: "1", phone: "1")!
-        
-        let photo2 = UIImage(named: "contact2")!
-        let contact2 = Contact(name: "Hayden Woo", photo: photo2, email: "2", phone: "2")!
-        
-        contacts += [contact1, contact2]
     }
     
     override func didReceiveMemoryWarning() {
@@ -78,6 +66,17 @@ class ContactsTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell,
+                   forRowAtIndexPath indexPath: NSIndexPath){
+        //设置cell的显示动画为3D缩放
+        //xy方向缩放的初始值为0.1
+        cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1)
+        //设置动画时间为0.25秒，xy方向缩放的最终值为1
+        UIView.animateWithDuration(0.25, animations: {
+            cell.layer.transform=CATransform3DMakeScale(1, 1, 1)
+        })
+    }
+    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -92,7 +91,7 @@ class ContactsTableViewController: UITableViewController {
                 contactDetailTableViewController.contact = selectedContact
             }
         }
-        else if segue.identifier == "AddContact" {
+        else if segue.identifier == "addContact" {
             print("Adding new contact.")
         }
     }
@@ -114,39 +113,4 @@ class ContactsTableViewController: UITableViewController {
         }
         return 0
     }
-    
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-    // Return false if you do not want the specified item to be editable.
-    return true
-    }
-    */
-    
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-    if editingStyle == .Delete {
-    // Delete the row from the data source
-    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-    } else if editingStyle == .Insert {
-    // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }
-    }
-    */
-    
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-    
-    }
-    */
-    
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-    // Return false if you do not want the item to be re-orderable.
-    return true
-    }
-    */
 }

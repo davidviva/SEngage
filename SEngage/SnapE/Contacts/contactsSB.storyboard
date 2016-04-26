@@ -268,8 +268,11 @@
                                                     <color key="backgroundColor" red="0.98725867146596857" green="0.19375055559953486" blue="0.3275755283381776" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="Scopia"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.conrnerRadius">
                                                             <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="keyPath">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>

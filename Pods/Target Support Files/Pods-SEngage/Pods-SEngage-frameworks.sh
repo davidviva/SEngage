@@ -84,11 +84,13 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-SEngage/MJRefresh.framework"
   install_framework "Pods-SEngage/ProtocolBuffers.framework"
   install_framework "Pods-SEngage/Realm.framework"
   install_framework "Pods-SEngage/RealmSwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-SEngage/MJRefresh.framework"
   install_framework "Pods-SEngage/ProtocolBuffers.framework"
   install_framework "Pods-SEngage/Realm.framework"
   install_framework "Pods-SEngage/RealmSwift.framework"

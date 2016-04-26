@@ -13,6 +13,7 @@ class MeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "My Profile"
+        
     }
 
     override func didReceiveMemoryWarning() {

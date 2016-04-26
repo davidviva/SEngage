@@ -11,6 +11,8 @@ pod 'ProtocolBuffers-Swift'
 
 pod 'RealmSwift'
 
+pod 'MJRefresh'
+
 end
 
 target 'SEngageTests' do

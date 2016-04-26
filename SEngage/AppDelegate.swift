@@ -16,6 +16,8 @@ var tcpResponse = TCPResponse()
 
 var reqQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 var respQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+//var realmQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+//let dbService = LocalDBService()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var socketConnection: Bool = false
     var socketErrMsg: String = ""
+    
+    var stopThread: Bool = false
+    var timer: NSTimer?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         connectSocket()
@@ -63,17 +68,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         dispatch_async(respQueue) { () -> Void in
             print("Thread Go!")
             while self.socketConnection {
+                print("Loop Go!")
                 //Connect
+                self.timer?.invalidate()
                 let msg: Msg = tcpResponse.readResponse()
                 if msg.hasMsgtype {
                     dispatch_async(dispatch_get_main_queue(), {
+                        //                        print("ok")
                         tcpResponse.processRespMsg(msg)
                     })
                 } else {
+                    self.timer = NSTimer(timeInterval: 60, target: self, selector: #selector(AppDelegate.threadHandler), userInfo: nil, repeats: true)
                     print("empty")
+                    if self.stopThread {
+                        break
+                    }
                 }
             }
+            print("Loop Stop!")
         }
+    }
+    
+    func threadHandler() {
+        self.stopThread = true
     }
     
     // Initialize socket connector

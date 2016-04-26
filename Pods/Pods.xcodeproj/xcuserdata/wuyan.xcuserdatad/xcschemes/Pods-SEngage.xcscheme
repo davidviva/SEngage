@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '3F826F24FDE96C22F9DAF300'
+               BlueprintIdentifier = 'A688419DE16DE5E42982E059'
                BlueprintName = 'Pods-SEngage'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_SEngage.framework'>
