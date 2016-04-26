@@ -21,6 +21,10 @@ class ContactDetailTableViewController: UITableViewController {
     @IBAction func messageAction(sender: UIButton) {
     }
     
+    @IBAction func photoDetail(sender: UITapGestureRecognizer) {
+        
+    }
+    
     var contact: Contact?
     
     override func viewDidLoad() {

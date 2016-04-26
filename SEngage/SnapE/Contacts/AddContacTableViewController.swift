@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import MJRefresh
 
-class AddContacTableViewController: UITableViewController {
+class AddContacTableViewController: UITableViewController, UISearchBarDelegate {
+    
+    // Identify the footer for loading more
+    let footer = MJRefreshAutoNormalFooter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,5 +35,29 @@ class AddContacTableViewController: UITableViewController {
     // set rows in section
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
+    }
+    
+    // Load more at the bottom
+    func footerSetting() {
+        footer.automaticallyHidden = true
+        
+        // Drag up to load more
+        footer.setRefreshingTarget(self, refreshingAction: #selector(self.footerRefresh))
+        // self.mj_footer = footer
+        
+        // set the text for footer
+        footer.setTitle("Click or drag up to load more", forState:MJRefreshState.Idle)
+        footer.setTitle("Loading more ...", forState: MJRefreshState.Refreshing)
+        footer.setTitle("No more data", forState: MJRefreshState.NoMoreData)
+    }
+    //    var index = 0
+    func footerRefresh(){
+        // load more
+        footer.endRefreshing()
+        //        // 2次后模拟没有更多数据
+        //        index = index + 1
+        //        if index > 2 {
+        //            footer.endRefreshingWithNoMoreData()
+        //        }
     }
 }

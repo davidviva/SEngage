@@ -62,7 +62,16 @@ class ContactsTableViewController: UITableViewController {
         
         cell.nameLabel.text = contact.name
         cell.photoImageView.image = contact.photo
-        
+        if contact.status == "idle" {
+            cell.statusImageView.backgroundColor = UIColor.yellowColor()
+        } else if contact.status == "available" {
+            cell.statusImageView.backgroundColor = UIColor.greenColor()
+        } else if contact.status == "busy" {
+            cell.statusImageView.backgroundColor = UIColor.redColor()
+        } else {
+            cell.statusImageView.backgroundColor = UIColor.grayColor()
+            
+        }
         return cell
     }
     

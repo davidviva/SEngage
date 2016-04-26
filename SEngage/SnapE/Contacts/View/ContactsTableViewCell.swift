@@ -12,6 +12,7 @@ class ContactsTableViewCell: UITableViewCell {
     // MARK: Properties
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var statusImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

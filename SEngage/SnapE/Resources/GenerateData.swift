@@ -24,10 +24,11 @@ class GenerateData {
         
         let image = ["icon1", "icon2", "icon3", "icon4", "icon0", "contact1", "contact2"]
         let name = ["mike", "john", "sunny", "jamy", "peter"]
+        let status = ["idle", "available", "busy", "offline"]
         
         while count > 0 {
             photo = UIImage(named: image[random() % 7])!
-            contact = Contact(name: name[random() % 5], photo: photo, email: "1", phone: "1")!
+            contact = Contact(name: name[random() % 5], photo: photo, email: "1", phone: "1", status: status[random() % 4])!
             contacts += [contact]
             count -= 1
         }
