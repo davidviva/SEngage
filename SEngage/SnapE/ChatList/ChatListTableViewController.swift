@@ -50,6 +50,7 @@ class ChatListTableViewController: UITableViewController, ChatListBaseCellDelega
         return cell!
     }
     
+    
     // just for test message
     
     let image = ["icon1", "icon2", "icon3", "icon4", "icon0"]
@@ -76,7 +77,6 @@ class ChatListTableViewController: UITableViewController, ChatListBaseCellDelega
         navigationController?.pushViewController(ChatViewController(), animated: true)
     }
     
-    // Set the height of the cell
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 60.0
     }
