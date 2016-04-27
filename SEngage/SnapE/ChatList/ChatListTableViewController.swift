@@ -12,7 +12,6 @@ class ChatListTableViewController: UITableViewController, ChatListBaseCellDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.rowHeight = 60.0
         self.title = "Chats"
     }
 

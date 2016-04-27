@@ -15,7 +15,7 @@ class PhotoViewController: SEViewController, UIImagePickerControllerDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        imageView.image = user?.photo
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,9 +81,11 @@ class PhotoViewController: SEViewController, UIImagePickerControllerDelegate, UI
         
         // Set photoImageView to display the selected image.
         imageView.image = selectedImage
-        user?.photo = selectedImage
+        
+        // Save the Image in the db and send it to the server
         
         // Dismiss the picker.
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
 }
