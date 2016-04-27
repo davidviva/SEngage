@@ -13,20 +13,20 @@ import AVFoundation
 let toolBarMinHeight: CGFloat = 44.0
 let indicatorViewH: CGFloat = 120
 
-let messageOutSound: SystemSoundID = {
-    var soundID: SystemSoundID = 10120
-    let soundUrl = CFBundleCopyResourceURL(CFBundleGetMainBundle(), "MessageOutgoing", "aiff", nil)
-    AudioServicesCreateSystemSoundID(soundUrl, &soundID)
-    return soundID
-}()
-
-
-let messageInSound: SystemSoundID = {
-    var soundID: SystemSoundID = 10121
-    let soundUrl = CFBundleCopyResourceURL(CFBundleGetMainBundle(), "MessageIncoming", "aiff", nil)
-    AudioServicesCreateSystemSoundID(soundUrl, &soundID)
-    return soundID
-}()
+//let messageOutSound: SystemSoundID = {
+//    var soundID: SystemSoundID = 10120
+//    let soundUrl = CFBundleCopyResourceURL(CFBundleGetMainBundle(), "MessageOutgoing", "aiff", nil)
+//    AudioServicesCreateSystemSoundID(soundUrl, &soundID)
+//    return soundID
+//}()
+//
+//
+//let messageInSound: SystemSoundID = {
+//    var soundID: SystemSoundID = 10121
+//    let soundUrl = CFBundleCopyResourceURL(CFBundleGetMainBundle(), "MessageIncoming", "aiff", nil)
+//    AudioServicesCreateSystemSoundID(soundUrl, &soundID)
+//    return soundID
+//}()
 
 class ChatViewController: SEViewController, UITableViewDataSource, UITableViewDelegate , UITextViewDelegate {
 
@@ -359,7 +359,7 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
             reloadTableView()
             messageList.append(receiveMessage)
             reloadTableView()
-            AudioServicesPlayAlertSound(messageOutSound)
+//            AudioServicesPlayAlertSound(messageOutSound)
         }
     }
     
@@ -420,7 +420,7 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
             let message = videoMessage(incoming: false, sentDate: NSDate(), iconName: "", url: url)
             messageList.append(message)
             reloadTableView()
-            AudioServicesPlayAlertSound(messageOutSound)
+//            AudioServicesPlayAlertSound(messageOutSound)
             toolBarView.showMore(false)
             self.view.endEditing(true)
         case .location:
@@ -457,7 +457,7 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
             let message = videoMessage(incoming: false, sentDate: NSDate(), iconName: "", url: url)
             self.messageList.append(message)
             self.reloadTableView()
-            AudioServicesPlayAlertSound(messageOutSound)
+//            AudioServicesPlayAlertSound(messageOutSound)
             self.toolBarView.showMore(false)
             self.videoRecordComplection()
         }
@@ -490,7 +490,7 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
     func sendImage(image: UIImage) {
         let message = imageMessage(incoming: false, sentDate: NSDate(), iconName: "", image: image)
         messageList.append(message)
-        AudioServicesPlayAlertSound(messageOutSound)
+//        AudioServicesPlayAlertSound(messageOutSound)
         reloadTableView()
     }
     
@@ -555,7 +555,7 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
             reloadTableView()
             messageList.append(receiveMessage)
             reloadTableView()
-            AudioServicesPlayAlertSound(messageOutSound)
+//            AudioServicesPlayAlertSound(messageOutSound)
             textView.text = ""
             return false
         }
