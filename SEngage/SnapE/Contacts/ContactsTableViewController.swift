@@ -21,6 +21,7 @@ class ContactsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.leftBarButtonItem = editButtonItem()
         
         contacts = GenerateData.generateContacts(10)
         contacts.sortInPlace({$0.name < $1.name})
@@ -39,11 +40,11 @@ class ContactsTableViewController: UITableViewController {
         return 1
     }
     
-    // set titles for each section
-    override func tableView(tableView:UITableView, titleForHeaderInSection section:Int)->String {
-        var headers = self.contactIndexTitleList;
-        return headers[section];
-    }
+//    // set titles for each section
+//    override func tableView(tableView:UITableView, titleForHeaderInSection section:Int)->String {
+//        var headers = self.contactIndexTitleList;
+//        return headers[section];
+//    }
     
     // set rows in section
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -105,21 +106,42 @@ class ContactsTableViewController: UITableViewController {
         }
     }
     
-    //right side: "A" ... "Z"
-    override func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
-        return contactIndexTitleList
+//    //right side index bar: "A" ... "Z"
+//    override func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
+//        return contactIndexTitleList
+//    }
+//    
+//    override func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int {
+//        var tpIndex:Int = 0
+//        // traverse the value of indexes
+//        for character in contactIndexTitleList{
+//            // if the index equals the tile, return the value
+//            if character == title{
+//                return tpIndex
+//            }
+//            tpIndex += 1
+//        }
+//        return 0
+//    }
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
     }
     
-    override func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int {
-        var tpIndex:Int = 0
-        // traverse the value of indexes
-        for character in contactIndexTitleList{
-            // if the index equals the tile, return the value
-            if character == title{
-                return tpIndex
-            }
-            tpIndex += 1
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            // Delete the row from the data source
+            contacts.removeAtIndex(indexPath.row)
+            
+            
+            // need to save the new contacts array in the db
+            
+            
+            
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
-        return 0
     }
 }
