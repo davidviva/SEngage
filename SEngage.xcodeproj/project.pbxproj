@@ -16,6 +16,10 @@
 		243A9F561CCFB1AC00A23AF8 /* PublicStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A9F551CCFB1AC00A23AF8 /* PublicStrings.swift */; };
 		243A9F581CCFB3A100A23AF8 /* GenerateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A9F571CCFB3A100A23AF8 /* GenerateData.swift */; };
 		243A9F5A1CCFE92F00A23AF8 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A9F591CCFE92F00A23AF8 /* ImageViewController.swift */; };
+<<<<<<< HEAD
+		243A9F5C1CD076CB00A23AF8 /* MeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A9F5B1CD076CB00A23AF8 /* MeTableViewController.swift */; };
+=======
+>>>>>>> origin/master
 		24514E7F1CBFEF0000299E9B /* ContactDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514E7C1CBFEF0000299E9B /* ContactDetailTableViewController.swift */; };
 		24514E801CBFEF0000299E9B /* contactsSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24514E7D1CBFEF0000299E9B /* contactsSB.storyboard */; };
 		24514E811CBFEF0000299E9B /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514E7E1CBFEF0000299E9B /* ContactsTableViewController.swift */; };
@@ -176,7 +180,6 @@
 		2485E79B1CBC380C006D92A2 /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7981CBC380C006D92A2 /* CGRectEx.swift */; };
 		2485E79C1CBC380C006D92A2 /* ColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7991CBC380C006D92A2 /* ColorEx.swift */; };
 		2485E79D1CBC380C006D92A2 /* CommonEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E79A1CBC380C006D92A2 /* CommonEx.swift */; };
-		2485E7A81CBD7D57006D92A2 /* MeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7A71CBD7D57006D92A2 /* MeTableViewController.swift */; };
 		2485E7AA1CBD8B4E006D92A2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7A91CBD8B4E006D92A2 /* RootViewController.swift */; };
 		24F644021CC14C7A00491504 /* Entity.proto in Resources */ = {isa = PBXBuildFile; fileRef = 24F643FE1CC14C7A00491504 /* Entity.proto */; };
 		24F644031CC14C7A00491504 /* MsgBase.proto in Resources */ = {isa = PBXBuildFile; fileRef = 24F643FF1CC14C7A00491504 /* MsgBase.proto */; };
@@ -224,6 +227,10 @@
 		243A9F551CCFB1AC00A23AF8 /* PublicStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PublicStrings.swift; path = SnapE/Resources/PublicStrings.swift; sourceTree = "<group>"; };
 		243A9F571CCFB3A100A23AF8 /* GenerateData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenerateData.swift; path = SnapE/Resources/GenerateData.swift; sourceTree = "<group>"; };
 		243A9F591CCFE92F00A23AF8 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageViewController.swift; path = SnapE/Contacts/ImageViewController.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		243A9F5B1CD076CB00A23AF8 /* MeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeTableViewController.swift; path = SnapE/Me/MeTableViewController.swift; sourceTree = "<group>"; };
+=======
+>>>>>>> origin/master
 		24514E7C1CBFEF0000299E9B /* ContactDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactDetailTableViewController.swift; path = SnapE/Contacts/ContactDetailTableViewController.swift; sourceTree = "<group>"; };
 		24514E7D1CBFEF0000299E9B /* contactsSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = contactsSB.storyboard; path = SnapE/Contacts/contactsSB.storyboard; sourceTree = "<group>"; };
 		24514E7E1CBFEF0000299E9B /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsTableViewController.swift; path = SnapE/Contacts/ContactsTableViewController.swift; sourceTree = "<group>"; };
@@ -390,7 +397,6 @@
 		2485E7981CBC380C006D92A2 /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGRectEx.swift; path = SnapE/Extension/CGRectEx.swift; sourceTree = "<group>"; };
 		2485E7991CBC380C006D92A2 /* ColorEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorEx.swift; path = SnapE/Extension/ColorEx.swift; sourceTree = "<group>"; };
 		2485E79A1CBC380C006D92A2 /* CommonEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommonEx.swift; path = SnapE/Extension/CommonEx.swift; sourceTree = "<group>"; };
-		2485E7A71CBD7D57006D92A2 /* MeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeTableViewController.swift; path = SnapE/Me/MeTableViewController.swift; sourceTree = "<group>"; };
 		2485E7A91CBD8B4E006D92A2 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = SnapE/Login/RootViewController.swift; sourceTree = "<group>"; };
 		24F643FE1CC14C7A00491504 /* Entity.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Entity.proto; path = Proto/Entity.proto; sourceTree = "<group>"; };
 		24F643FF1CC14C7A00491504 /* MsgBase.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MsgBase.proto; path = Proto/MsgBase.proto; sourceTree = "<group>"; };
@@ -826,8 +832,8 @@
 			children = (
 				2413C0FE1CC7CD42005D9AA2 /* MeSB.storyboard */,
 				2485E7A31CBD7C93006D92A2 /* Model */,
-				2485E7A71CBD7D57006D92A2 /* MeTableViewController.swift */,
 				24514FC21CC02D4400299E9B /* PhotoViewController.swift */,
+				243A9F5B1CD076CB00A23AF8 /* MeTableViewController.swift */,
 			);
 			name = Me;
 			sourceTree = "<group>";
@@ -1205,6 +1211,7 @@
 				24514E9A1CBFF3D000299E9B /* ChatListTableViewController.swift in Sources */,
 				243A9F521CCFAC0000A23AF8 /* UserObj.swift in Sources */,
 				24F6440D1CC14DA900491504 /* Request.proto.swift in Sources */,
+				243A9F5C1CD076CB00A23AF8 /* MeTableViewController.swift in Sources */,
 				2485E79D1CBC380C006D92A2 /* CommonEx.swift in Sources */,
 				24514EA01CBFF3E000299E9B /* ChatListCell.swift in Sources */,
 				24514FC11CC02A7000299E9B /* PublicMethods.swift in Sources */,
@@ -1235,7 +1242,6 @@
 				24514EAA1CBFF45200299E9B /* AudioPlayer.swift in Sources */,
 				24514EAD1CBFF45200299E9B /* Observable.swift in Sources */,
 				24514FB91CBFF61C00299E9B /* PlaceAnnotation.swift in Sources */,
-				2485E7A81CBD7D57006D92A2 /* MeTableViewController.swift in Sources */,
 				24514EAC1CBFF45200299E9B /* EmotionManager.swift in Sources */,
 				24F6440B1CC14DA900491504 /* Entity.proto.swift in Sources */,
 				24514EB81CBFF4EC00299E9B /* RecordIndicatorView.swift in Sources */,
