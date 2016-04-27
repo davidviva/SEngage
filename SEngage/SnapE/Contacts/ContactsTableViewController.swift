@@ -21,7 +21,7 @@ class ContactsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.leftBarButtonItem = editButtonItem()
+        //navigationItem.leftBarButtonItem = editButtonItem()
         
         contacts = GenerateData.generateContacts(10)
         contacts.sortInPlace({$0.name < $1.name})
@@ -134,14 +134,14 @@ class ContactsTableViewController: UITableViewController {
             // Delete the row from the data source
             contacts.removeAtIndex(indexPath.row)
             
-            
             // need to save the new contacts array in the db
-            
-            
+            save()
             
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
+    }
+    
+    func save() {
+        
     }
 }

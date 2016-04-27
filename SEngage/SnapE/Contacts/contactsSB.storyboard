@@ -88,7 +88,7 @@
         <!--Contact Detail Table View Controller-->
         <scene sceneID="CDs-r6-gEY">
             <objects>
-                <tableViewController id="wiS-xs-HdO" customClass="ContactDetailTableViewController" customModule="SEngage" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController extendedLayoutIncludesOpaqueBars="YES" id="wiS-xs-HdO" customClass="ContactDetailTableViewController" customModule="SEngage" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FEW-AM-Cge">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -267,11 +267,11 @@
                                         <rect key="frame" x="0.0" y="344" width="600" height="257"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hDt-qJ-FTY" id="CUQ-Bu-ZRJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="256.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="257"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gm-9C-xNG">
-                                                    <rect key="frame" x="153" y="37" width="294" height="45"/>
+                                                    <rect key="frame" x="153" y="15" width="294" height="45"/>
                                                     <color key="backgroundColor" red="0.98725867146596857" green="0.19375055559953486" blue="0.3275755283381776" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="ErG-gX-H6d"/>
@@ -288,7 +288,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Non-wc-C89">
-                                                    <rect key="frame" x="153" y="114" width="294" height="45"/>
+                                                    <rect key="frame" x="153" y="75" width="294" height="45"/>
                                                     <color key="backgroundColor" red="0.98725867146596857" green="0.19375055559953486" blue="0.3275755283381776" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="Scopia"/>
                                                     <userDefinedRuntimeAttributes>
@@ -303,13 +303,33 @@
                                                         <action selector="scopiaAction:" destination="wiS-xs-HdO" eventType="touchUpInside" id="SqW-xi-Pec"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xh-qr-C6z">
+                                                    <rect key="frame" x="153" y="135" width="294" height="45"/>
+                                                    <color key="backgroundColor" red="0.98725867150000002" green="0.19375055560000001" blue="0.32757552829999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Delete"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="keyPath">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="scopiaAction:" destination="wiS-xs-HdO" eventType="touchUpInside" id="g26-7q-asO"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="7gm-9C-xNG" firstAttribute="top" secondItem="CUQ-Bu-ZRJ" secondAttribute="topMargin" constant="29" id="Xtr-r6-R3a"/>
+                                                <constraint firstItem="7xh-qr-C6z" firstAttribute="trailing" secondItem="Non-wc-C89" secondAttribute="trailing" id="0LL-ob-YeP"/>
+                                                <constraint firstItem="7xh-qr-C6z" firstAttribute="top" secondItem="Non-wc-C89" secondAttribute="bottom" constant="15" id="Pst-fP-KLR"/>
+                                                <constraint firstItem="7gm-9C-xNG" firstAttribute="top" secondItem="CUQ-Bu-ZRJ" secondAttribute="topMargin" constant="7" id="Xtr-r6-R3a"/>
                                                 <constraint firstItem="7gm-9C-xNG" firstAttribute="trailing" secondItem="Non-wc-C89" secondAttribute="trailing" id="iQc-up-Xug"/>
-                                                <constraint firstItem="Non-wc-C89" firstAttribute="top" secondItem="7gm-9C-xNG" secondAttribute="bottom" constant="32" id="qMb-TJ-T3D"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="7xh-qr-C6z" secondAttribute="bottom" constant="69" id="jgx-Fr-Mfq"/>
+                                                <constraint firstItem="Non-wc-C89" firstAttribute="top" secondItem="7gm-9C-xNG" secondAttribute="bottom" constant="15" id="qMb-TJ-T3D"/>
+                                                <constraint firstItem="7xh-qr-C6z" firstAttribute="leading" secondItem="Non-wc-C89" secondAttribute="leading" id="rfu-Vg-4fc"/>
                                                 <constraint firstItem="7gm-9C-xNG" firstAttribute="leading" secondItem="Non-wc-C89" secondAttribute="leading" id="tHm-TJ-SMU"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Non-wc-C89" secondAttribute="bottom" constant="90" id="tcF-fT-WUc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Non-wc-C89" secondAttribute="bottom" constant="129" id="tcF-fT-WUc"/>
                                                 <constraint firstItem="7gm-9C-xNG" firstAttribute="centerX" secondItem="CUQ-Bu-ZRJ" secondAttribute="centerX" id="zSb-tA-j4q"/>
                                             </constraints>
                                         </tableViewCellContentView>
