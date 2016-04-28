@@ -18,18 +18,45 @@ class ContactsTableViewController: UITableViewController {
     
     // MARK: Properties
     var contacts = [Contact]()
+    var segmentedControl:UISegmentedControl!
+    var teamView: TeamView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //navigationItem.leftBarButtonItem = editButtonItem()
         
         contacts = GenerateData.generateContacts(10)
         contacts.sortInPlace({$0.name < $1.name})
+        
+        //navigationItem.leftBarButtonItem = editButtonItem()
+        segmentedSetting()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func segmentedSetting() {
+        teamView = TeamView()
+        segmentedControl = UISegmentedControl(items: ["Contacts","Teams"])
+        segmentedControl.selectedSegmentIndex = 0
+        segmentedControl.center=self.view.center
+        segmentedControl.addTarget(self, action: #selector(ContactsTableViewController.segmentedControlAction(_:)), forControlEvents: .ValueChanged)
+        self.navigationItem.titleView = segmentedControl
+    }
+    
+    func segmentedControlAction(sender: UISegmentedControl) {
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            self.view.hidden = false
+            teamView.hidden = true
+        case 1:
+            self.view.hidden = true
+            teamView.hidden = false
+        default:
+            break;
+        }
     }
     
     // MARK: - Table view data source
