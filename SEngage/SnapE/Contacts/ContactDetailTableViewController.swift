@@ -29,7 +29,7 @@ class ContactDetailTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.title = "Profile"
         // Set up views if editing an exisiting contact or see details
         

@@ -114,23 +114,8 @@ class ContactsTableViewController: UITableViewController {
         })
     }
     
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showDetail" {
-            let contactDetailTableViewController = segue.destinationViewController as! ContactDetailTableViewController
-            
-            // Get the cell that generated this segue
-            if let selectedContactCell = sender as? ContactsTableViewCell {
-                let indexPath = tableView.indexPathForCell(selectedContactCell)!
-                let selectedContact = contacts[indexPath.row]
-                contactDetailTableViewController.contact = selectedContact
-            }
-        }
-        else if segue.identifier == "addContact" {
-            print("Adding new contact.")
-        }
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 60.0
     }
     
 //    //right side index bar: "A" ... "Z"
@@ -170,5 +155,24 @@ class ContactsTableViewController: UITableViewController {
     
     func save() {
         
+    }
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showDetail" {
+            let contactDetailTableViewController = segue.destinationViewController as! ContactDetailTableViewController
+            
+            // Get the cell that generated this segue
+            if let selectedContactCell = sender as? ContactsTableViewCell {
+                let indexPath = tableView.indexPathForCell(selectedContactCell)!
+                let selectedContact = contacts[indexPath.row]
+                contactDetailTableViewController.contact = selectedContact
+            }
+        }
+        else if segue.identifier == "addContact" {
+            print("Adding new contact.")
+        }
     }
 }

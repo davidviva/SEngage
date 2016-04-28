@@ -34,5 +34,23 @@ class GenerateData {
         }
         return contacts
     }
+    
+    static func generateTeams(num: Int) -> Array<Group>{
+        var teams = [Group]()
+        var count = num
+        var photo: UIImage
+        var group: Group
+        
+        let image = ["icon1", "icon2", "icon3", "icon4", "icon0", "contact1", "contact2"]
+        let name = ["Kids", "Girls", "Boys", "Men", "Women"]
+        
+        while count > 0 {
+            photo = UIImage(named: image[random() % 7])!
+            group = Group(name: name[random() % 5], photo: photo, contacts: generateContacts(10))!
+            teams += [group]
+            count -= 1
+        }
+        return teams
+    }
 }
 
