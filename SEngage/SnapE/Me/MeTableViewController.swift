@@ -9,6 +9,8 @@
 import UIKit
 
 class MeTableViewController: UITableViewController {
+    @IBAction func logoutAction(sender: AnyObject) {
+    }
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!

@@ -225,6 +225,13 @@
                             <outlet property="delegate" destination="aDF-FB-ZLd" id="bf6-86-EwM"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Tg1-Mu-hue">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="chj-xL-elm" userLabel="Log out">
+                            <connections>
+                                <action selector="logoutAction:" destination="aDF-FB-ZLd" id="YJR-tA-fdi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailLabel" destination="AoF-38-pKS" id="e38-4B-Djv"/>
                         <outlet property="nameLabel" destination="kFz-Vz-96Q" id="Qlp-rw-zX3"/>
@@ -234,7 +241,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s1P-BV-afV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="991" y="-50"/>
+            <point key="canvasLocation" x="1803" y="-50"/>
         </scene>
         <!--Photo-->
         <scene sceneID="dLA-Du-h3K">
@@ -274,7 +281,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZxS-k6-OKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1725" y="-50"/>
+            <point key="canvasLocation" x="2537" y="-50"/>
         </scene>
     </scenes>
     <resources>
