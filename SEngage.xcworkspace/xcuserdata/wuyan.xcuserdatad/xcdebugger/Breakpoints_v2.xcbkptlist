@@ -24,7 +24,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SEngage/SnapE/Contacts/ContactDetailTableViewController.swift"
-            timestampString = "483389132.021369"
+            timestampString = "483567126.31228"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -94,6 +94,22 @@
             startingLineNumber = "49"
             endingLineNumber = "49"
             landmarkName = "generateTeams(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SEngage/SnapE/Contacts/ContactsTableViewController.swift"
+            timestampString = "483637357.420169"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "segmentedSetting()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

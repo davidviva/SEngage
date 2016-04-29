@@ -18,14 +18,18 @@ class ContactsTableViewController: UITableViewController {
     
     // MARK: Properties
     var contacts = [Contact]()
+    var teams = [Group]()
+    var segment = 0
     var segmentedControl:UISegmentedControl!
-    var teamView: TeamView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         contacts = GenerateData.generateContacts(10)
         contacts.sortInPlace({$0.name < $1.name})
+        
+        teams = GenerateData.generateTeams(10)
+        teams.sortInPlace({$0.name < $1.name})
         
         //navigationItem.leftBarButtonItem = editButtonItem()
         segmentedSetting()
@@ -37,7 +41,6 @@ class ContactsTableViewController: UITableViewController {
     }
     
     func segmentedSetting() {
-        teamView = TeamView()
         segmentedControl = UISegmentedControl(items: ["Contacts","Teams"])
         segmentedControl.selectedSegmentIndex = 0
         segmentedControl.center=self.view.center
@@ -49,14 +52,13 @@ class ContactsTableViewController: UITableViewController {
         switch segmentedControl.selectedSegmentIndex
         {
         case 0:
-            self.view.hidden = false
-            teamView.hidden = true
+            segment = 0
         case 1:
-            self.view.hidden = true
-            teamView.hidden = false
+            segment = 1
         default:
             break;
         }
+        tableView.reloadData()
     }
     
     // MARK: - Table view data source
@@ -80,27 +82,43 @@ class ContactsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        // Table view cells are reused and should be dequeued using a cell  identifier.
-        let cellIdentifier = "ContactsTableViewCell"
+        var retCell: UITableViewCell
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ContactsTableViewCell
-        
-        // Fetches the appropriate contact for the data source layout.
-        let contact = contacts[indexPath.row]
-        
-        cell.nameLabel.text = contact.name
-        cell.photoImageView.image = contact.photo
-        if contact.status == "idle" {
-            cell.statusImageView.backgroundColor = UIColor.yellowColor()
-        } else if contact.status == "available" {
-            cell.statusImageView.backgroundColor = UIColor.greenColor()
-        } else if contact.status == "busy" {
-            cell.statusImageView.backgroundColor = UIColor.redColor()
-        } else {
-            cell.statusImageView.backgroundColor = UIColor.grayColor()
+        if segment == 0 {
+            // Table view cells are reused and should be dequeued using a cell  identifier.
+            let cellIdentifier = "ContactsTableViewCell"
             
+            let cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ContactsTableViewCell
+            
+            // Fetches the appropriate contact for the data source layout.
+            let contact = contacts[indexPath.row]
+            
+            cell.nameLabel.text = contact.name
+            cell.photoImageView.image = contact.photo
+            if contact.status == "idle" {
+                cell.statusImageView.backgroundColor = UIColor.yellowColor()
+            } else if contact.status == "available" {
+                cell.statusImageView.backgroundColor = UIColor.greenColor()
+            } else if contact.status == "busy" {
+                cell.statusImageView.backgroundColor = UIColor.redColor()
+            } else {
+                cell.statusImageView.backgroundColor = UIColor.grayColor()
+            }
+            retCell = cell
+        } else {
+            // Table view cells are reused and should be dequeued using a cell  identifier.
+            let cellIdentifier = "TeamTableViewCell"
+            
+            let cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! TeamTableViewCell
+            
+            // Fetches the appropriate contact for the data source layout.
+            let group = teams[indexPath.row]
+            
+            cell.teamNameLabel.text = group.name
+            cell.teamImageView.image = group.photo
+            retCell = cell
         }
-        return cell
+        return retCell
     }
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell,

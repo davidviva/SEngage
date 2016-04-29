@@ -16,6 +16,8 @@ class TeamTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        teamImageView.layer.cornerRadius = 5
+        teamImageView.layer.masksToBounds = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
