@@ -33,6 +33,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         connectSocket()
         runThread()
+        
+        // open the notifications
+        let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound],
+                                                  categories: nil)
+        application.registerUserNotificationSettings(settings)
+        
         return true
     }
     

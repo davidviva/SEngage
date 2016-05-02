@@ -30,7 +30,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="oyf-k5-Ad2">
-                                            <rect key="frame" x="5" y="7" width="50" height="50"/>
+                                            <rect key="frame" x="15" y="5" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="oyf-k5-Ad2" secondAttribute="height" multiplier="57:43" constant="-16.279069767441854" id="ZtW-lQ-d4m"/>
                                             </constraints>
@@ -47,7 +47,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NDL-Gm-U2k">
-                                            <rect key="frame" x="42" y="44" width="13" height="13"/>
+                                            <rect key="frame" x="55" y="44" width="13" height="13"/>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="13" id="H94-vQ-ttS"/>
@@ -62,15 +62,15 @@
                                     <constraints>
                                         <constraint firstItem="NDL-Gm-U2k" firstAttribute="top" secondItem="6dY-Rx-1da" secondAttribute="topMargin" constant="36" id="1RA-S9-xkX"/>
                                         <constraint firstItem="6Q5-NA-ovB" firstAttribute="top" secondItem="6dY-Rx-1da" secondAttribute="topMargin" constant="1" id="3Cu-Sz-Sak"/>
-                                        <constraint firstItem="NDL-Gm-U2k" firstAttribute="trailing" secondItem="oyf-k5-Ad2" secondAttribute="trailing" id="48a-h4-yZ2"/>
+                                        <constraint firstItem="NDL-Gm-U2k" firstAttribute="trailing" secondItem="oyf-k5-Ad2" secondAttribute="trailing" constant="3" id="48a-h4-yZ2"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="6Q5-NA-ovB" secondAttribute="trailing" constant="55" id="6OE-dm-qaB"/>
-                                        <constraint firstItem="oyf-k5-Ad2" firstAttribute="centerY" secondItem="6dY-Rx-1da" secondAttribute="centerY" constant="2" id="B7t-7c-tqK"/>
-                                        <constraint firstItem="6Q5-NA-ovB" firstAttribute="leading" secondItem="NDL-Gm-U2k" secondAttribute="trailing" constant="39" id="KhC-3B-gM9"/>
-                                        <constraint firstItem="oyf-k5-Ad2" firstAttribute="top" secondItem="6dY-Rx-1da" secondAttribute="topMargin" constant="-1" id="cce-TW-ocX"/>
+                                        <constraint firstItem="oyf-k5-Ad2" firstAttribute="centerY" secondItem="6dY-Rx-1da" secondAttribute="centerY" id="B7t-7c-tqK"/>
+                                        <constraint firstItem="6Q5-NA-ovB" firstAttribute="leading" secondItem="NDL-Gm-U2k" secondAttribute="trailing" constant="26" id="KhC-3B-gM9"/>
+                                        <constraint firstItem="oyf-k5-Ad2" firstAttribute="top" secondItem="6dY-Rx-1da" secondAttribute="topMargin" constant="-3" id="cce-TW-ocX"/>
                                         <constraint firstItem="6Q5-NA-ovB" firstAttribute="centerY" secondItem="6dY-Rx-1da" secondAttribute="centerY" id="cxn-1E-lt2"/>
-                                        <constraint firstItem="NDL-Gm-U2k" firstAttribute="leading" secondItem="6dY-Rx-1da" secondAttribute="leadingMargin" constant="34" id="dJs-4d-RWX"/>
-                                        <constraint firstItem="NDL-Gm-U2k" firstAttribute="bottom" secondItem="oyf-k5-Ad2" secondAttribute="bottom" id="tzy-zC-OaQ"/>
-                                        <constraint firstItem="oyf-k5-Ad2" firstAttribute="leading" secondItem="6dY-Rx-1da" secondAttribute="leadingMargin" constant="-3" id="vdd-zA-9Xj"/>
+                                        <constraint firstItem="NDL-Gm-U2k" firstAttribute="leading" secondItem="6dY-Rx-1da" secondAttribute="leadingMargin" constant="47" id="dJs-4d-RWX"/>
+                                        <constraint firstItem="NDL-Gm-U2k" firstAttribute="bottom" secondItem="oyf-k5-Ad2" secondAttribute="bottom" constant="2" id="tzy-zC-OaQ"/>
+                                        <constraint firstItem="oyf-k5-Ad2" firstAttribute="leading" secondItem="6dY-Rx-1da" secondAttribute="leadingMargin" constant="7" id="vdd-zA-9Xj"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -88,7 +88,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AvayaLogoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="UxQ-so-bPH">
-                                            <rect key="frame" x="5" y="7" width="50" height="50"/>
+                                            <rect key="frame" x="15" y="5" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="hVP-fh-0o4"/>
                                             </constraints>
@@ -101,12 +101,12 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="UxQ-so-bPH" firstAttribute="top" secondItem="bM9-LB-ERQ" secondAttribute="topMargin" constant="-1" id="1G3-qb-Jcm"/>
-                                        <constraint firstItem="UxQ-so-bPH" firstAttribute="leading" secondItem="bM9-LB-ERQ" secondAttribute="leadingMargin" constant="-3" id="G0o-ec-B7S"/>
+                                        <constraint firstItem="UxQ-so-bPH" firstAttribute="top" secondItem="bM9-LB-ERQ" secondAttribute="topMargin" constant="-3" id="1G3-qb-Jcm"/>
+                                        <constraint firstItem="UxQ-so-bPH" firstAttribute="leading" secondItem="bM9-LB-ERQ" secondAttribute="leadingMargin" constant="7" id="G0o-ec-B7S"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="OSN-p8-IPE" secondAttribute="trailing" constant="55" id="Un8-fZ-iTp"/>
-                                        <constraint firstItem="UxQ-so-bPH" firstAttribute="bottom" secondItem="OSN-p8-IPE" secondAttribute="bottom" constant="6" id="bFH-Lz-IPf"/>
+                                        <constraint firstItem="UxQ-so-bPH" firstAttribute="bottom" secondItem="OSN-p8-IPE" secondAttribute="bottom" constant="4" id="bFH-Lz-IPf"/>
                                         <constraint firstItem="OSN-p8-IPE" firstAttribute="centerY" secondItem="bM9-LB-ERQ" secondAttribute="centerY" id="nHV-hH-LuM"/>
-                                        <constraint firstItem="OSN-p8-IPE" firstAttribute="leading" secondItem="UxQ-so-bPH" secondAttribute="trailing" constant="39" id="sRn-kq-78B"/>
+                                        <constraint firstItem="OSN-p8-IPE" firstAttribute="leading" secondItem="UxQ-so-bPH" secondAttribute="trailing" constant="29" id="sRn-kq-78B"/>
                                         <constraint firstItem="OSN-p8-IPE" firstAttribute="top" secondItem="bM9-LB-ERQ" secondAttribute="topMargin" constant="1" id="xwN-gh-jFl"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -171,9 +171,6 @@
                                                             <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
-                                                    <connections>
-                                                        <outletCollection property="gestureRecognizers" destination="zBb-3C-iYk" appends="YES" id="dcB-1c-fUb"/>
-                                                    </connections>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -393,37 +390,8 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CmX-X6-0Nz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="zBb-3C-iYk">
-                    <connections>
-                        <action selector="photoDetail:" destination="wiS-xs-HdO" id="xw2-UC-1zd"/>
-                        <segue destination="Ihg-1q-9he" kind="show" identifier="viewPhotoDetail" id="4Jc-PQ-3Et"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3242" y="-76"/>
-        </scene>
-        <!--Image View Controller-->
-        <scene sceneID="i6v-AM-rqi">
-            <objects>
-                <viewController id="Ihg-1q-9he" customClass="ImageViewController" customModule="SEngage" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mDv-IR-3AR"/>
-                        <viewControllerLayoutGuide type="bottom" id="UVu-JP-kK1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4Lm-HC-XWh">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AvayaLogoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="pSH-CO-8Wm">
-                                <rect key="frame" x="0.0" y="146" width="600" height="324"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2tJ-Pk-a1z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3875" y="-76"/>
         </scene>
         <!--Add Contac Table View Controller-->
         <scene sceneID="59u-KC-qlt">

@@ -21,6 +21,7 @@ class ContactsTableViewController: UITableViewController {
     var teams = [Group]()
     var segment = 0
     var segmentedControl:UISegmentedControl!
+    var rightBarButtonItem : UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +54,7 @@ class ContactsTableViewController: UITableViewController {
         {
         case 0:
             segment = 0
-            
+            self.navigationItem.rightBarButtonItem = rightBarButtonItem
         case 1:
             segment = 1
             

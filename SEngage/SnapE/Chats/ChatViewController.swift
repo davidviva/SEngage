@@ -58,6 +58,9 @@ class ChatViewController: SEViewController, UITableViewDataSource, UITableViewDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // send the notifications
+        scheduleNotification();
+        
         view.backgroundColor = UIColor(patternImage: UIImage(named: "bg3")!)
         
         tableView = UITableView()
@@ -567,5 +570,59 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
         if recordIndicatorView != nil {
             recordIndicatorView.updateLevelMetra(metra)
         }
+    }
+    
+    //send the notification
+    func scheduleNotification(){
+        //清除所有本地推送
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
+        //创建UILocalNotification来进行本地消息通知
+        let localNotification = UILocalNotification()
+        //set the number of notifications on the app icon
+        localNotification.applicationIconBadgeNumber = 78;
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+    }
+    
+    //发送通知消息
+    func scheduleNotification(itemID:Int){
+        //如果已存在该通知消息，则先取消
+        cancelNotification(itemID)
+        
+        //创建UILocalNotification来进行本地消息通知
+        let localNotification = UILocalNotification()
+        //推送时间（设置为30秒以后）
+        localNotification.fireDate = NSDate(timeIntervalSinceNow: 30)
+        //时区
+        localNotification.timeZone = NSTimeZone.defaultTimeZone()
+        //推送内容
+        localNotification.alertBody = "来自hangge.com的本地消息"
+        //声音
+        localNotification.soundName = UILocalNotificationDefaultSoundName
+        //额外信息
+        localNotification.userInfo = ["ItemID":itemID]
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+    }
+    
+    //取消通知消息
+    func cancelNotification(itemID:Int){
+        //通过itemID获取已有的消息推送，然后删除掉，以便重新判断
+        let existingNotification = self.notificationForThisItem(itemID) as UILocalNotification?
+        if existingNotification != nil {
+            //如果existingNotification不为nil，就取消消息推送
+            UIApplication.sharedApplication().cancelLocalNotification(existingNotification!)
+        }
+    }
+    
+    //通过遍历所有消息推送，通过itemid的对比，返回UIlocalNotification
+    func notificationForThisItem(itemID:Int)-> UILocalNotification? {
+        let allNotifications = UIApplication.sharedApplication().scheduledLocalNotifications
+        for notification in allNotifications! {
+            let info = notification.userInfo as! [String:Int]
+            let number = info["ItemID"]
+            if number != nil && number == itemID {
+                return notification as UILocalNotification
+            }
+        }
+        return nil
     }
 }
