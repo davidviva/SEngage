@@ -21,7 +21,6 @@ class ContactsTableViewController: UITableViewController {
     var teams = [Group]()
     var segment = 0
     var segmentedControl:UISegmentedControl!
-    var rightBarButtonItem : UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +53,6 @@ class ContactsTableViewController: UITableViewController {
         {
         case 0:
             segment = 0
-            self.navigationItem.rightBarButtonItem = rightBarButtonItem
         case 1:
             segment = 1
             
@@ -183,6 +181,16 @@ class ContactsTableViewController: UITableViewController {
         }
         else if segue.identifier == "addContact" {
             print("Adding new contact.")
+        }
+        else if segue.identifier == "teamDetail" {
+            let teamDetailTableViewController = segue.destinationViewController as! TeamDetailTableViewController
+            
+            // Get the cell that generated this segue
+            if let selectedContactCell = sender as? TeamTableViewCell {
+                let indexPath = tableView.indexPathForCell(selectedContactCell)!
+                let selectedTeam = teams[indexPath.row]
+                teamDetailTableViewController.group = selectedTeam
+            }
         }
     }
 }

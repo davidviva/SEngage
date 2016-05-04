@@ -54,10 +54,5 @@ class AddContacTableViewController: UITableViewController, UISearchBarDelegate {
     func footerRefresh(){
         // load more
         footer.endRefreshing()
-        //        // 2次后模拟没有更多数据
-        //        index = index + 1
-        //        if index > 2 {
-        //            footer.endRefreshingWithNoMoreData()
-        //        }
     }
 }
