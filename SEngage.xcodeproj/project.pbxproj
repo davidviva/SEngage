@@ -744,6 +744,7 @@
 		2485E7501CBBF576006D92A2 /* SEngage */ = {
 			isa = PBXGroup;
 			children = (
+				24931C1E1CD99EBD0066A641 /* Chat */,
 				24F6440F1CC14E2200491504 /* Service */,
 				24F644061CC14D5100491504 /* ProtoEntry */,
 				24514EA51CBFF44300299E9B /* Utilities */,
@@ -838,6 +839,13 @@
 				243A9F511CCFAC0000A23AF8 /* UserObj.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		24931C1E1CD99EBD0066A641 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Chat;
 			sourceTree = "<group>";
 		};
 		24F643FD1CC14C4400491504 /* Proto */ = {

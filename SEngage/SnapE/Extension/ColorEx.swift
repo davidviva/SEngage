@@ -25,13 +25,13 @@ extension UIColor {
         if let _ = hex.rangeOfString("(^[0-9A-Fa-f]{6}$)|(^[0-9A-Fa-f]{3}$)", options: .RegularExpressionSearch) {
             if hex.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == 3 {
                 let redHex = hex.substringToIndex(hex.startIndex.advancedBy(1))
-                let greenHex = hex.substringWithRange(Range<String.Index>(start: hex.startIndex.advancedBy(1), end: hex.startIndex.advancedBy(2)))
+                let greenHex = hex.substringWithRange(hex.startIndex.advancedBy(1)..<hex.startIndex.advancedBy(2))
                 let blueHex = hex.substringFromIndex(hex.startIndex.advancedBy(2))
                 hex = redHex + redHex + greenHex + greenHex + blueHex + blueHex
             }
             let redHex = hex.substringToIndex(hex.startIndex.advancedBy(2))
-            let greenHex = hex.substringWithRange(Range<String.Index>(start: hex.startIndex.advancedBy(2), end: hex.startIndex.advancedBy(4)))
-            let blueHex = hex.substringWithRange(Range<String.Index>(start: hex.startIndex.advancedBy(4), end: hex.startIndex.advancedBy(6)))
+            let greenHex = hex.substringWithRange(hex.startIndex.advancedBy(2)..<hex.startIndex.advancedBy(4))
+            let blueHex = hex.substringWithRange(hex.startIndex.advancedBy(4)..<hex.startIndex.advancedBy(6))
             
             var redInt:   CUnsignedInt = 0
             var greenInt: CUnsignedInt = 0

@@ -536,7 +536,7 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
     // MARK: - emojiDelegate
     func selectEmoji(code: String, description: String, delete: Bool) {
         if delete {
-            let range = Range(start: toolBarView.textView.text.endIndex.advancedBy(-1), end: toolBarView.textView.text.endIndex)
+            let range = toolBarView.textView.text.endIndex.advancedBy(-1)..<toolBarView.textView.text.endIndex
             toolBarView.textView.text.removeRange(range)
         } else {
             toolBarView.textView.text.appendContentsOf(code)
