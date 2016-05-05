@@ -13,6 +13,7 @@ class ContactsTableViewCell: UITableViewCell {
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var statusImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var selectedImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +25,11 @@ class ContactsTableViewCell: UITableViewCell {
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
+        if selected {
+            self.selectedImageView?.image = UIImage(named: "CellBlueSelected")
+        }else {
+            self.selectedImageView?.image = UIImage(named: "CellGreySelected")
+        }
     }
+    
 }
