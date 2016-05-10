@@ -30,6 +30,10 @@ class TeamDetailTableViewController: UITableViewController {
             let selectedContacts = group?.contacts
             teamMemberTableViewController.contacts = selectedContacts!
         }
+        else if segue.identifier == "addMember" {
+            let selectionTableViewController = segue.destinationViewController as! SelectionTableViewController
+            selectionTableViewController.group = group
+        }
     }
 
 }

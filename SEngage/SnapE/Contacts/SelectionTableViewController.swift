@@ -11,7 +11,9 @@ import UIKit
 class SelectionTableViewController: UITableViewController {
 
     // MARK: Properties
+    var group: Group?
     var contacts = [Contact]()
+    var selectedData = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +67,26 @@ class SelectionTableViewController: UITableViewController {
         return true
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.selectedData.append(indexPath.row)
+    }
     
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        let index = self.selectedData.indexOf(indexPath.row)
+        self.selectedData.removeAtIndex(index!)
+    }
     
+    @IBAction func selectAction(sender: UIBarButtonItem) {
+        for index in selectedData {
+            let contact = contacts[index]
+            group!.contacts.append(contact)
+        }
+        saveGroup()
+        navigationController!.popViewControllerAnimated(true)
+    }
+    
+    // Save the change into db
+    func saveGroup() {
+        
+    }
 }

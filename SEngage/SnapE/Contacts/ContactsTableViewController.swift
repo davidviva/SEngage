@@ -22,6 +22,7 @@ class ContactsTableViewController: UITableViewController {
     var segment = 0
     var segmentedControl:UISegmentedControl!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
