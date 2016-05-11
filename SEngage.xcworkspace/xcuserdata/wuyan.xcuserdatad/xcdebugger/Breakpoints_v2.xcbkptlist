@@ -104,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SEngage/SnapE/Contacts/ContactsTableViewController.swift"
-            timestampString = "484065958.21823"
+            timestampString = "484673012.604978"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "segmentedSetting()"
             landmarkType = "5">
          </BreakpointContent>
