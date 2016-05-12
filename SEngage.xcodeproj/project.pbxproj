@@ -15,11 +15,9 @@
 		243A9F561CCFB1AC00A23AF8 /* PublicStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A9F551CCFB1AC00A23AF8 /* PublicStrings.swift */; };
 		243A9F581CCFB3A100A23AF8 /* GenerateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A9F571CCFB3A100A23AF8 /* GenerateData.swift */; };
 		243A9F5E1CD0FD8200A23AF8 /* MeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A9F5D1CD0FD8200A23AF8 /* MeTableViewController.swift */; };
-		243A9F601CD159AF00A23AF8 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A9F5F1CD159AF00A23AF8 /* ButtonView.swift */; };
 		243A9F681CD28BE200A23AF8 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A9F671CD28BE200A23AF8 /* Group.swift */; };
 		243A9F6A1CD291BE00A23AF8 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A9F691CD291BE00A23AF8 /* TeamTableViewCell.swift */; };
 		24514E7F1CBFEF0000299E9B /* ContactDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514E7C1CBFEF0000299E9B /* ContactDetailTableViewController.swift */; };
-		24514E801CBFEF0000299E9B /* contactsSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24514E7D1CBFEF0000299E9B /* contactsSB.storyboard */; };
 		24514E811CBFEF0000299E9B /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514E7E1CBFEF0000299E9B /* ContactsTableViewController.swift */; };
 		24514E831CBFEF0F00299E9B /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514E821CBFEF0F00299E9B /* ContactsTableViewCell.swift */; };
 		24514E861CBFEF2000299E9B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514E841CBFEF2000299E9B /* Contact.swift */; };
@@ -30,7 +28,6 @@
 		24514E911CBFF34E00299E9B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24514E901CBFF34E00299E9B /* AVFoundation.framework */; };
 		24514E991CBFF3D000299E9B /* ChatListSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24514E971CBFF3D000299E9B /* ChatListSB.storyboard */; };
 		24514E9A1CBFF3D000299E9B /* ChatListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514E981CBFF3D000299E9B /* ChatListTableViewController.swift */; };
-		24514E9F1CBFF3E000299E9B /* ChatListBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514E9C1CBFF3E000299E9B /* ChatListBaseCell.swift */; };
 		24514EA01CBFF3E000299E9B /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514E9D1CBFF3E000299E9B /* ChatListCell.swift */; };
 		24514EA31CBFF3EB00299E9B /* ChatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514EA11CBFF3EB00299E9B /* ChatList.swift */; };
 		24514EA41CBFF3EB00299E9B /* ChatListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514EA21CBFF3EB00299E9B /* ChatListCellModel.swift */; };
@@ -181,7 +178,7 @@
 		2485E7AA1CBD8B4E006D92A2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485E7A91CBD8B4E006D92A2 /* RootViewController.swift */; };
 		24931C201CDA47730066A641 /* TeamDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24931C1F1CDA47730066A641 /* TeamDetailTableViewController.swift */; };
 		24931C221CDA76B30066A641 /* TeamMemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24931C211CDA76B30066A641 /* TeamMemberTableViewController.swift */; };
-		24A5AB401CE38314000FD0B4 /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A5AB3F1CE38314000FD0B4 /* NavigationButton.swift */; };
+		24A5AB4A1CE4E112000FD0B4 /* contactsSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A5AB491CE4E112000FD0B4 /* contactsSB.storyboard */; };
 		24F644021CC14C7A00491504 /* Entity.proto in Resources */ = {isa = PBXBuildFile; fileRef = 24F643FE1CC14C7A00491504 /* Entity.proto */; };
 		24F644031CC14C7A00491504 /* MsgBase.proto in Resources */ = {isa = PBXBuildFile; fileRef = 24F643FF1CC14C7A00491504 /* MsgBase.proto */; };
 		24F644041CC14C7A00491504 /* Request.proto in Resources */ = {isa = PBXBuildFile; fileRef = 24F644001CC14C7A00491504 /* Request.proto */; };
@@ -227,11 +224,9 @@
 		243A9F551CCFB1AC00A23AF8 /* PublicStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PublicStrings.swift; path = SnapE/Resources/PublicStrings.swift; sourceTree = "<group>"; };
 		243A9F571CCFB3A100A23AF8 /* GenerateData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenerateData.swift; path = SnapE/Resources/GenerateData.swift; sourceTree = "<group>"; };
 		243A9F5D1CD0FD8200A23AF8 /* MeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeTableViewController.swift; path = SnapE/Me/MeTableViewController.swift; sourceTree = "<group>"; };
-		243A9F5F1CD159AF00A23AF8 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonView.swift; path = SnapE/ChatList/View/ButtonView.swift; sourceTree = "<group>"; };
 		243A9F671CD28BE200A23AF8 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Group.swift; path = SnapE/Contacts/Model/Group.swift; sourceTree = "<group>"; };
 		243A9F691CD291BE00A23AF8 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamTableViewCell.swift; path = SnapE/Contacts/View/TeamTableViewCell.swift; sourceTree = "<group>"; };
 		24514E7C1CBFEF0000299E9B /* ContactDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactDetailTableViewController.swift; path = SnapE/Contacts/ContactDetailTableViewController.swift; sourceTree = "<group>"; };
-		24514E7D1CBFEF0000299E9B /* contactsSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = contactsSB.storyboard; path = SnapE/Contacts/contactsSB.storyboard; sourceTree = "<group>"; };
 		24514E7E1CBFEF0000299E9B /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsTableViewController.swift; path = SnapE/Contacts/ContactsTableViewController.swift; sourceTree = "<group>"; };
 		24514E821CBFEF0F00299E9B /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsTableViewCell.swift; path = SnapE/Contacts/View/ContactsTableViewCell.swift; sourceTree = "<group>"; };
 		24514E841CBFEF2000299E9B /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = SnapE/Contacts/Model/Contact.swift; sourceTree = "<group>"; };
@@ -242,7 +237,6 @@
 		24514E901CBFF34E00299E9B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		24514E971CBFF3D000299E9B /* ChatListSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ChatListSB.storyboard; path = SnapE/ChatList/ChatListSB.storyboard; sourceTree = "<group>"; };
 		24514E981CBFF3D000299E9B /* ChatListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatListTableViewController.swift; path = SnapE/ChatList/ChatListTableViewController.swift; sourceTree = "<group>"; };
-		24514E9C1CBFF3E000299E9B /* ChatListBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatListBaseCell.swift; path = SnapE/ChatList/View/ChatListBaseCell.swift; sourceTree = "<group>"; };
 		24514E9D1CBFF3E000299E9B /* ChatListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatListCell.swift; path = SnapE/ChatList/View/ChatListCell.swift; sourceTree = "<group>"; };
 		24514EA11CBFF3EB00299E9B /* ChatList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatList.swift; path = SnapE/ChatList/Model/ChatList.swift; sourceTree = "<group>"; };
 		24514EA21CBFF3EB00299E9B /* ChatListCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatListCellModel.swift; path = SnapE/ChatList/Model/ChatListCellModel.swift; sourceTree = "<group>"; };
@@ -399,7 +393,7 @@
 		2485E7A91CBD8B4E006D92A2 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = SnapE/Login/RootViewController.swift; sourceTree = "<group>"; };
 		24931C1F1CDA47730066A641 /* TeamDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamDetailTableViewController.swift; path = SnapE/Contacts/TeamDetailTableViewController.swift; sourceTree = "<group>"; };
 		24931C211CDA76B30066A641 /* TeamMemberTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamMemberTableViewController.swift; path = SnapE/Contacts/TeamMemberTableViewController.swift; sourceTree = "<group>"; };
-		24A5AB3F1CE38314000FD0B4 /* NavigationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationButton.swift; path = SnapE/Contacts/View/NavigationButton.swift; sourceTree = "<group>"; };
+		24A5AB491CE4E112000FD0B4 /* contactsSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = contactsSB.storyboard; path = SnapE/Contacts/contactsSB.storyboard; sourceTree = "<group>"; };
 		24F643FE1CC14C7A00491504 /* Entity.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Entity.proto; path = Proto/Entity.proto; sourceTree = "<group>"; };
 		24F643FF1CC14C7A00491504 /* MsgBase.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MsgBase.proto; path = Proto/MsgBase.proto; sourceTree = "<group>"; };
 		24F644001CC14C7A00491504 /* Request.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Request.proto; path = Proto/Request.proto; sourceTree = "<group>"; };
@@ -454,8 +448,8 @@
 		24514E791CBFEC1200299E9B /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				24A5AB491CE4E112000FD0B4 /* contactsSB.storyboard */,
 				24514E7C1CBFEF0000299E9B /* ContactDetailTableViewController.swift */,
-				24514E7D1CBFEF0000299E9B /* contactsSB.storyboard */,
 				24514E7E1CBFEF0000299E9B /* ContactsTableViewController.swift */,
 				24514E7B1CBFEEC400299E9B /* View */,
 				24514E7A1CBFEEBE00299E9B /* Model */,
@@ -482,7 +476,6 @@
 				24514E821CBFEF0F00299E9B /* ContactsTableViewCell.swift */,
 				2413C1061CC80E08005D9AA2 /* SearchResultTableViewCell.swift */,
 				243A9F691CD291BE00A23AF8 /* TeamTableViewCell.swift */,
-				24A5AB3F1CE38314000FD0B4 /* NavigationButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -523,8 +516,6 @@
 		24514E961CBFF3C000299E9B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				243A9F5F1CD159AF00A23AF8 /* ButtonView.swift */,
-				24514E9C1CBFF3E000299E9B /* ChatListBaseCell.swift */,
 				24514E9D1CBFF3E000299E9B /* ChatListCell.swift */,
 			);
 			name = View;
@@ -1042,7 +1033,6 @@
 				24514F911CBFF5EC00299E9B /* Expression_79@2x.png in Resources */,
 				24514F611CBFF5EC00299E9B /* Expression_31@2x.png in Resources */,
 				24514F731CBFF5EC00299E9B /* Expression_49@2x.png in Resources */,
-				24514E801CBFEF0000299E9B /* contactsSB.storyboard in Resources */,
 				24514F4F1CBFF5EC00299E9B /* Expression_13@2x.png in Resources */,
 				24514F551CBFF5EC00299E9B /* Expression_19@2x.png in Resources */,
 				24514FA61CBFF5EC00299E9B /* Expression_100@2x.png in Resources */,
@@ -1119,6 +1109,7 @@
 				24514F491CBFF5EC00299E9B /* Expression_7@2x.png in Resources */,
 				24514F861CBFF5EC00299E9B /* Expression_68@2x.png in Resources */,
 				24514F591CBFF5EC00299E9B /* Expression_23@2x.png in Resources */,
+				24A5AB4A1CE4E112000FD0B4 /* contactsSB.storyboard in Resources */,
 				24514F4A1CBFF5EC00299E9B /* Expression_8@2x.png in Resources */,
 				24514F6D1CBFF5EC00299E9B /* Expression_43@2x.png in Resources */,
 				24514F8F1CBFF5EC00299E9B /* Expression_77@2x.png in Resources */,
@@ -1216,7 +1207,6 @@
 			files = (
 				24F644131CC17F4300491504 /* ServerConfig.swift in Sources */,
 				24514FB41CBFF61200299E9B /* RecordVideoView.swift in Sources */,
-				243A9F601CD159AF00A23AF8 /* ButtonView.swift in Sources */,
 				2413C1031CC7D548005D9AA2 /* SEViewController.swift in Sources */,
 				24931C201CDA47730066A641 /* TeamDetailTableViewController.swift in Sources */,
 				24514FB31CBFF61200299E9B /* RecordVideoModel.swift in Sources */,
@@ -1255,7 +1245,6 @@
 				2485E7841CBC11C2006D92A2 /* AppTheme.swift in Sources */,
 				243A9F581CCFB3A100A23AF8 /* GenerateData.swift in Sources */,
 				24514FC31CC02D4400299E9B /* PhotoViewController.swift in Sources */,
-				24514E9F1CBFF3E000299E9B /* ChatListBaseCell.swift in Sources */,
 				24F6440E1CC14DA900491504 /* Response.proto.swift in Sources */,
 				24514EAA1CBFF45200299E9B /* AudioPlayer.swift in Sources */,
 				24514EAD1CBFF45200299E9B /* Observable.swift in Sources */,
@@ -1275,7 +1264,6 @@
 				24514EA41CBFF3EB00299E9B /* ChatListCellModel.swift in Sources */,
 				24514FB21CBFF61200299E9B /* AVPlayView.swift in Sources */,
 				243A9F561CCFB1AC00A23AF8 /* PublicStrings.swift in Sources */,
-				24A5AB401CE38314000FD0B4 /* NavigationButton.swift in Sources */,
 				2485E7521CBBF577006D92A2 /* AppDelegate.swift in Sources */,
 				24514EC61CBFF52A00299E9B /* ChatVoiceCell.swift in Sources */,
 			);

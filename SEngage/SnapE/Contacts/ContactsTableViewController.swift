@@ -34,22 +34,6 @@ class ContactsTableViewController: UITableViewController {
         
         //navigationItem.leftBarButtonItem = editButtonItem()
         segmentedSetting()
-        
-        let mainSize = UIScreen.mainScreen().bounds.size
-        
-        let navButton = NavigationButton(frame: CGRectMake(mainSize.width - 140, 0, 140, 60), controllerView: self.view)
-        navButton.setTitle("➕", forState: UIControlState.Normal)
-        navButton.backgroundColor = UIColor.greenColor()
-        
-        let lb = UILabel()
-        lb.frame = CGRectMake(mainSize.width - 145, 4, 140, 30)
-        lb.text = "Just for test"
-        navButton.contentView.addSubview(lb)
-        
-        let rightBarButton = UIBarButtonItem()
-        rightBarButton.customView = navButton
-        self.navigationItem.rightBarButtonItem = rightBarButton
-
     }
     
     override func didReceiveMemoryWarning() {

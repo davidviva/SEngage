@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChatListCell: ChatListBaseCell {
+class ChatListCell: UITableViewCell {
     
     let iconView: UIImageView!
     let userNameLabel: UILabel!

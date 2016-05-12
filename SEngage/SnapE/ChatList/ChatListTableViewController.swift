@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChatListTableViewController: UITableViewController, ChatListBaseCellDelegate {
+class ChatListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,15 +35,9 @@ class ChatListTableViewController: UITableViewController, ChatListBaseCellDelega
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("messageListCell") as? ChatListCell
         if cell == nil {
-            let leftButtons = [UIButton.createButton("Cancel Subscribe", backGroundColor: UIColor.purpleColor())]
-            let rightButtons = [UIButton.createButton("Mark Read", backGroundColor: UIColor.grayColor()),UIButton.createButton("Delete", backGroundColor: UIColor.redColor())]
-            
             cell = ChatListCell(style: .Subtitle, reuseIdentifier: "messageListCell")
-            cell?.delegate = self
             cell?.viewModel = updateCell()
-            
-            cell?.setLeftButtons(leftButtons)
-            cell?.setRightButtons(rightButtons)
+    
         }
         
         return cell!
@@ -85,23 +79,20 @@ class ChatListTableViewController: UITableViewController, ChatListBaseCellDelega
         return true
     }
     
-    
-    // MARK: - cell delegate
-    
-    func didSelectedLeftButton(index: Int) {
-        let actionSheet = UIAlertController(title: "取消关注", message: "确定要取消关注?", preferredStyle: .ActionSheet)
-        actionSheet.addAction(UIAlertAction(title: "取消", style: .Cancel, handler: { (alertAction) -> Void in
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+//            // Delete the row from the data source
+//            contacts.removeAtIndex(indexPath.row)
             
-        }))
-        actionSheet.addAction(UIAlertAction(title: "确定", style: .Default, handler: { (alertAction) -> Void in
+            // need to save the new contacts array in the db
+            save()
             
-        }))
-        
-        self.presentViewController(actionSheet, animated: true, completion: nil)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
     }
     
-    func didSelectedRightButton(index: Int) {
-        NSLog("click")
+    func save() {
+        
     }
 
 }

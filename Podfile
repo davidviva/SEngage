@@ -13,6 +13,12 @@ pod 'RealmSwift'
 
 pod 'MJRefresh'
 
+pod 'SnapKit'
+
+pod 'RxSwift', '~> 2.3.1'
+
+pod 'RxCocoa', '~> 2.3.1'
+
 end
 
 target 'SEngageTests' do
