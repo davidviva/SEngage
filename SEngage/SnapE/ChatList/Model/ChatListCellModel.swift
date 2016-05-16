@@ -9,17 +9,14 @@
 import Foundation
 
 class ChatListCellModel {
-    let iconName: Observable<String>
-    let userName: Observable<String>
-    let lastMessage: Observable<String>
-    let timer: Observable<String>
+    let contact: Contact!
+    let lastMessage: String
+    let timer: String
+
     
-    private let emptyString = ""
-    
-    init() {
-        iconName = Observable(emptyString)
-        userName = Observable(emptyString)
-        lastMessage = Observable(emptyString)
-        timer = Observable(emptyString)
+    init(contact: Contact, lastMessage: String, timer: String) {
+        self.contact = contact
+        self.lastMessage = lastMessage
+        self.timer = timer
     }
 }

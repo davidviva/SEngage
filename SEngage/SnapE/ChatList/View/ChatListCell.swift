@@ -9,40 +9,14 @@
 import UIKit
 
 class ChatListCell: UITableViewCell {
-    
+
     let iconView: UIImageView!
     let userNameLabel: UILabel!
     let messageLabel: UILabel!
     let timerLabel: UILabel!
     
     let messageListCellHeight = 64
-    
-    
-    var viewModel: ChatListCellModel? {
-        didSet {
-            viewModel?.iconName.observe {
-                [unowned self] in
-                self.iconView.image = UIImage(named: $0)
-            }
-            
-            viewModel?.lastMessage.observe {
-                [unowned self] in
-                self.messageLabel.text = $0
-            }
-            
-            viewModel?.userName.observe {
-                [unowned self] in
-                self.userNameLabel.text = $0
-            }
-            
-            viewModel?.timer.observe {
-                [unowned self] in
-                self.timerLabel.text = $0
-            }
-        }
-    }
-    
-    
+
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         iconView = UIImageView(frame: CGRectMake(5, CGFloat(messageListCellHeight - 50) / 2, 50, 50))
         iconView.layer.cornerRadius = 5.0

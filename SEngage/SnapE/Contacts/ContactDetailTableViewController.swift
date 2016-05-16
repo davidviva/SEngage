@@ -18,8 +18,7 @@ class ContactDetailTableViewController: UITableViewController {
     @IBOutlet weak var phoneLabel: UILabel!
     @IBAction func scopiaAction(sender: UIButton) {
     }
-    @IBAction func messageAction(sender: UIButton) {
-    }
+
     
     @IBAction func photoDetail(sender: UITapGestureRecognizer) {
         
@@ -39,5 +38,16 @@ class ContactDetailTableViewController: UITableViewController {
             emailLabel.text = contact.email
             phoneLabel.text = contact.phone
         }
+    }
+    
+    @IBAction func messageAction(sender: AnyObject) {
+        skipToChat()
+    }
+    
+    func skipToChat() {
+        let chatViewController = ChatViewController()
+        chatViewController.contact = contact
+//        self.presentViewController(chatViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(chatViewController, animated: true)
     }
 }

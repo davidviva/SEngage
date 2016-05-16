@@ -13,43 +13,20 @@ import AVFoundation
 let toolBarMinHeight: CGFloat = 44.0
 let indicatorViewH: CGFloat = 120
 
-//let messageOutSound: SystemSoundID = {
-//    var soundID: SystemSoundID = 10120
-//    let soundUrl = CFBundleCopyResourceURL(CFBundleGetMainBundle(), "MessageOutgoing", "aiff", nil)
-//    AudioServicesCreateSystemSoundID(soundUrl, &soundID)
-//    return soundID
-//}()
-//
-//
-//let messageInSound: SystemSoundID = {
-//    var soundID: SystemSoundID = 10121
-//    let soundUrl = CFBundleCopyResourceURL(CFBundleGetMainBundle(), "MessageIncoming", "aiff", nil)
-//    AudioServicesCreateSystemSoundID(soundUrl, &soundID)
-//    return soundID
-//}()
 
 class ChatViewController: SEViewController, UITableViewDataSource, UITableViewDelegate , UITextViewDelegate {
 
     var tableView: UITableView!
     var toolBarView: ToolBarView!
-    var emojiView: EmotionView!
     var shareView: ShareMoreView!
-    var recordIndicatorView: RecordIndicatorView!
-    var videoController: VideoController!
-    
-    var recorder: AudioRecorder!
-    var player: AudioPlayer!
-    var videoRecordBakgoundView: UIView!
-    var videoRecordView: RecordVideoView!
-    
     var messageList = [Message]()
     var toolBarConstranit: NSLayoutConstraint!
+    var contact: Contact?
     
     // MARK: - lifecycle
     init(){
         super.init(nibName: nil, bundle: nil)
         hidesBottomBarWhenPushed = true
-        title = "jamy" // change name to the contact
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -60,6 +37,10 @@ class ChatViewController: SEViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         // send the notifications
         scheduleNotification();
+        
+        if let contact = contact{
+            self.title = contact.name
+        }
         
         view.backgroundColor = UIColor(patternImage: UIImage(named: "bg3")!)
         
@@ -79,14 +60,9 @@ class ChatViewController: SEViewController, UITableViewDataSource, UITableViewDe
         
         view.addSubview(tableView)
         
-        recordIndicatorView = RecordIndicatorView(frame: CGRectMake(self.view.center.x - indicatorViewH / 2, self.view.center.y - indicatorViewH / 3, indicatorViewH, indicatorViewH))
-        
-        emojiView = EmotionView(frame: CGRectMake(0, 0, view.bounds.width, 196))
-        emojiView.delegate = self
-        
         shareView = ShareMoreView(frame: CGRectMake(0, 0, view.bounds.width, 196), selector: #selector(ChatViewController.shareMoreClick(_:)), target: self)
         
-        toolBarView = ToolBarView(taget: self, voiceSelector: #selector(ChatViewController.voiceClick(_:)), recordSelector: #selector(ChatViewController.recordClick(_:)), emotionSelector: #selector(ChatViewController.emotionClick(_:)), moreSelector: #selector(ChatViewController.moreClick(_:)))
+        toolBarView = ToolBarView(taget: self, moreSelector: #selector(ChatViewController.moreClick(_:)))
         toolBarView.textView.delegate = self
         view.addSubview(toolBarView)
         
@@ -121,12 +97,6 @@ class ChatViewController: SEViewController, UITableViewDataSource, UITableViewDe
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        if player != nil {
-            if player.audioPlayer.playing {
-                player.stopPlaying()
-            }
-        }
     }
     
     // show menuController
@@ -164,7 +134,6 @@ class ChatViewController: SEViewController, UITableViewDataSource, UITableViewDe
         doubleTapGesture.numberOfTapsRequired = 2
         cell.backgroundImageView.addGestureRecognizer(doubleTapGesture)
         cell.backgroundImageView.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: action))
-        cell.backgroundImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ChatViewController.clickCellAction(_:))))
         
         if indexPath.row > 0 {
             let preMessage = messageList[indexPath.row - 1]
@@ -176,6 +145,7 @@ class ChatViewController: SEViewController, UITableViewDataSource, UITableViewDe
         }
         
         cell.setMessage(message)
+        cell.iconImageView.image = contact!.photo
         
         return cell
     }
@@ -289,108 +259,12 @@ class ChatViewController: SEViewController, UITableViewDataSource, UITableViewDe
         toolBarView.showEmotion(false)
         toolBarView.showMore(false)
     }
-    
-    func clickCellAction(gestureRecognizer: UITapGestureRecognizer) {
-        let pressIndexPath = tableView.indexPathForRowAtPoint(gestureRecognizer.locationInView(tableView))!
-        let pressCell = tableView.cellForRowAtIndexPath(pressIndexPath)
-        let message = messageList[pressIndexPath.row]
-        
-        if message.messageType == .Voice {
-            let message = message as! voiceMessage
-            let cell = pressCell as! ChatVoiceCell
-            let play = AudioPlayer()
-            player = play
-            player.startPlaying(message)
-            cell.beginAnimation()
-            
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(message.voiceTime.intValue) * 1000 * 1000 * 1000), dispatch_get_main_queue(), { () -> Void in
-                cell.stopAnimation()
-            })
-        } else if message.messageType == .Video {
-            let message = message as! videoMessage
-            if videoController != nil {
-                videoController = nil
-            }
-            videoController = VideoController()
-            videoController.setPlayUrl(message.url)
-            presentViewController(videoController, animated: true, completion: nil)
-        }
-    }
 }
 
 // MARK: extension for toobar action
 
-extension ChatViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate, AudioRecorderDelegate, EmotionViewDelegate, MapViewControllerDelegate {
-    
-    func voiceClick(button: UIButton) {
-        if toolBarView.recordButton.hidden == false {
-            toolBarView.showRecord(false)
-        } else {
-            toolBarView.showRecord(true)
-            self.view.endEditing(true)
-        }
-    }
-    
-    func recordClick(button: UIButton) {
-        button.setTitle("Release     to end", forState: .Normal)
-        button.addTarget(self, action: #selector(ChatViewController.recordComplection(_:)), forControlEvents: .TouchUpInside)
-        button.addTarget(self, action: #selector(ChatViewController.recordDragOut(_:)), forControlEvents: .TouchDragOutside)
-        button.addTarget(self, action: #selector(ChatViewController.recordCancel(_:)), forControlEvents: .TouchUpOutside)
-        
-        let currentTime = NSDate().timeIntervalSinceReferenceDate
-        let record = AudioRecorder(fileName: "\(currentTime).wav")
-        record.delegate = self
-        recorder = record
-        recorder.startRecord()
-        
-        recordIndicatorView = RecordIndicatorView(frame: CGRectMake(self.view.center.x - indicatorViewH / 2, self.view.center.y - indicatorViewH / 3, indicatorViewH, indicatorViewH))
-        view.addSubview(recordIndicatorView)
-    }
-    
-    func recordComplection(button: UIButton) {
-        button.setTitle("Hold     to speak", forState: .Normal)
-        recorder.stopRecord()
-        recorder.delegate = nil
-        recordIndicatorView.removeFromSuperview()
-        recordIndicatorView = nil
-        
-        if recorder.timeInterval != nil {
-            let message = voiceMessage(incoming: false, sentDate: NSDate(), iconName: "", voicePath: recorder.recorder.url, voiceTime: recorder.timeInterval)
-            let receiveMessage = voiceMessage(incoming: true, sentDate: NSDate(), iconName: "", voicePath: recorder.recorder.url, voiceTime: recorder.timeInterval)
-            
-            messageList.append(message)
-            reloadTableView()
-            messageList.append(receiveMessage)
-            reloadTableView()
-//            AudioServicesPlayAlertSound(messageOutSound)
-        }
-    }
-    
-    func recordDragOut(button: UIButton) {
-        button.setTitle("Hold     to speak", forState: .Normal)
-        recordIndicatorView.showText("Release to cancel", textColor: UIColor.redColor())
-    }
-    
-    
-    func recordCancel(button: UIButton) {
-        button.setTitle("Hold     to speak", forState: .Normal)
-        recorder.stopRecord()
-        recorder.delegate = nil
-        recordIndicatorView.removeFromSuperview()
-        recordIndicatorView = nil
-    }
-    
-    func emotionClick(button: UIButton) {
-        if toolBarView.emotionButton.tag == 1 {
-            toolBarView.showEmotion(true)
-            toolBarView.textView.inputView = emojiView
-        } else {
-            toolBarView.showEmotion(false)
-            toolBarView.textView.inputView = nil
-        }
-        toolBarView.textView.becomeFirstResponder()
-        toolBarView.textView.reloadInputViews()
-    }
+extension ChatViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+
     
     func moreClick(button: UIButton) {
         if toolBarView.moreButton.tag == 2 {
@@ -418,76 +292,18 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
             let nav = UINavigationController(rootViewController: imagePick)
             self.presentViewController(nav, animated: true, completion: nil)
         */
-        case .video:
-            let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("test", ofType: "m4v")!)
-            let message = videoMessage(incoming: false, sentDate: NSDate(), iconName: "", url: url)
-            messageList.append(message)
-            reloadTableView()
-//            AudioServicesPlayAlertSound(messageOutSound)
-            toolBarView.showMore(false)
-            self.view.endEditing(true)
-        case .location:
-            let mapCtrl = MapViewController()
-            mapCtrl.delegate = self
-            let nav = UINavigationController(rootViewController: mapCtrl)
-            self.presentViewController(nav, animated: true, completion: nil)
-        case .record:
-            beginVideoRecord()
+//        case .video:
+//            let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("test", ofType: "m4v")!)
+//            let message = videoMessage(incoming: false, sentDate: NSDate(), iconName: "", url: url)
+//            messageList.append(message)
+//            reloadTableView()
+////            AudioServicesPlayAlertSound(messageOutSound)
+//            toolBarView.showMore(false)
+//            self.view.endEditing(true)
+//            break
         default:
             break
         }
-    }
-    
-    func beginVideoRecord() {
-        videoRecordView = RecordVideoView(frame: CGRectMake(0, view.bounds.height * 0.4, view.bounds.width, view.bounds.height * 0.6))
-        videoRecordBakgoundView = UIView(frame: view.bounds)
-        videoRecordBakgoundView.backgroundColor = UIColor.blackColor()
-        videoRecordBakgoundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ChatViewController.videoBackgroundViewClick(_:))))
-        videoRecordBakgoundView.alpha = 0.6
-        videoRecordView.alpha = 1.0
-        
-        UIView.animateWithDuration(0.35, animations: { () -> Void in
-            self.view.endEditing(true)
-            self.toolBarConstranit.constant = self.videoRecordView.bounds.height
-            self.scrollToBottom()
-            self.view.layoutIfNeeded()
-            }) { (finish) -> Void in
-                self.view.addSubview(self.videoRecordBakgoundView)
-                self.view.addSubview(self.videoRecordView)
-        }
-        
-        videoRecordView.recordVideoModel.complectionClosure = { (url: NSURL) -> Void in
-            let message = videoMessage(incoming: false, sentDate: NSDate(), iconName: "", url: url)
-            self.messageList.append(message)
-            self.reloadTableView()
-//            AudioServicesPlayAlertSound(messageOutSound)
-            self.toolBarView.showMore(false)
-            self.videoRecordComplection()
-        }
-        
-        videoRecordView.recordVideoModel.cancelClosure = {
-            self.videoRecordComplection()
-        }
-    }
-    
-    func videoBackgroundViewClick(gestureReconizer: UITapGestureRecognizer) {
-        videoRecordComplection()
-    }
-    
-    func videoRecordComplection() {
-        view.layoutIfNeeded()
-        UIView.animateWithDuration(0.35, animations: { () -> Void in
-            self.videoRecordBakgoundView.bounds.y = self.view.bounds.height
-            self.videoRecordView.bounds.y = self.view.bounds.height
-            }) { (_) -> Void in
-                self.videoRecordView.removeFromSuperview()
-                self.videoRecordBakgoundView.removeFromSuperview()
-                self.videoRecordBakgoundView = nil
-                self.videoRecordView = nil
-                self.toolBarConstranit.constant = 0
-                self.view.layoutIfNeeded()
-        }
-        toolBarView.showMore(false)
     }
     
     func sendImage(image: UIImage) {
@@ -508,17 +324,6 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
         
     }
     
-    // MARK: - mapview delegate
-    
-    func mapViewController(controller: MapViewController, didSelectLocationSnapeShort image: UIImage) {
-        toolBarView.showMore(false)
-        sendImage(image)
-    }
-    
-    func mapViewController(controller: MapViewController, didCancel error: NSError?) {
-        toolBarView.showMore(false)
-    }
-    
     /*
     // MARK: - imagePick delegate
     func imagePickerController(picker: ImagePickController, didFinishPickingImages images: [UIImage]) {
@@ -532,16 +337,6 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
         toolBarView.showMore(false)
     }
     */
-    
-    // MARK: - emojiDelegate
-    func selectEmoji(code: String, description: String, delete: Bool) {
-        if delete {
-            let range = toolBarView.textView.text.endIndex.advancedBy(-1)..<toolBarView.textView.text.endIndex
-            toolBarView.textView.text.removeRange(range)
-        } else {
-            toolBarView.textView.text.appendContentsOf(code)
-        }
-    }
     
     // MARK: - textViewDelegate
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
@@ -563,13 +358,6 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
             return false
         }
         return true
-    }
-    
-    // MARK: -LGrecordDelegate
-    func audioRecorderUpdateMetra(metra: Float) {
-        if recordIndicatorView != nil {
-            recordIndicatorView.updateLevelMetra(metra)
-        }
     }
     
     //send the notification

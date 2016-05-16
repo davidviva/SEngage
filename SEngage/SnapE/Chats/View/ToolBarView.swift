@@ -16,14 +16,14 @@ class ToolBarView: UIView {
     var moreButton: UIButton!
     var recordButton: UIButton!
     
-    convenience init(taget: UIViewController, voiceSelector: Selector, recordSelector: Selector, emotionSelector: Selector, moreSelector: Selector) {
+    convenience init(taget: UIViewController, moreSelector: Selector) {
         self.init()
         backgroundColor = UIColor(hexString: "D8EBF2")
         
         voiceButton = UIButton(type: .Custom)
         voiceButton.setImage(UIImage(named: "ToolViewInputVoice"), forState: .Normal)
         voiceButton.setImage(UIImage(named: "ToolViewInputVoiceHL"), forState: .Highlighted)
-        voiceButton.addTarget(taget, action: voiceSelector, forControlEvents: .TouchUpInside)
+//        voiceButton.addTarget(taget, action: voiceSelector, forControlEvents: .TouchUpInside)
         self.addSubview(voiceButton)
         
         textView = InputTextView()
@@ -41,7 +41,7 @@ class ToolBarView: UIView {
         emotionButton.tag = 1
         emotionButton.setImage(UIImage(named: "ToolViewEmotion"), forState: .Normal)
         emotionButton.setImage(UIImage(named: "ToolViewEmotionHL"), forState: .Highlighted)
-        emotionButton.addTarget(taget, action: emotionSelector, forControlEvents: .TouchUpInside)
+//        emotionButton.addTarget(taget, action: emotionSelector, forControlEvents: .TouchUpInside)
         self.addSubview(emotionButton)
         
         moreButton = UIButton(type: .Custom)
@@ -52,11 +52,11 @@ class ToolBarView: UIView {
         self.addSubview(moreButton)
         
         recordButton = UIButton(type: .Custom)
-        recordButton.setTitle("按住     说话", forState: .Normal)
+        recordButton.setTitle("Hold     Talk", forState: .Normal)
         recordButton.titleLabel?.font = UIFont.systemFontOfSize(14.0)
         recordButton.setBackgroundImage(UIImage.imageWithColor(UIColor(hexString: "F6F6F6")!), forState: .Normal)
         recordButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        recordButton.addTarget(taget, action: recordSelector, forControlEvents: .TouchDown)
+//        recordButton.addTarget(taget, action: recordSelector, forControlEvents: .TouchDown)
         recordButton.layer.borderColor = UIColor(hexString: "DADADA")?.CGColor
         recordButton.layer.borderWidth = 1
         recordButton.layer.cornerRadius = 5.0
