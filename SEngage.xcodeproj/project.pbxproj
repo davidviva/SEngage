@@ -11,8 +11,8 @@
 		2413C1031CC7D548005D9AA2 /* SEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2413C1021CC7D548005D9AA2 /* SEViewController.swift */; };
 		2413C1051CC80C56005D9AA2 /* AddContacTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2413C1041CC80C56005D9AA2 /* AddContacTableViewController.swift */; };
 		2413C1071CC80E08005D9AA2 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2413C1061CC80E08005D9AA2 /* SearchResultTableViewCell.swift */; };
-		24332E3F1CEA15A800630A9C /* ChatVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24332E3D1CEA15A800630A9C /* ChatVideoCell.swift */; };
-		24332E401CEA15A800630A9C /* ChatVoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24332E3E1CEA15A800630A9C /* ChatVoiceCell.swift */; };
+		24332E461CEBA2B000630A9C /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24332E451CEBA2B000630A9C /* MessageModel.swift */; };
+		24332E481CEBA59900630A9C /* SnapBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24332E471CEBA59900630A9C /* SnapBaseModel.swift */; };
 		243A9F521CCFAC0000A23AF8 /* UserObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A9F511CCFAC0000A23AF8 /* UserObj.swift */; };
 		243A9F561CCFB1AC00A23AF8 /* PublicStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A9F551CCFB1AC00A23AF8 /* PublicStrings.swift */; };
 		243A9F581CCFB3A100A23AF8 /* GenerateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A9F571CCFB3A100A23AF8 /* GenerateData.swift */; };
@@ -32,17 +32,6 @@
 		24514E9A1CBFF3D000299E9B /* ChatListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514E981CBFF3D000299E9B /* ChatListTableViewController.swift */; };
 		24514EA01CBFF3E000299E9B /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514E9D1CBFF3E000299E9B /* ChatListCell.swift */; };
 		24514EA41CBFF3EB00299E9B /* ChatListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514EA21CBFF3EB00299E9B /* ChatListCellModel.swift */; };
-		24514EAA1CBFF45200299E9B /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514EA61CBFF45200299E9B /* AudioPlayer.swift */; };
-		24514EAB1CBFF45200299E9B /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514EA71CBFF45200299E9B /* AudioRecorder.swift */; };
-		24514EAC1CBFF45200299E9B /* EmotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514EA81CBFF45200299E9B /* EmotionManager.swift */; };
-		24514EAD1CBFF45200299E9B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514EA91CBFF45200299E9B /* Observable.swift */; };
-		24514EB11CBFF4BC00299E9B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514EB01CBFF4BC00299E9B /* ChatViewController.swift */; };
-		24514EB41CBFF4D600299E9B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514EB31CBFF4D600299E9B /* Message.swift */; };
-		24514EB91CBFF4EC00299E9B /* ShareMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514EB61CBFF4EC00299E9B /* ShareMoreView.swift */; };
-		24514EBA1CBFF4EC00299E9B /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514EB71CBFF4EC00299E9B /* ToolBarView.swift */; };
-		24514EC21CBFF52A00299E9B /* ChatBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514EBD1CBFF52A00299E9B /* ChatBaseCell.swift */; };
-		24514EC31CBFF52A00299E9B /* ChatImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514EBE1CBFF52A00299E9B /* ChatImageCell.swift */; };
-		24514EC41CBFF52A00299E9B /* ChatTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514EBF1CBFF52A00299E9B /* ChatTextCell.swift */; };
 		24514FC11CC02A7000299E9B /* PublicMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514FC01CC02A7000299E9B /* PublicMethods.swift */; };
 		24514FC31CC02D4400299E9B /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24514FC21CC02D4400299E9B /* PhotoViewController.swift */; };
 		2461B4BD1CDBA08F00A8BE2A /* SelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461B4BC1CDBA08F00A8BE2A /* SelectionTableViewController.swift */; };
@@ -61,6 +50,8 @@
 		24931C201CDA47730066A641 /* TeamDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24931C1F1CDA47730066A641 /* TeamDetailTableViewController.swift */; };
 		24931C221CDA76B30066A641 /* TeamMemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24931C211CDA76B30066A641 /* TeamMemberTableViewController.swift */; };
 		24A5AB4A1CE4E112000FD0B4 /* contactsSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A5AB491CE4E112000FD0B4 /* contactsSB.storyboard */; };
+		24CEE9DF1CECB45600040F78 /* MessageSubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CEE9DE1CECB45600040F78 /* MessageSubModel.swift */; };
+		24CEE9E11CECB9E600040F78 /* ChatBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CEE9E01CECB9E600040F78 /* ChatBaseCell.swift */; };
 		24F644021CC14C7A00491504 /* Entity.proto in Resources */ = {isa = PBXBuildFile; fileRef = 24F643FE1CC14C7A00491504 /* Entity.proto */; };
 		24F644031CC14C7A00491504 /* MsgBase.proto in Resources */ = {isa = PBXBuildFile; fileRef = 24F643FF1CC14C7A00491504 /* MsgBase.proto */; };
 		24F644041CC14C7A00491504 /* Request.proto in Resources */ = {isa = PBXBuildFile; fileRef = 24F644001CC14C7A00491504 /* Request.proto */; };
@@ -102,8 +93,8 @@
 		2413C1021CC7D548005D9AA2 /* SEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SEViewController.swift; path = SnapE/Resources/SEViewController.swift; sourceTree = "<group>"; };
 		2413C1041CC80C56005D9AA2 /* AddContacTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddContacTableViewController.swift; path = SnapE/Contacts/AddContacTableViewController.swift; sourceTree = "<group>"; };
 		2413C1061CC80E08005D9AA2 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultTableViewCell.swift; path = SnapE/Contacts/View/SearchResultTableViewCell.swift; sourceTree = "<group>"; };
-		24332E3D1CEA15A800630A9C /* ChatVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatVideoCell.swift; path = SnapE/Chats/View/Cells/ChatVideoCell.swift; sourceTree = "<group>"; };
-		24332E3E1CEA15A800630A9C /* ChatVoiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatVoiceCell.swift; path = SnapE/Chats/View/Cells/ChatVoiceCell.swift; sourceTree = "<group>"; };
+		24332E451CEBA2B000630A9C /* MessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageModel.swift; path = SnapE/Chat/Model/MessageModel.swift; sourceTree = "<group>"; };
+		24332E471CEBA59900630A9C /* SnapBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapBaseModel.swift; path = SnapE/Chat/Model/SnapBaseModel.swift; sourceTree = "<group>"; };
 		243A9F511CCFAC0000A23AF8 /* UserObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserObj.swift; path = SnapE/Me/Model/UserObj.swift; sourceTree = "<group>"; };
 		243A9F551CCFB1AC00A23AF8 /* PublicStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PublicStrings.swift; path = SnapE/Resources/PublicStrings.swift; sourceTree = "<group>"; };
 		243A9F571CCFB3A100A23AF8 /* GenerateData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenerateData.swift; path = SnapE/Resources/GenerateData.swift; sourceTree = "<group>"; };
@@ -123,17 +114,6 @@
 		24514E981CBFF3D000299E9B /* ChatListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatListTableViewController.swift; path = SnapE/ChatList/ChatListTableViewController.swift; sourceTree = "<group>"; };
 		24514E9D1CBFF3E000299E9B /* ChatListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatListCell.swift; path = SnapE/ChatList/View/ChatListCell.swift; sourceTree = "<group>"; };
 		24514EA21CBFF3EB00299E9B /* ChatListCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatListCellModel.swift; path = SnapE/ChatList/Model/ChatListCellModel.swift; sourceTree = "<group>"; };
-		24514EA61CBFF45200299E9B /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioPlayer.swift; path = SnapE/Utilities/AudioPlayer.swift; sourceTree = "<group>"; };
-		24514EA71CBFF45200299E9B /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioRecorder.swift; path = SnapE/Utilities/AudioRecorder.swift; sourceTree = "<group>"; };
-		24514EA81CBFF45200299E9B /* EmotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmotionManager.swift; path = SnapE/Utilities/EmotionManager.swift; sourceTree = "<group>"; };
-		24514EA91CBFF45200299E9B /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Observable.swift; path = SnapE/Utilities/Observable.swift; sourceTree = "<group>"; };
-		24514EB01CBFF4BC00299E9B /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = SnapE/Chats/ChatViewController.swift; sourceTree = "<group>"; };
-		24514EB31CBFF4D600299E9B /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = SnapE/Chats/Model/Message.swift; sourceTree = "<group>"; };
-		24514EB61CBFF4EC00299E9B /* ShareMoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShareMoreView.swift; path = SnapE/Chats/View/ShareMoreView.swift; sourceTree = "<group>"; };
-		24514EB71CBFF4EC00299E9B /* ToolBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToolBarView.swift; path = SnapE/Chats/View/ToolBarView.swift; sourceTree = "<group>"; };
-		24514EBD1CBFF52A00299E9B /* ChatBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatBaseCell.swift; path = SnapE/Chats/View/Cells/ChatBaseCell.swift; sourceTree = "<group>"; };
-		24514EBE1CBFF52A00299E9B /* ChatImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatImageCell.swift; path = SnapE/Chats/View/Cells/ChatImageCell.swift; sourceTree = "<group>"; };
-		24514EBF1CBFF52A00299E9B /* ChatTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatTextCell.swift; path = SnapE/Chats/View/Cells/ChatTextCell.swift; sourceTree = "<group>"; };
 		24514FC01CC02A7000299E9B /* PublicMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PublicMethods.swift; path = SnapE/Resources/PublicMethods.swift; sourceTree = "<group>"; };
 		24514FC21CC02D4400299E9B /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoViewController.swift; path = SnapE/Me/PhotoViewController.swift; sourceTree = "<group>"; };
 		2461B4BC1CDBA08F00A8BE2A /* SelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectionTableViewController.swift; path = SnapE/Contacts/SelectionTableViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +138,8 @@
 		24931C1F1CDA47730066A641 /* TeamDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamDetailTableViewController.swift; path = SnapE/Contacts/TeamDetailTableViewController.swift; sourceTree = "<group>"; };
 		24931C211CDA76B30066A641 /* TeamMemberTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamMemberTableViewController.swift; path = SnapE/Contacts/TeamMemberTableViewController.swift; sourceTree = "<group>"; };
 		24A5AB491CE4E112000FD0B4 /* contactsSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = contactsSB.storyboard; path = SnapE/Contacts/contactsSB.storyboard; sourceTree = "<group>"; };
+		24CEE9DE1CECB45600040F78 /* MessageSubModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageSubModel.swift; path = SnapE/Chat/Model/MessageSubModel.swift; sourceTree = "<group>"; };
+		24CEE9E01CECB9E600040F78 /* ChatBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatBaseCell.swift; path = SnapE/Chat/View/Cells/ChatBaseCell.swift; sourceTree = "<group>"; };
 		24F643FE1CC14C7A00491504 /* Entity.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Entity.proto; path = Proto/Entity.proto; sourceTree = "<group>"; };
 		24F643FF1CC14C7A00491504 /* MsgBase.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MsgBase.proto; path = Proto/MsgBase.proto; sourceTree = "<group>"; };
 		24F644001CC14C7A00491504 /* Request.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Request.proto; path = Proto/Request.proto; sourceTree = "<group>"; };
@@ -209,6 +191,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24332E411CEB9FD800630A9C /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				24332E431CEBA01500630A9C /* View */,
+				24332E421CEBA00700630A9C /* Model */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
+		24332E421CEBA00700630A9C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				24332E451CEBA2B000630A9C /* MessageModel.swift */,
+				24332E471CEBA59900630A9C /* SnapBaseModel.swift */,
+				24CEE9DE1CECB45600040F78 /* MessageSubModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		24332E431CEBA01500630A9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24332E441CEBA01B00630A9C /* Cells */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		24332E441CEBA01B00630A9C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				24CEE9E01CECB9E600040F78 /* ChatBaseCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		24514E791CBFEC1200299E9B /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,16 +261,6 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		24514E931CBFF37400299E9B /* Chats */ = {
-			isa = PBXGroup;
-			children = (
-				24514EB01CBFF4BC00299E9B /* ChatViewController.swift */,
-				24514EAF1CBFF4A000299E9B /* Model */,
-				24514EAE1CBFF49900299E9B /* View */,
-			);
-			name = Chats;
-			sourceTree = "<group>";
-		};
 		24514E941CBFF37C00299E9B /* ChatList */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,47 +286,6 @@
 				24514E9D1CBFF3E000299E9B /* ChatListCell.swift */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		24514EA51CBFF44300299E9B /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				24514EA61CBFF45200299E9B /* AudioPlayer.swift */,
-				24514EA71CBFF45200299E9B /* AudioRecorder.swift */,
-				24514EA81CBFF45200299E9B /* EmotionManager.swift */,
-				24514EA91CBFF45200299E9B /* Observable.swift */,
-			);
-			name = Utilities;
-			sourceTree = "<group>";
-		};
-		24514EAE1CBFF49900299E9B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				24514EBB1CBFF50600299E9B /* Cells */,
-				24514EB61CBFF4EC00299E9B /* ShareMoreView.swift */,
-				24514EB71CBFF4EC00299E9B /* ToolBarView.swift */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		24514EAF1CBFF4A000299E9B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				24514EB31CBFF4D600299E9B /* Message.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		24514EBB1CBFF50600299E9B /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				24332E3D1CEA15A800630A9C /* ChatVideoCell.swift */,
-				24332E3E1CEA15A800630A9C /* ChatVoiceCell.swift */,
-				24514EBD1CBFF52A00299E9B /* ChatBaseCell.swift */,
-				24514EBE1CBFF52A00299E9B /* ChatImageCell.swift */,
-				24514EBF1CBFF52A00299E9B /* ChatTextCell.swift */,
-			);
-			name = Cells;
 			sourceTree = "<group>";
 		};
 		2485E7451CBBF576006D92A2 = {
@@ -353,11 +319,10 @@
 		2485E7501CBBF576006D92A2 /* SEngage */ = {
 			isa = PBXGroup;
 			children = (
+				24332E411CEB9FD800630A9C /* Chat */,
 				24F6440F1CC14E2200491504 /* Service */,
 				24F644061CC14D5100491504 /* ProtoEntry */,
-				24514EA51CBFF44300299E9B /* Utilities */,
 				24514E941CBFF37C00299E9B /* ChatList */,
-				24514E931CBFF37400299E9B /* Chats */,
 				24514E791CBFEC1200299E9B /* Contacts */,
 				2485E7A21CBD7C8C006D92A2 /* Me */,
 				2485E7A11CBD780C006D92A2 /* Supports */,
@@ -707,44 +672,35 @@
 				2485E79D1CBC380C006D92A2 /* CommonEx.swift in Sources */,
 				24514EA01CBFF3E000299E9B /* ChatListCell.swift in Sources */,
 				24514FC11CC02A7000299E9B /* PublicMethods.swift in Sources */,
-				24332E3F1CEA15A800630A9C /* ChatVideoCell.swift in Sources */,
-				24514EB41CBFF4D600299E9B /* Message.swift in Sources */,
-				24514EAB1CBFF45200299E9B /* AudioRecorder.swift in Sources */,
 				24514E861CBFEF2000299E9B /* Contact.swift in Sources */,
 				2461B4BD1CDBA08F00A8BE2A /* SelectionTableViewController.swift in Sources */,
-				24514EC31CBFF52A00299E9B /* ChatImageCell.swift in Sources */,
 				24F6441F1CC1807000491504 /* ytcpsocket.c in Sources */,
 				24514E811CBFEF0000299E9B /* ContactsTableViewController.swift in Sources */,
 				24F6441B1CC1807000491504 /* Closure.swift in Sources */,
 				243A9F6A1CD291BE00A23AF8 /* TeamTableViewCell.swift in Sources */,
 				2485E7AA1CBD8B4E006D92A2 /* RootViewController.swift in Sources */,
-				24514EC21CBFF52A00299E9B /* ChatBaseCell.swift in Sources */,
 				2413C1051CC80C56005D9AA2 /* AddContacTableViewController.swift in Sources */,
 				24931C221CDA76B30066A641 /* TeamMemberTableViewController.swift in Sources */,
-				24514EB11CBFF4BC00299E9B /* ChatViewController.swift in Sources */,
 				24F6440C1CC14DA900491504 /* MsgBase.proto.swift in Sources */,
 				24F6441D1CC1807000491504 /* TCPResponse.swift in Sources */,
 				2413C1071CC80E08005D9AA2 /* SearchResultTableViewCell.swift in Sources */,
 				2485E7841CBC11C2006D92A2 /* AppTheme.swift in Sources */,
 				243A9F581CCFB3A100A23AF8 /* GenerateData.swift in Sources */,
 				24514FC31CC02D4400299E9B /* PhotoViewController.swift in Sources */,
+				24332E481CEBA59900630A9C /* SnapBaseModel.swift in Sources */,
 				24F6440E1CC14DA900491504 /* Response.proto.swift in Sources */,
-				24514EAA1CBFF45200299E9B /* AudioPlayer.swift in Sources */,
-				24514EAD1CBFF45200299E9B /* Observable.swift in Sources */,
-				24514EAC1CBFF45200299E9B /* EmotionManager.swift in Sources */,
 				24F6440B1CC14DA900491504 /* Entity.proto.swift in Sources */,
 				24514E831CBFEF0F00299E9B /* ContactsTableViewCell.swift in Sources */,
 				24F6441E1CC1807000491504 /* ysocket.swift in Sources */,
-				24514EB91CBFF4EC00299E9B /* ShareMoreView.swift in Sources */,
+				24CEE9E11CECB9E600040F78 /* ChatBaseCell.swift in Sources */,
 				2485E79B1CBC380C006D92A2 /* CGRectEx.swift in Sources */,
-				24514EC41CBFF52A00299E9B /* ChatTextCell.swift in Sources */,
 				24F644201CC1807000491504 /* ytcpsocket.swift in Sources */,
 				2485E79C1CBC380C006D92A2 /* ColorEx.swift in Sources */,
-				24332E401CEA15A800630A9C /* ChatVoiceCell.swift in Sources */,
+				24332E461CEBA2B000630A9C /* MessageModel.swift in Sources */,
 				24514E7F1CBFEF0000299E9B /* ContactDetailTableViewController.swift in Sources */,
-				24514EBA1CBFF4EC00299E9B /* ToolBarView.swift in Sources */,
 				24514EA41CBFF3EB00299E9B /* ChatListCellModel.swift in Sources */,
 				243A9F561CCFB1AC00A23AF8 /* PublicStrings.swift in Sources */,
+				24CEE9DF1CECB45600040F78 /* MessageSubModel.swift in Sources */,
 				2485E7521CBBF577006D92A2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
