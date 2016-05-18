@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class textMessageModel: MessageModel {
+class TextMessageModel: MessageModel {
     let text: String
     override var messageContentType: MessageContentType {
         get {
@@ -22,7 +22,7 @@ class textMessageModel: MessageModel {
     }
 }
 
-class imageMessageModel: MessageModel {
+class ImageMessageModel: MessageModel {
     let image: UIImage
     override var messageContentType: MessageContentType {
         get {

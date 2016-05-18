@@ -15,8 +15,7 @@ class MessageModel {
     var user: UserObj
     var sender: String
     var receiver: String
-    var senderIcon: UIImage
-    var recIcon: UIImage
+    var icon: UIImage
     let incoming: Bool
     let sentDate: NSDate
     var messageFromType : MessageFromType = MessageFromType.Personal
@@ -44,13 +43,11 @@ class MessageModel {
         if incoming {
             self.sender = contact.name
             self.receiver = user.name
-            self.senderIcon = contact.photo!
-            self.recIcon = user.photo!
+            self.icon = contact.photo!
         } else {
             self.sender = user.name
             self.receiver = contact.name
-            self.senderIcon = user.photo!
-            self.recIcon = contact.photo!
+            self.icon = user.photo!
         }
     }
 }

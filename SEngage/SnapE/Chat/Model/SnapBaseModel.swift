@@ -27,7 +27,7 @@ enum MessageContentType: String {
 //    case Voice = "2"
 //    case System = "3"
 //    case File = "4"
-    case Time
+//    case Time
 }
 
 

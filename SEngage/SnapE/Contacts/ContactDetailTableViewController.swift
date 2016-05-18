@@ -46,7 +46,7 @@ class ContactDetailTableViewController: UITableViewController {
     
     func skipToChat() {
         let chatViewController = ChatViewController()
-        chatViewController.contact = contact
+        chatViewController.contact = contact!
 //        self.presentViewController(chatViewController, animated: true, completion: nil)
         self.navigationController?.pushViewController(chatViewController, animated: true)
     }
