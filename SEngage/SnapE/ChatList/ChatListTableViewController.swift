@@ -39,13 +39,10 @@ class ChatListTableViewController: UITableViewController {
         var cell = tableView.dequeueReusableCellWithIdentifier("messageListCell") as? ChatListCell
             cell = ChatListCell(style: .Subtitle, reuseIdentifier: "messageListCell")
             let contact = contacts[indexPath.row]
-            print(indexPath.row)
-            print(contact.name)
             cell?.iconView.image = contact.photo
             cell?.userNameLabel.text = contact.name
             cell?.messageLabel.text = message[random() % 5]
             cell?.timerLabel.text = time[random() % 5]
-        
         
         return cell!
     }
