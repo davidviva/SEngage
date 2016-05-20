@@ -12,6 +12,7 @@
 		2413C1051CC80C56005D9AA2 /* AddContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2413C1041CC80C56005D9AA2 /* AddContactTableViewController.swift */; };
 		2413C1071CC80E08005D9AA2 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2413C1061CC80E08005D9AA2 /* SearchResultTableViewCell.swift */; };
 		241DC12F1CEF922A00A68B31 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241DC12E1CEF922A00A68B31 /* TeamTableViewCell.swift */; };
+		241DC1311CEF959B00A68B31 /* TeamCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241DC1301CEF959B00A68B31 /* TeamCreationViewController.swift */; };
 		24332E461CEBA2B000630A9C /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24332E451CEBA2B000630A9C /* MessageModel.swift */; };
 		24332E481CEBA59900630A9C /* SnapBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24332E471CEBA59900630A9C /* SnapBaseModel.swift */; };
 		243A9F521CCFAC0000A23AF8 /* UserObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A9F511CCFAC0000A23AF8 /* UserObj.swift */; };
@@ -97,6 +98,7 @@
 		2413C1041CC80C56005D9AA2 /* AddContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddContactTableViewController.swift; path = SnapE/Contacts/AddContactTableViewController.swift; sourceTree = "<group>"; };
 		2413C1061CC80E08005D9AA2 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultTableViewCell.swift; path = SnapE/Contacts/View/SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		241DC12E1CEF922A00A68B31 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamTableViewCell.swift; path = SnapE/Contacts/View/TeamTableViewCell.swift; sourceTree = "<group>"; };
+		241DC1301CEF959B00A68B31 /* TeamCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamCreationViewController.swift; path = SnapE/Contacts/TeamCreationViewController.swift; sourceTree = "<group>"; };
 		24332E451CEBA2B000630A9C /* MessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageModel.swift; path = SnapE/Chat/Model/MessageModel.swift; sourceTree = "<group>"; };
 		24332E471CEBA59900630A9C /* SnapBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapBaseModel.swift; path = SnapE/Chat/Model/SnapBaseModel.swift; sourceTree = "<group>"; };
 		243A9F511CCFAC0000A23AF8 /* UserObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserObj.swift; path = SnapE/Me/Model/UserObj.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				24931C1F1CDA47730066A641 /* TeamDetailTableViewController.swift */,
 				24931C211CDA76B30066A641 /* TeamMemberTableViewController.swift */,
 				2461B4BC1CDBA08F00A8BE2A /* SelectionTableViewController.swift */,
+				241DC1301CEF959B00A68B31 /* TeamCreationViewController.swift */,
 			);
 			name = Contacts;
 			sourceTree = "<group>";
@@ -663,6 +666,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				241DC1311CEF959B00A68B31 /* TeamCreationViewController.swift in Sources */,
 				24F644131CC17F4300491504 /* ServerConfig.swift in Sources */,
 				2413C1031CC7D548005D9AA2 /* SEViewController.swift in Sources */,
 				24F53C4D1CEE465700B08934 /* UIImageEx.swift in Sources */,

@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="2575" y="-1470"/>
         </scene>
-        <!--View Controller-->
+        <!--Team Creation View Controller-->
         <scene sceneID="Wts-sx-OCi">
             <objects>
-                <viewController id="mXA-w2-uXo" sceneMemberID="viewController">
+                <viewController id="mXA-w2-uXo" customClass="TeamCreationViewController" customModule="SEngage" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v1Q-7o-7Fb"/>
                         <viewControllerLayoutGuide type="bottom" id="zs7-fE-LAg"/>
@@ -1047,33 +1047,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qHI-Uc-YFq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2575" y="698"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="EON-bT-884">
-            <objects>
-                <tableViewController id="2AC-z3-1XH" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="D8G-xz-irI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="u8Z-zl-X0V">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u8Z-zl-X0V" id="3wi-Q9-aSE">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="2AC-z3-1XH" id="aXq-e8-N78"/>
-                            <outlet property="delegate" destination="2AC-z3-1XH" id="Sw0-xs-md4"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ii-Rh-nTR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>
