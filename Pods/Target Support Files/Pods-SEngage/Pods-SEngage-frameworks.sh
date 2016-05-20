@@ -88,10 +88,16 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-SEngage/ProtocolBuffers.framework"
   install_framework "Pods-SEngage/Realm.framework"
   install_framework "Pods-SEngage/RealmSwift.framework"
+  install_framework "Pods-SEngage/RxCocoa.framework"
+  install_framework "Pods-SEngage/RxSwift.framework"
+  install_framework "Pods-SEngage/SnapKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-SEngage/MJRefresh.framework"
   install_framework "Pods-SEngage/ProtocolBuffers.framework"
   install_framework "Pods-SEngage/Realm.framework"
   install_framework "Pods-SEngage/RealmSwift.framework"
+  install_framework "Pods-SEngage/RxCocoa.framework"
+  install_framework "Pods-SEngage/RxSwift.framework"
+  install_framework "Pods-SEngage/SnapKit.framework"
 fi

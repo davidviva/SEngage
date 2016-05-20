@@ -40,7 +40,7 @@ class RootViewController: UITabBarController {
         let chatNavigationController = UINavigationController(rootViewController: chatCtrl)
         
         // Initial the contacts tab
-        let contactsCtrl = UIStoryboard(name: "contactsSB", bundle: nil).instantiateInitialViewController() as! ContactsTableViewController
+        let contactsCtrl = UIStoryboard(name: "contactsSB", bundle: nil).instantiateInitialViewController() as! ContactsViewController
         contactsCtrl.tabBarItem.title = "Contacts"
         contactsCtrl.tabBarItem.image = UIImage(named: "tabbar_contacts")?.imageWithRenderingMode(.AlwaysOriginal)
         contactsCtrl.tabBarItem.selectedImage = UIImage(named: "tabbar_contactsHL")?.imageWithRenderingMode(.AlwaysOriginal)
