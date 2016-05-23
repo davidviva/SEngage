@@ -248,8 +248,11 @@ extension ContactsViewController: ActionFloatViewDelegate {
             break
         case .AddContacts:
             self.hidesBottomBarWhenPushed = true
-            let addContactTableViewController = AddContactTableViewController()
-            self.navigationController?.pushViewController(addContactTableViewController, animated: true)
+            let sb = UIStoryboard(name: "contactsSB", bundle: nil)
+            let skip = sb.instantiateViewControllerWithIdentifier("AddContact")
+            self.navigationController?.pushViewController(skip, animated: true)
+//            let addContactTableViewController = AddContactTableViewController()
+//            self.navigationController?.pushViewController(addContactTableViewController, animated: true)
             self.hidesBottomBarWhenPushed = false
             break
         }

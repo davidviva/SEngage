@@ -125,7 +125,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
             endingLineNumber = "18"
-            landmarkName = "init(contact:lastMessage:timer:)"
+            landmarkName = "init(contact:lastMessage:timer:unreadNumber:messageContentType:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -184,7 +184,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SEngage/SnapE/ChatList/ChatListTableViewController.swift"
-            timestampString = "485375093.00942"
+            timestampString = "485725030.344835"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -254,6 +254,22 @@
             startingLineNumber = "95"
             endingLineNumber = "95"
             landmarkName = "selectAction(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SEngage/SnapE/ChatList/Model/ChatListCellModel.swift"
+            timestampString = "485726982.658009"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "init(contact:lastMessage:timer:unreadNumber:messageContentType:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
