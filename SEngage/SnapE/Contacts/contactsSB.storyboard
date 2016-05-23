@@ -91,7 +91,7 @@
         <!--Team Creation View Controller-->
         <scene sceneID="Wts-sx-OCi">
             <objects>
-                <viewController id="mXA-w2-uXo" customClass="TeamCreationViewController" customModule="SEngage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeamCreation" id="mXA-w2-uXo" customClass="TeamCreationViewController" customModule="SEngage" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v1Q-7o-7Fb"/>
                         <viewControllerLayoutGuide type="bottom" id="zs7-fE-LAg"/>
@@ -196,7 +196,7 @@
         <!--Team Detail Table View Controller-->
         <scene sceneID="GYJ-av-b1h">
             <objects>
-                <tableViewController storyboardIdentifier="TeamDetail" id="X2D-Db-C2U" customClass="TeamDetailTableViewController" customModule="SEngage" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TeamDetail" hidesBottomBarWhenPushed="YES" id="X2D-Db-C2U" customClass="TeamDetailTableViewController" customModule="SEngage" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="guz-t6-qHU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -367,6 +367,7 @@
                             <outlet property="delegate" destination="X2D-Db-C2U" id="juJ-9V-vIm"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gS3-BM-Nao" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -565,10 +566,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="2QX-uz-vlX" id="0aK-CW-1Z0"/>
-                                    <outlet property="delegate" destination="2QX-uz-vlX" id="4lr-Hm-7My"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -581,130 +578,10 @@
             </objects>
             <point key="canvasLocation" x="1849" y="-59"/>
         </scene>
-        <!--Contacts-->
-        <scene sceneID="Xrz-p7-MV2">
-            <objects>
-                <tableViewController id="2QX-uz-vlX" customClass="ContactsTableViewController" customModule="SEngage" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="TLB-Zr-Ib7">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="YcJ-CL-7AC">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </searchBar>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ContactsTableViewCell" rowHeight="60" id="dII-M1-Hpe" customClass="ContactsTableViewCell" customModule="SEngage" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="600" height="60"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dII-M1-Hpe" id="6dY-Rx-1da">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="oyf-k5-Ad2">
-                                            <rect key="frame" x="15" y="5" width="50" height="50"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="oyf-k5-Ad2" secondAttribute="height" multiplier="57:43" constant="-16.279069767441854" id="ZtW-lQ-d4m"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="5"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Q5-NA-ovB">
-                                            <rect key="frame" x="94" y="9" width="443" height="42"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NDL-Gm-U2k">
-                                            <rect key="frame" x="55" y="44" width="13" height="13"/>
-                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="13" id="H94-vQ-ttS"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="5"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </imageView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="NDL-Gm-U2k" firstAttribute="top" secondItem="6dY-Rx-1da" secondAttribute="topMargin" constant="36" id="1RA-S9-xkX"/>
-                                        <constraint firstItem="6Q5-NA-ovB" firstAttribute="top" secondItem="6dY-Rx-1da" secondAttribute="topMargin" constant="1" id="3Cu-Sz-Sak"/>
-                                        <constraint firstItem="NDL-Gm-U2k" firstAttribute="trailing" secondItem="oyf-k5-Ad2" secondAttribute="trailing" constant="3" id="48a-h4-yZ2"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="6Q5-NA-ovB" secondAttribute="trailing" constant="55" id="6OE-dm-qaB"/>
-                                        <constraint firstItem="oyf-k5-Ad2" firstAttribute="centerY" secondItem="6dY-Rx-1da" secondAttribute="centerY" id="B7t-7c-tqK"/>
-                                        <constraint firstItem="6Q5-NA-ovB" firstAttribute="leading" secondItem="NDL-Gm-U2k" secondAttribute="trailing" constant="26" id="KhC-3B-gM9"/>
-                                        <constraint firstItem="oyf-k5-Ad2" firstAttribute="top" secondItem="6dY-Rx-1da" secondAttribute="topMargin" constant="-3" id="cce-TW-ocX"/>
-                                        <constraint firstItem="6Q5-NA-ovB" firstAttribute="centerY" secondItem="6dY-Rx-1da" secondAttribute="centerY" id="cxn-1E-lt2"/>
-                                        <constraint firstItem="NDL-Gm-U2k" firstAttribute="leading" secondItem="6dY-Rx-1da" secondAttribute="leadingMargin" constant="47" id="dJs-4d-RWX"/>
-                                        <constraint firstItem="NDL-Gm-U2k" firstAttribute="bottom" secondItem="oyf-k5-Ad2" secondAttribute="bottom" constant="2" id="tzy-zC-OaQ"/>
-                                        <constraint firstItem="oyf-k5-Ad2" firstAttribute="leading" secondItem="6dY-Rx-1da" secondAttribute="leadingMargin" constant="7" id="vdd-zA-9Xj"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="nameLabel" destination="6Q5-NA-ovB" id="tTZ-iX-M6b"/>
-                                    <outlet property="photoImageView" destination="oyf-k5-Ad2" id="Qr0-ee-oc4"/>
-                                    <outlet property="statusImageView" destination="NDL-Gm-U2k" id="38D-rb-i4X"/>
-                                    <segue destination="wiS-xs-HdO" kind="show" identifier="" id="Vfb-Lh-Lmd"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamTableViewCell" rowHeight="60" id="zuV-IO-hBK" customClass="TeamTableViewCell" customModule="SEngage" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="132" width="600" height="60"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zuV-IO-hBK" id="bM9-LB-ERQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AvayaLogoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="UxQ-so-bPH">
-                                            <rect key="frame" x="15" y="5" width="50" height="50"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="hVP-fh-0o4"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSN-p8-IPE">
-                                            <rect key="frame" x="94" y="9" width="443" height="42"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="UxQ-so-bPH" firstAttribute="top" secondItem="bM9-LB-ERQ" secondAttribute="topMargin" constant="-3" id="1G3-qb-Jcm"/>
-                                        <constraint firstItem="UxQ-so-bPH" firstAttribute="leading" secondItem="bM9-LB-ERQ" secondAttribute="leadingMargin" constant="7" id="G0o-ec-B7S"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="OSN-p8-IPE" secondAttribute="trailing" constant="55" id="Un8-fZ-iTp"/>
-                                        <constraint firstItem="UxQ-so-bPH" firstAttribute="bottom" secondItem="OSN-p8-IPE" secondAttribute="bottom" constant="4" id="bFH-Lz-IPf"/>
-                                        <constraint firstItem="OSN-p8-IPE" firstAttribute="centerY" secondItem="bM9-LB-ERQ" secondAttribute="centerY" id="nHV-hH-LuM"/>
-                                        <constraint firstItem="OSN-p8-IPE" firstAttribute="leading" secondItem="UxQ-so-bPH" secondAttribute="trailing" constant="29" id="sRn-kq-78B"/>
-                                        <constraint firstItem="OSN-p8-IPE" firstAttribute="top" secondItem="bM9-LB-ERQ" secondAttribute="topMargin" constant="1" id="xwN-gh-jFl"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="teamImageView" destination="UxQ-so-bPH" id="YWk-2a-HhI"/>
-                                    <outlet property="teamNameLabel" destination="OSN-p8-IPE" id="8ld-Lg-ESt"/>
-                                    <segue destination="X2D-Db-C2U" kind="show" identifier="" id="2UX-EC-73w"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="2QX-uz-vlX" id="VWx-tY-vwk"/>
-                            <outlet property="delegate" destination="2QX-uz-vlX" id="SZv-bh-aGJ"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Contacts" id="JZq-bn-YjS"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CFe-De-CqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2575" y="-76"/>
-        </scene>
         <!--Contact Detail Table View Controller-->
         <scene sceneID="CDs-r6-gEY">
             <objects>
-                <tableViewController extendedLayoutIncludesOpaqueBars="YES" id="wiS-xs-HdO" customClass="ContactDetailTableViewController" customModule="SEngage" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="wiS-xs-HdO" customClass="ContactDetailTableViewController" customModule="SEngage" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FEW-AM-Cge">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -950,6 +827,7 @@
                             <outlet property="delegate" destination="wiS-xs-HdO" id="mDY-JI-NNQ"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <connections>
                         <outlet property="emailLabel" destination="lNH-ny-d9b" id="NHv-ZZ-GNU"/>
                         <outlet property="imageView" destination="OGY-pP-a7g" id="fd1-V4-yIa"/>
@@ -1054,8 +932,4 @@
         <image name="CellGreySelected" width="30" height="30"/>
         <image name="defaultPhoto" width="540" height="540"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="PTm-no-dem"/>
-        <segue reference="FT1-od-r0G"/>
-    </inferredMetricsTieBreakers>
 </document>
