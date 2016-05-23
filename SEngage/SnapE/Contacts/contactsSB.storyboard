@@ -375,6 +375,9 @@
                                                             <integer key="value" value="10"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="messageAction:" destination="X2D-Db-C2U" eventType="touchUpInside" id="ObZ-QP-cOC"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dup-u4-tkm">
                                                     <rect key="frame" x="153" y="138" width="294" height="45"/>
@@ -409,6 +412,7 @@
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <connections>
+                        <outlet property="memberCountLabel" destination="Yls-ed-Fwf" id="Xer-n9-hKD"/>
                         <outlet property="nameLabel" destination="112-lH-Ydr" id="EEX-UI-SUa"/>
                     </connections>
                 </tableViewController>

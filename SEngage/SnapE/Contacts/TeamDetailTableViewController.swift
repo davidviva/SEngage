@@ -10,15 +10,17 @@ import UIKit
 
 class TeamDetailTableViewController: UITableViewController {
 
-    var group: Group?
+    var group: Group!
     
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var memberCountLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Team Detail"
         
         nameLabel.text = group?.name
+        memberCountLabel.text = "\(group.contacts.count)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,4 +42,7 @@ class TeamDetailTableViewController: UITableViewController {
         }
     }
 
+    @IBAction func messageAction(sender: AnyObject) {
+        
+    }
 }
