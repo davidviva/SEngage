@@ -38,8 +38,23 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        initNavigationBarItem()
+        initActionFloatView()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.actionFloatView.hide(true)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func initNavigationBarItem() {
         let button: UIButton = UIButton(type: UIButtonType.Custom)
-//        button.setImage(UIImage(asset:.Barbuttonicon_add), forState: .Normal)
+        //        button.setImage(UIImage(asset:.Barbuttonicon_add), forState: .Normal)
         button.setTitle("➕", forState: .Normal)
         button.frame = CGRectMake(0, 0, 40, 30)
         button.imageView!.contentMode = .ScaleAspectFit;
@@ -52,7 +67,9 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         let gapItem = UIBarButtonItem(barButtonSystemItem: .FixedSpace, target: nil, action: nil)
         gapItem.width = -7 //fix the space
         self.navigationItem.setRightBarButtonItems([gapItem, barButton], animated: true)
-        
+    }
+    
+    func initActionFloatView() {
         //Init ActionFloatView
         self.actionFloatView = ActionFloatView()
         self.actionFloatView.delegate = self
@@ -60,16 +77,6 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         self.actionFloatView.snp_makeConstraints { (make) -> Void in
             make.edges.equalTo(UIEdgeInsetsMake(64, 0, 0, 0))
         }
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.actionFloatView.hide(true)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func segmentedSetting() {

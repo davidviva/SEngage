@@ -12,9 +12,13 @@ class TeamDetailTableViewController: UITableViewController {
 
     var group: Group?
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Team Detail"
+        
+        nameLabel.text = group?.name
     }
 
     override func didReceiveMemoryWarning() {
