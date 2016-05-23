@@ -91,7 +91,7 @@
         <!--Team Creation View Controller-->
         <scene sceneID="Wts-sx-OCi">
             <objects>
-                <viewController storyboardIdentifier="TeamCreation" id="mXA-w2-uXo" customClass="TeamCreationViewController" customModule="SEngage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeamCreation" hidesBottomBarWhenPushed="YES" id="mXA-w2-uXo" customClass="TeamCreationViewController" customModule="SEngage" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v1Q-7o-7Fb"/>
                         <viewControllerLayoutGuide type="bottom" id="zs7-fE-LAg"/>
@@ -101,7 +101,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lc7-et-pHA">
-                                <rect key="frame" x="0.0" y="76" width="600" height="524"/>
+                                <rect key="frame" x="0.0" y="65" width="600" height="535"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" id="HB7-BX-7wH">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -113,7 +113,7 @@
                                         <rect key="frame" x="0.0" y="72" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WM2-yz-ybR" id="PEC-3Q-CzK">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="X3J-eT-Hba">
@@ -160,14 +160,14 @@
                                 </prototypes>
                             </tableView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oxC-Jh-cqe">
-                                <rect key="frame" x="195" y="27" width="352" height="30"/>
+                                <rect key="frame" x="157" y="27" width="423" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXT-wX-k2g">
                                 <rect key="frame" x="20" y="27" width="121" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="121" id="BA9-bm-Cvf"/>
+                                    <constraint firstAttribute="width" constant="121" id="IAI-Qz-0fT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -176,18 +176,30 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Lc7-et-pHA" secondAttribute="trailing" id="3Pk-qq-KwO"/>
-                            <constraint firstItem="oxC-Jh-cqe" firstAttribute="top" secondItem="EXT-wX-k2g" secondAttribute="top" id="Emt-c8-wsZ"/>
-                            <constraint firstItem="EXT-wX-k2g" firstAttribute="leading" secondItem="vYu-hh-yzz" secondAttribute="leadingMargin" id="Zzh-je-IY1"/>
-                            <constraint firstItem="Lc7-et-pHA" firstAttribute="leading" secondItem="vYu-hh-yzz" secondAttribute="leading" id="c6h-2D-uZV"/>
-                            <constraint firstItem="EXT-wX-k2g" firstAttribute="top" secondItem="v1Q-7o-7Fb" secondAttribute="bottom" constant="7" id="cGY-nQ-lvp"/>
-                            <constraint firstItem="oxC-Jh-cqe" firstAttribute="bottom" secondItem="EXT-wX-k2g" secondAttribute="bottom" id="jFQ-BG-VLu"/>
-                            <constraint firstItem="oxC-Jh-cqe" firstAttribute="leading" secondItem="EXT-wX-k2g" secondAttribute="trailing" constant="54" id="jLU-bU-chy"/>
-                            <constraint firstItem="Lc7-et-pHA" firstAttribute="bottom" secondItem="zs7-fE-LAg" secondAttribute="top" id="ork-aj-j9d"/>
-                            <constraint firstItem="Lc7-et-pHA" firstAttribute="top" secondItem="EXT-wX-k2g" secondAttribute="bottom" constant="19" id="vJS-6x-Mmb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oxC-Jh-cqe" secondAttribute="trailing" constant="33" id="ypz-3X-YP7"/>
+                            <constraint firstItem="Lc7-et-pHA" firstAttribute="bottom" secondItem="zs7-fE-LAg" secondAttribute="top" id="8n6-H9-9pY"/>
+                            <constraint firstItem="Lc7-et-pHA" firstAttribute="top" secondItem="EXT-wX-k2g" secondAttribute="bottom" constant="8" id="AWo-RY-WPe"/>
+                            <constraint firstItem="EXT-wX-k2g" firstAttribute="leading" secondItem="vYu-hh-yzz" secondAttribute="leadingMargin" id="GZD-M5-8aE"/>
+                            <constraint firstItem="Lc7-et-pHA" firstAttribute="top" secondItem="oxC-Jh-cqe" secondAttribute="bottom" constant="8" symbolic="YES" id="KhU-yX-jJV"/>
+                            <constraint firstItem="Lc7-et-pHA" firstAttribute="leading" secondItem="vYu-hh-yzz" secondAttribute="leading" id="MN6-Lh-mnm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oxC-Jh-cqe" secondAttribute="trailing" id="XVz-Ud-ijK"/>
+                            <constraint firstItem="EXT-wX-k2g" firstAttribute="top" secondItem="v1Q-7o-7Fb" secondAttribute="bottom" constant="7" id="b21-2P-xLl"/>
+                            <constraint firstItem="oxC-Jh-cqe" firstAttribute="leading" secondItem="EXT-wX-k2g" secondAttribute="trailing" constant="16" id="jyS-QD-FRJ"/>
+                            <constraint firstItem="oxC-Jh-cqe" firstAttribute="top" secondItem="EXT-wX-k2g" secondAttribute="top" id="nfz-NO-OkI"/>
+                            <constraint firstAttribute="trailing" secondItem="Lc7-et-pHA" secondAttribute="trailing" id="xCW-TC-nM2"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="8mz-Yk-Xh7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Az3-AU-v3j">
+                            <connections>
+                                <action selector="selectAction:" destination="mXA-w2-uXo" id="Yij-Hh-08g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Lc7-et-pHA" id="HZ8-u2-qNd"/>
+                        <outlet property="textField" destination="oxC-Jh-cqe" id="trl-XY-q5l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSw-T0-YKw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

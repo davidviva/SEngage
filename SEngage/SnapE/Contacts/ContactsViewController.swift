@@ -235,7 +235,7 @@ extension ContactsViewController: ActionFloatViewDelegate {
         case .CreateTeams:
             self.hidesBottomBarWhenPushed = true
             let sb = UIStoryboard(name: "contactsSB", bundle: nil)
-            let skip = sb.instantiateViewControllerWithIdentifier("TeamDetail") as! UITableViewController
+            let skip = sb.instantiateViewControllerWithIdentifier("TeamCreation") 
             self.navigationController?.pushViewController(skip, animated: true)
             self.hidesBottomBarWhenPushed = false
             break
