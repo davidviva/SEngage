@@ -23,6 +23,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     var resultContacts = [Contact]()
     var resultTeams = [Group]()
     var segment = 0
+    var isSearch = false
     var segmentedControl:UISegmentedControl!
     var actionFloatView: ActionFloatView!
     @IBOutlet weak var tableView: UITableView!
@@ -30,23 +31,20 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        contacts = GenerateData.generateContacts(10)
-        contacts.sortInPlace({$0.name < $1.name})
-        self.resultContacts = self.contacts
-        
-        teams = GenerateData.generateTeams(15)
-        teams.sortInPlace({$0.name < $1.name})
-        self.resultTeams = self.teams
+        loadData()
         
         //navigationItem.leftBarButtonItem = editButtonItem()
         segmentedSetting()
+        self.searchBar.placeholder = "Search"
         self.searchBar.delegate = self
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
         initNavigationBarItem()
         initActionFloatView()
+        
+        // Register the gesture for dismissing the keyboard
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(ContactsViewController.handleTap(_:))))
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -57,6 +55,16 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func loadData() {
+        contacts = GenerateData.generateContacts(10)
+        contacts.sortInPlace({$0.name < $1.name})
+        self.resultContacts = self.contacts
+        
+        teams = GenerateData.generateTeams(15)
+        teams.sortInPlace({$0.name < $1.name})
+        self.resultTeams = self.teams
     }
     
     func initNavigationBarItem() {
@@ -99,8 +107,10 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         {
         case 0:
             segment = 0
+            clearSearchContent()
         case 1:
             segment = 1
+            clearSearchContent()
         default:
             break;
         }
@@ -250,6 +260,48 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        isSearch = true;
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        isSearch = false;
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        clearSearchContent()
+    }
+    
+    func clearSearchContent() {
+        isSearch = false
+        
+        // Clear the search bar text
+        searchBar.text=""
+        
+        // Close the virtual keyboard
+        searchBar.resignFirstResponder()
+        
+        // Reload data
+        if segment == 0 {
+            self.resultContacts = self.contacts
+        } else {
+            self.resultTeams = self.teams
+        }
+        self.tableView.reloadData()
+    }
+    
+    // Hide the keyboard when click the blank
+    func handleTap(sender: UITapGestureRecognizer) {
+        if sender.state == .Ended {
+            searchBar.resignFirstResponder()
+        }
+        sender.cancelsTouchesInView = false
+    }
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         searchBar.resignFirstResponder()
     }
     

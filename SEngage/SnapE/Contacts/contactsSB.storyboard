@@ -512,7 +512,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fvn-OE-pdl">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="" id="w9f-lM-D9h">
+                                <searchBar key="tableHeaderView" contentMode="redraw" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="" showsCancelButton="YES" id="w9f-lM-D9h">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits" returnKeyType="search"/>
