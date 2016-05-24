@@ -36,8 +36,9 @@ class ChatListTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("messageListCell") as? ChatListCell
-            cell = ChatListCell(style: .Subtitle, reuseIdentifier: "messageListCell")
+        // Table view cells are reused and should be dequeued using a cell  identifier.
+        let cellIdentifier = "ChatListCell"
+        let cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as? ChatListCell
         let cellModel = cellDataSource[indexPath.row]
         cell!.setCellContnet(cellModel)
         
