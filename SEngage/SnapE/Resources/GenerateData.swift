@@ -52,5 +52,32 @@ class GenerateData {
         }
         return teams
     }
+    
+    static func generateChatListCellModel(num: Int) -> Array<ChatListCellModel> {
+        var result = [ChatListCellModel]()
+        var contacts = generateContacts(num)
+        var count = num
+        
+        var contact: Contact
+        var lastMessage: String
+        var timer: String
+        var unreadNumber: Int
+        
+        // just for test message
+        let number = [21, 2, 100, 0, 33]
+        let time = ["13:14", "23:45", "Yesterday", "Friday", "15/10/19"]
+        let message = ["iPhone 6s 和 iPhone 6s Plus can be used within CMCC network", "如果你从 apple.com 购买 iPhone，则此 iPhone 为无合约 iPhone。你可以直接联系运营商，了解适用于 iPhone 的服务套餐。", "http://www.apple.com/cn/iphone-6s/", "Hello world", "do you know who I am"]
+        
+        while count > 0 {
+            unreadNumber = number[random() % 5]
+            lastMessage = message[random() % 5]
+            timer = time[random() % 5]
+            contact = contacts[count - 1]
+            let cell = ChatListCellModel(contact: contact, lastMessage: lastMessage, timer: timer, unreadNumber: unreadNumber)
+            result += [cell]
+            count -= 1
+        }
+        return result
+    }
 }
 

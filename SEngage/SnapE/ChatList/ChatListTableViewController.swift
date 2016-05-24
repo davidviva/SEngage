@@ -10,12 +10,12 @@ import UIKit
 
 class ChatListTableViewController: UITableViewController {
 
-    var contacts = [Contact]()
+    var cellDataSource = [ChatListCellModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Chats"
-        contacts = GenerateData.generateContacts(20)
+        cellDataSource = GenerateData.generateChatListCellModel(20)
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,26 +38,17 @@ class ChatListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("messageListCell") as? ChatListCell
             cell = ChatListCell(style: .Subtitle, reuseIdentifier: "messageListCell")
-            let contact = contacts[indexPath.row]
-            cell?.iconView.image = contact.photo
-            cell?.userNameLabel.text = contact.name
-            cell?.messageLabel.text = message[random() % 5]
-            cell?.timerLabel.text = time[random() % 5]
+        let cellModel = cellDataSource[indexPath.row]
+        cell!.setCellContnet(cellModel)
         
         return cell!
     }
-    
-    
-    // just for test message
-    let time = ["13:14", "23:45", "Yesterday", "Friday", "15/10/19"]
-    let message = ["iPhone 6s 和 iPhone 6s Plus 可使用中国移动、中国联通或中国电信的网络", "如果你从 apple.com 购买 iPhone，则此 iPhone 为无合约 iPhone。你可以直接联系运营商，了解适用于 iPhone 的服务套餐。", "http://www.apple.com/cn/iphone-6s/", "你是我的眼", "do you know who I am"]
-    
     
     // Click the cell to enter into a chat
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
         let chatViewController = ChatViewController()
-        chatViewController.contact = contacts[indexPath.row]
+        chatViewController.contact = cellDataSource[indexPath.row].contact
         navigationController?.pushViewController(chatViewController, animated: true)
     }
     

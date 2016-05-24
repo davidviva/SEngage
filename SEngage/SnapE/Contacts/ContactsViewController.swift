@@ -42,6 +42,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         
         initNavigationBarItem()
         initActionFloatView()
+//        setTableViewFooter()
         
         // Register the gesture for dismissing the keyboard
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(ContactsViewController.handleTap(_:))))
@@ -108,14 +109,42 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         case 0:
             segment = 0
             clearSearchContent()
+            break
         case 1:
             segment = 1
             clearSearchContent()
+            break
         default:
             break;
         }
         tableView.reloadData()
+//        setTableViewFooter()
     }
+    
+//    func setTableViewFooter() {
+//        let footerView:UIView = UIView(frame:
+//            CGRectMake(0,0,tableView!.frame.size.width,60))
+//        let footerlabel:UILabel = UILabel(frame: footerView.bounds)
+//        footerlabel.textColor = UIColor.whiteColor()
+//        footerlabel.backgroundColor = AppTheme.AVAYA_RED_COLOR
+//        footerlabel.font = UIFont.systemFontOfSize(16)
+//        footerView.addSubview(footerlabel)
+//        footerView.backgroundColor = UIColor.blackColor()
+//        tableView?.tableFooterView = footerView
+//        if segment == 0 {
+//            if resultContacts.count != 0 {
+//                footerlabel.text = "\(resultContacts.count) Contacts"
+//            } else {
+//                footerlabel.text = "No Results"
+//            }
+//        } else {
+//            if resultTeams.count != 0 {
+//                footerlabel.text = "\(resultTeams.count) Teams"
+//            } else {
+//                footerlabel.text = "No Results"
+//            }
+//        }
+//    }
     
     // MARK: - Table view data source
     

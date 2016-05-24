@@ -43,7 +43,6 @@ class ChatViewController: SEViewController, UITableViewDataSource, UITableViewDe
         
         initTableView()
         initToolBarView()
-
         
         shareView = ShareMoreView(frame: CGRectMake(0, 0, view.bounds.width, 196), selector: #selector(ChatViewController.shareMoreClick(_:)), target: self)
         

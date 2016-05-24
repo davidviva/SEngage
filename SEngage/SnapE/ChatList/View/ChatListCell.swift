@@ -60,6 +60,15 @@ class ChatListCell: UITableViewCell {
         
     }
     
+    func setCellContnet(model: ChatListCellModel) {
+        self.iconView.image = model.contact.photo
+//        self.unreadNumberLabel.text = model.unreadNumber > 99 ? "99+" : String(model.unreadNumber)
+//        self.unreadNumberLabel.hidden = (model.unreadNumber == 0)
+        self.messageLabel.text = model.lastMessage
+        self.timerLabel.text = model.timer
+        self.userNameLabel.text = model.contact.name
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
