@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContactsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ContactsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate {
     
     let contactIndexTitleList:[String] = [
         "A", "B", "C", "D", "E", "F", "G",
@@ -19,22 +19,29 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     // MARK: Properties
     var contacts = [Contact]()
     var teams = [Group]()
+    // search results DataSource
+    var resultContacts = [Contact]()
+    var resultTeams = [Group]()
     var segment = 0
     var segmentedControl:UISegmentedControl!
     var actionFloatView: ActionFloatView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         contacts = GenerateData.generateContacts(10)
         contacts.sortInPlace({$0.name < $1.name})
+        self.resultContacts = self.contacts
         
-        teams = GenerateData.generateTeams(10)
+        teams = GenerateData.generateTeams(15)
         teams.sortInPlace({$0.name < $1.name})
+        self.resultTeams = self.teams
         
         //navigationItem.leftBarButtonItem = editButtonItem()
         segmentedSetting()
+        self.searchBar.delegate = self
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
@@ -94,7 +101,6 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
             segment = 0
         case 1:
             segment = 1
-            
         default:
             break;
         }
@@ -117,7 +123,11 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     
     // set rows in section
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contacts.count
+        if segment == 0 {
+            return resultContacts.count
+        } else {
+            return resultTeams.count
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -131,7 +141,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
             let cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ContactsTableViewCell
             
             // Fetches the appropriate contact for the data source layout.
-            let contact = contacts[indexPath.row]
+            let contact = resultContacts[indexPath.row]
             
             cell.nameLabel.text = contact.name
             cell.photoImageView.image = contact.photo
@@ -152,7 +162,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
             let cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! TeamTableViewCell
             
             // Fetches the appropriate contact for the data source layout.
-            let group = teams[indexPath.row]
+            let group = resultTeams[indexPath.row]
             
             cell.teamNameLabel.text = group.name
             cell.teamImageView.image = group.photo
@@ -204,9 +214,47 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
-    // MARK: - Navigation
+    // *Search Result
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // Method of UISearchBarDelegate，called when the search text changed
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if segment == 0 {
+            // show all the cell when there's no input
+            if searchText == "" {
+                self.resultContacts = self.contacts
+            }
+            else { // Match the input regardless of the Uppercase
+                self.resultContacts = []
+                for contact in self.contacts {
+                    if contact.name.lowercaseString.hasPrefix(searchText.lowercaseString) {
+                        self.resultContacts.append(contact)
+                    }
+                }
+            }
+        } else {
+            // show all the cell when there's no input
+            if searchText == "" {
+                self.resultTeams = self.teams
+            }
+            else { // Match the input regardless of the Uppercase
+                self.resultTeams = []
+                for group in self.teams {
+                    if group.name.lowercaseString.hasPrefix(searchText.lowercaseString) {
+                        self.resultTeams.append(group)
+                    }
+                }
+            }
+        }
+        
+        self.tableView.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+    // *Prepare for segue
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             let contactDetailTableViewController = segue.destinationViewController as! ContactDetailTableViewController
