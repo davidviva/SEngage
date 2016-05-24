@@ -103,7 +103,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lc7-et-pHA">
                                 <rect key="frame" x="0.0" y="65" width="600" height="535"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" id="HB7-BX-7wH">
+                                <searchBar key="tableHeaderView" contentMode="redraw" showsCancelButton="YES" id="HB7-BX-7wH">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -197,6 +197,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="HB7-BX-7wH" id="Bof-dY-EzM"/>
                         <outlet property="tableView" destination="Lc7-et-pHA" id="HZ8-u2-qNd"/>
                         <outlet property="textField" destination="oxC-Jh-cqe" id="trl-XY-q5l"/>
                     </connections>
