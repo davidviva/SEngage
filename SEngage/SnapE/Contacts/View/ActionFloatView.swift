@@ -11,7 +11,7 @@ import UIKit
 import SnapKit
 import RxSwift
 
-private let kActionViewWidth: CGFloat = 140   //container view width
+private let kActionViewWidth: CGFloat = 170   //container view width
 private let kActionViewHeight: CGFloat = 110    //container view height
 private let kActionButtonHeight: CGFloat = 44   //button height
 private let kFirstButtonY: CGFloat = 12 //the first button Y value
@@ -47,7 +47,7 @@ class ActionFloatView: UIView {
         
         //Init containerView
         let containerView : UIView = UIView()
-        containerView.backgroundColor = UIColor.blackColor()
+        containerView.backgroundColor = UIColor.clearColor()
         self.addSubview(containerView)
         containerView.snp_makeConstraints { (make) -> Void in
             make.top.equalTo(self.snp_top).offset(3)
@@ -58,7 +58,7 @@ class ActionFloatView: UIView {
         
         //Init bgImageView 
 //        let stretchInsets = UIEdgeInsetsMake(14, 6, 6, 34)
-//        let bubbleMaskImage = UIImage(asset:.MessageRightTopBg).resizableImageWithCapInsets(stretchInsets, resizingMode: .Stretch)
+//        let bubbleMaskImage = UIImage(asset: .FloatView_background).resizableImageWithCapInsets(stretchInsets, resizingMode: .Stretch)
         let bgImageView: UIImageView = UIImageView(image: UIImage(asset:.FloatView_background))
         containerView.addSubview(bgImageView)
         bgImageView.snp_makeConstraints { (make) -> Void in
