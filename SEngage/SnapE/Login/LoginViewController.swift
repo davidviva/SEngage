@@ -69,25 +69,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
         // Set the background image
         let logoBackgroundViewRect:CGRect = CGRect(x: 0.0, y: 0.0 , width: mainSize.width, height:mainSize.height)
         let logoBackgroundView:UIImageView = UIImageView(frame: logoBackgroundViewRect)
-        logoBackgroundView.image = UIImage(named:"AvayaLogoBackground")
+        logoBackgroundView.image = UIImage(asset: .Login_background)
         self.scrollView.addSubview(logoBackgroundView)
         
         // Get the image of owl
         imgLogin =  UIImageView(frame:CGRectMake(mainSize.width/2-211/2, 100, 211, 109))
-        imgLogin.image = UIImage(named:"owl-login")
+        imgLogin.image = UIImage(asset: .Login_owl)
         imgLogin.layer.masksToBounds = true
         self.scrollView.addSubview(imgLogin)
         
         // left-hand （hide eye）
         let rectLeftHand = CGRectMake(61 - offsetLeftHand, 90, 40, 65)
         imgLeftHand = UIImageView(frame:rectLeftHand)
-        imgLeftHand.image = UIImage(named:"owl-login-arm-left")
+        imgLeftHand.image = UIImage(asset: .Login_owl_left_arm)
         imgLogin.addSubview(imgLeftHand)
         
         // right-hand (hide eye)
         let rectRightHand = CGRectMake(imgLogin.frame.size.width / 2 + 60, 90, 40, 65)
         imgRightHand = UIImageView(frame:rectRightHand)
-        imgRightHand.image = UIImage(named:"owl-login-arm-right")
+        imgRightHand.image = UIImage(asset: .Login_owl_right_arm)
         imgLogin.addSubview(imgRightHand)
         
         // The frame of input area
@@ -102,14 +102,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
         let rectLeftHandGone = CGRectMake(mainSize.width / 2 - 100,
                                           vLogin.frame.origin.y - 22, 40, 40)
         imgLeftHandGone = UIImageView(frame:rectLeftHandGone)
-        imgLeftHandGone.image = UIImage(named:"icon_hand")
+        imgLeftHandGone.image = UIImage(asset: .Login_owl_unhide_arm)
         self.scrollView.addSubview(imgLeftHandGone)
         
         // right hand (unhide eye)
         let rectRightHandGone = CGRectMake(mainSize.width / 2 + 62,
                                            vLogin.frame.origin.y - 22, 40, 40)
         imgRightHandGone = UIImageView(frame:rectRightHandGone)
-        imgRightHandGone.image = UIImage(named:"icon_hand")
+        imgRightHandGone.image = UIImage(asset: .Login_owl_unhide_arm)
         self.scrollView.addSubview(imgRightHandGone)
         
         // Settings for userName text field
@@ -124,7 +124,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
         
         // Image for userName text field
         let imgUser =  UIImageView(frame:CGRectMake(11, 11, 22, 22))
-        imgUser.image = UIImage(named:"iconfont-user")
+        imgUser.image = UIImage(asset: .Login_user_handle)
         txtUser.leftView!.addSubview(imgUser)
         vLogin.addSubview(txtUser)
         
@@ -141,7 +141,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
         
         // Image for password text field
         let imgPwd =  UIImageView(frame:CGRectMake(11, 11, 22, 22))
-        imgPwd.image = UIImage(named:"iconfont-password")
+        imgPwd.image = UIImage(asset: .Login_password)
         txtPwd.leftView!.addSubview(imgPwd)
         vLogin.addSubview(txtPwd)
         

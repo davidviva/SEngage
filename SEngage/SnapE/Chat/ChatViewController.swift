@@ -39,7 +39,7 @@ class ChatViewController: SEViewController, UITableViewDataSource, UITableViewDe
         self.title = contact!.name
         user = GenerateData.generateUser()
         
-        view.backgroundColor = UIColor(patternImage: UIImage(named: "bg3")!)
+        view.backgroundColor = UIColor(patternImage: UIImage(asset: .Chat_background)!)
         
         initTableView()
         initToolBarView()

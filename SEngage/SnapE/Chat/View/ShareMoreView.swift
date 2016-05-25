@@ -17,28 +17,28 @@ enum shareMoreType: Int {
         var title = ""
         switch self {
         case .picture:
-            image = UIImage(named: "sharemore_pic")!
+            image = UIImage(asset: .Sharemore_pic)!
             title = "Picture"
         case .video:
-            image = UIImage(named: "sharemore_videovoip")!
+            image = UIImage(asset: .Sharemore_videovoip)!
             title = "Camera"
         case .location:
-            image = UIImage(named: "sharemore_location")!
+            image = UIImage(asset: .Sharemore_location)!
             title = "Location"
         case .record:
-            image = UIImage(named: "sharemore_sight")!
+            image = UIImage(asset: .Sharemore_sight)!
             title = ""
         case .timeSpeak:
-            image = UIImage(named: "sharemore_wxtalk")!
+            image = UIImage(asset: .Sharemore_timeSpeak)!
             title = ""
         case .hongbao:
-            image = UIImage(named: "sharemorePay")!
+            image = UIImage(asset: .SharemorePay)!
             title = ""
         case .personCard:
-            image = UIImage(named: "sharemore_friendcard")!
+            image = UIImage(asset: .Sharemore_friendcard)!
             title = ""
         case .store:
-            image = UIImage(named: "sharemore_myfav")!
+            image = UIImage(asset: .Sharemore_myfav)!
             title = ""
         }
         return (image, title)
@@ -78,8 +78,8 @@ class ShareMoreView: UIView {
             //            button.titleEdgeInsets = UIEdgeInsetsMake(53, -59, 0, 0)
             //            button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 21, 0)
             
-            button.setBackgroundImage(UIImage(named: "sharemore_otherDown"), forState: .Normal)
-            button.setBackgroundImage(UIImage(named: "sharemore_otherDownHL"), forState: .Highlighted)
+            button.setBackgroundImage(UIImage(asset: .Sharemore_other), forState: .Normal)
+            button.setBackgroundImage(UIImage(asset: .Sharemore_other_HL), forState: .Highlighted)
             
             let buttonX = CGFloat(marginW) + (buttonH + marginX) * CGFloat(column)
             let buttonY = CGFloat(marginH) + (buttonH + CGFloat(marginH)) * CGFloat(row)

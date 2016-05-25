@@ -26,9 +26,9 @@ class ContactsTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         
         if selected {
-            self.selectedImageView?.image = UIImage(named: "CellBlueSelected")
+            self.selectedImageView?.image = UIImage(asset: .Contact_cell_picked)
         }else {
-            self.selectedImageView?.image = UIImage(named: "CellGreySelected")
+            self.selectedImageView?.image = UIImage(asset: .Contact_cell_unpicked)
         }
     }
     

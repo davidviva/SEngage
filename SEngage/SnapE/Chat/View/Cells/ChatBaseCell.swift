@@ -27,7 +27,7 @@ class ChatBaseCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         
-        iconImageView = UIImageView(image: UIImage(named: "DefaultHead"))
+        iconImageView = UIImageView()
         iconImageView.layer.cornerRadius = 8.0
         iconImageView.layer.masksToBounds = true
         iconImageView.tag = iconImageTag
@@ -169,10 +169,10 @@ class ChatBaseCell: UITableViewCell {
 let backgroundImage = backgroundImageMake()
 
 func backgroundImageMake() -> (incoming: UIImage, incomingHighlighed: UIImage, outgoing: UIImage, outgoingHighlighed: UIImage) {
-    let maskOutgoing = UIImage(named: "SenderTextNodeBkg")!
-    let maskOutHightedgoing = UIImage(named: "SenderTextNodeBkgHL")!
-    let maskIncoming = UIImage(named: "ReceiverTextNodeBkg")!
-    let maskInHightedcoming = UIImage(named: "ReceiverTextNodeBkgHL")!
+    let maskOutgoing = UIImage(asset: .Chat_senderBackground)!
+    let maskOutHightedgoing = UIImage(asset: .Chat_senderBackground_HL)!
+    let maskIncoming = UIImage(asset: .Chat_receiverBackground)!
+    let maskInHightedcoming = UIImage(asset: .Chat_receiverBackground_HL)!
     
     let incoming = maskIncoming.resizeImage()
     let incomingHighlighted = maskInHightedcoming.resizeImage()

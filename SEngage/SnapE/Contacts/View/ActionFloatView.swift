@@ -37,8 +37,8 @@ class ActionFloatView: UIView {
     private func initContent() {
         self.backgroundColor = UIColor.clearColor()
         let actionImages = [
-            UIImage(asset:.Contacts_add_newmessage),
-            UIImage(asset:.Barbuttonicon_add_cube),            ]
+            UIImage(asset:.FloatView_creatTeam),
+            UIImage(asset:.FloatView_addContact),            ]
         
         let actionTitles = [
             "Create Teams",
@@ -59,7 +59,7 @@ class ActionFloatView: UIView {
         //Init bgImageView 
 //        let stretchInsets = UIEdgeInsetsMake(14, 6, 6, 34)
 //        let bubbleMaskImage = UIImage(asset:.MessageRightTopBg).resizableImageWithCapInsets(stretchInsets, resizingMode: .Stretch)
-        let bgImageView: UIImageView = UIImageView(image: UIImage(asset:.MessageRightTopBg))
+        let bgImageView: UIImageView = UIImageView(image: UIImage(asset:.FloatView_background))
         containerView.addSubview(bgImageView)
         bgImageView.snp_makeConstraints { (make) -> Void in
             make.edges.equalTo(containerView)
@@ -122,14 +122,7 @@ class ActionFloatView: UIView {
     func hide(hide: Bool) {
         if hide {
             self.alpha = 1.0
-            UIView.animateWithDuration(0.2 ,
-                                       animations: {
-                                        self.alpha = 0.0
-                },
-                                       completion: { finish in
-                                        self.hidden = true
-                                        self.alpha = 1.0
-            })
+            UIView.animateWithDuration(0.2, animations: {self.alpha = 0.0}, completion: { finish in self.hidden = true; self.alpha = 1.0})
         } else {
             self.alpha = 1.0
             self.hidden = false

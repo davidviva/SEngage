@@ -19,7 +19,6 @@ class ContactDetailTableViewController: UITableViewController {
     @IBAction func scopiaAction(sender: UIButton) {
     }
 
-    
     @IBAction func photoDetail(sender: UITapGestureRecognizer) {
         
     }

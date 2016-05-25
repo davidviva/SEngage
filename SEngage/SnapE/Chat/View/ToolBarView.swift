@@ -21,8 +21,8 @@ class ToolBarView: UIView {
         backgroundColor = UIColor(hexString: "D8EBF2")
         
         voiceButton = UIButton(type: .Custom)
-        voiceButton.setImage(UIImage(named: "ToolViewInputVoice"), forState: .Normal)
-        voiceButton.setImage(UIImage(named: "ToolViewInputVoiceHL"), forState: .Highlighted)
+        voiceButton.setImage(UIImage(asset: .ToolBar_voicebtn), forState: .Normal)
+        voiceButton.setImage(UIImage(asset: .ToolBar_voicebtn_HL), forState: .Highlighted)
 //        voiceButton.addTarget(taget, action: voiceSelector, forControlEvents: .TouchUpInside)
         self.addSubview(voiceButton)
         
@@ -39,15 +39,15 @@ class ToolBarView: UIView {
         
         emotionButton = UIButton(type: .Custom)
         emotionButton.tag = 1
-        emotionButton.setImage(UIImage(named: "ToolViewEmotion"), forState: .Normal)
-        emotionButton.setImage(UIImage(named: "ToolViewEmotionHL"), forState: .Highlighted)
+        emotionButton.setImage(UIImage(asset: .ToolBar_emotionbtn), forState: .Normal)
+        emotionButton.setImage(UIImage(asset: .ToolBar_emotionbtn_HL), forState: .Highlighted)
 //        emotionButton.addTarget(taget, action: emotionSelector, forControlEvents: .TouchUpInside)
         self.addSubview(emotionButton)
         
         moreButton = UIButton(type: .Custom)
         moreButton.tag = 2
-        moreButton.setImage(UIImage(named: "TypeSelectorBtn_Black"), forState: .Normal)
-        moreButton.setImage(UIImage(named: "TypeSelectorBtnHL_Black"), forState: .Highlighted)
+        moreButton.setImage(UIImage(asset: .ToolBar_morebtn), forState: .Normal)
+        moreButton.setImage(UIImage(asset: .ToolBar_morebtn_HL), forState: .Highlighted)
         moreButton.addTarget(taget, action: moreSelector, forControlEvents: .TouchUpInside)
         self.addSubview(moreButton)
         
@@ -82,10 +82,7 @@ class ToolBarView: UIView {
         
         self.addConstraint(NSLayoutConstraint(item: moreButton, attribute: .Right, relatedBy: .Equal, toItem: self, attribute: .Right, multiplier: 1, constant: -5))
         self.addConstraint(NSLayoutConstraint(item: moreButton, attribute: .Top, relatedBy: .Equal, toItem: self, attribute: .Top, multiplier: 1, constant: 5))
-        
-        
     }
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -95,15 +92,14 @@ class ToolBarView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     internal func showRecord(show: Bool) {
         if show {
             recordButton.hidden = false
             recordButton.frame = textView.frame
             textView.hidden = true
-            recordButton.setTitle("按住     说话", forState: .Normal)
-            voiceButton.setImage(UIImage(named: "ToolViewKeyboard"), forState: .Normal)
-            voiceButton.setImage(UIImage(named: "ToolViewKeyboardHL"), forState: .Highlighted)
+            recordButton.setTitle("Press     to talk", forState: .Normal)
+            voiceButton.setImage(UIImage(asset: .ToolBar_keyboard), forState: .Normal)
+            voiceButton.setImage(UIImage(asset: .ToolBar_keyboard_HL), forState: .Highlighted)
             
             showEmotion(false)
             showMore(false)
@@ -111,8 +107,8 @@ class ToolBarView: UIView {
             recordButton.hidden = true
             textView.hidden = false
             textView.inputView = nil
-            voiceButton.setImage(UIImage(named: "ToolViewInputVoice"), forState: .Normal)
-            voiceButton.setImage(UIImage(named: "ToolViewInputVoiceHL"), forState: .Highlighted)
+            voiceButton.setImage(UIImage(asset: .ToolBar_voicebtn), forState: .Normal)
+            voiceButton.setImage(UIImage(asset: .ToolBar_voicebtn_HL), forState: .Highlighted)
         }
     }
     
@@ -120,16 +116,16 @@ class ToolBarView: UIView {
     internal func showEmotion(show: Bool) {
         if show {
             emotionButton.tag = 0
-            emotionButton.setImage(UIImage(named: "ToolViewKeyboard"), forState: .Normal)
-            emotionButton.setImage(UIImage(named: "ToolViewKeyboardHL"), forState: .Highlighted)
+            emotionButton.setImage(UIImage(asset: .ToolBar_keyboard), forState: .Normal)
+            emotionButton.setImage(UIImage(asset: .ToolBar_keyboard_HL), forState: .Highlighted)
             
             showRecord(false)
             showMore(false)
         } else {
             emotionButton.tag = 1
             textView.inputView = nil
-            emotionButton.setImage(UIImage(named: "ToolViewEmotion"), forState: .Normal)
-            emotionButton.setImage(UIImage(named: "ToolViewEmotionHL"), forState: .Highlighted)
+            emotionButton.setImage(UIImage(asset: .ToolBar_emotionbtn), forState: .Normal)
+            emotionButton.setImage(UIImage(asset: .ToolBar_emotionbtn_HL), forState: .Highlighted)
         }
     }
     

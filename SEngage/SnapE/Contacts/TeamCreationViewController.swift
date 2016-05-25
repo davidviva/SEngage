@@ -158,7 +158,7 @@ class TeamCreationViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     @IBAction func selectAction(sender: UIBarButtonItem) {
-        group = Group(name: self.textField.text!, photo: UIImage(asset:.Contacts_add_newmessage), contacts: groupContacts)
+        group = Group(name: self.textField.text!, photo: UIImage(asset:.Tabbar_me_unselected), contacts: groupContacts)
         for index in selectedData {
             let contact = searchContacts[index]
             group!.contacts.append(contact)

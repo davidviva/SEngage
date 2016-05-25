@@ -20,18 +20,22 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AvayaLogoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="1HJ-Z8-P5S">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="AvayaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="LRZ-ef-HMZ">
-                                <rect key="frame" x="180" y="223" width="240" height="154"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AvayaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="LRZ-ef-HMZ">
+                                <rect key="frame" x="180" y="233" width="240" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="kwC-cL-fXa"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1HJ-Z8-P5S" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="JNE-XC-DKE"/>
-                            <constraint firstItem="1HJ-Z8-P5S" firstAttribute="centerY" secondItem="LRZ-ef-HMZ" secondAttribute="centerY" id="Kkl-Rm-Wcy"/>
-                            <constraint firstItem="1HJ-Z8-P5S" firstAttribute="centerX" secondItem="LRZ-ef-HMZ" secondAttribute="centerX" id="Z05-On-zbV"/>
-                            <constraint firstItem="1HJ-Z8-P5S" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="d6o-N5-n3t"/>
-                            <constraint firstAttribute="trailing" secondItem="1HJ-Z8-P5S" secondAttribute="trailing" id="fEI-ap-CDc"/>
-                            <constraint firstItem="1HJ-Z8-P5S" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="xfy-4Z-spu"/>
+                            <constraint firstItem="LRZ-ef-HMZ" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="213" id="BYI-hV-vSD"/>
+                            <constraint firstItem="LRZ-ef-HMZ" firstAttribute="centerX" secondItem="1HJ-Z8-P5S" secondAttribute="centerX" id="LpX-nH-oiY"/>
+                            <constraint firstItem="1HJ-Z8-P5S" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="PyU-dS-xMf"/>
+                            <constraint firstItem="1HJ-Z8-P5S" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="VTC-Mu-GXa"/>
+                            <constraint firstItem="1HJ-Z8-P5S" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="f2h-pv-Coo"/>
+                            <constraint firstItem="LRZ-ef-HMZ" firstAttribute="centerY" secondItem="1HJ-Z8-P5S" secondAttribute="centerY" id="kY7-PW-CgX"/>
+                            <constraint firstAttribute="trailing" secondItem="1HJ-Z8-P5S" secondAttribute="trailing" id="r85-jk-hzm"/>
                         </constraints>
                     </view>
                 </viewController>
