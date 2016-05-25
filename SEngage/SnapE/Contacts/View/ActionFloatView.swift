@@ -57,9 +57,9 @@ class ActionFloatView: UIView {
         }
         
         //Init bgImageView 
-//        let stretchInsets = UIEdgeInsetsMake(14, 6, 6, 34)
-//        let bubbleMaskImage = UIImage(asset: .FloatView_background).resizableImageWithCapInsets(stretchInsets, resizingMode: .Stretch)
-        let bgImageView: UIImageView = UIImageView(image: UIImage(asset:.FloatView_background))
+        let stretchInsets = UIEdgeInsetsMake(14, 6, 6, 34)
+        let bubbleMaskImage = UIImage(asset: .FloatView_background).resizableImageWithCapInsets(stretchInsets, resizingMode: .Stretch)
+        let bgImageView: UIImageView = UIImageView(image: bubbleMaskImage)
         containerView.addSubview(bgImageView)
         bgImageView.snp_makeConstraints { (make) -> Void in
             make.edges.equalTo(containerView)

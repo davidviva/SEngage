@@ -34,7 +34,7 @@ extension UIImage {
         // Team Creation new team default photo is abbar_me_unselected)
         
         // FloatView
-        case FloatView_background = "MessageRightTopBg"
+        case FloatView_background = "FloatViewBg"
         case FloatView_creatTeam = "contacts_add_newmessage"
         case FloatView_addContact = "barbuttonicon_add_cube"
         
@@ -67,6 +67,7 @@ extension UIImage {
         case Chat_receiverBackground = "ReceiverTextNodeBkg"
         case Chat_receiverBackground_HL = "ReceiverTextNodeBkgHL"
         case Chat_background = "bg3"
+        case Chat_fail = "share_auth_fail"
         
         // Bar Buttons
         case Back_icon = "back_icon"

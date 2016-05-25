@@ -44,7 +44,7 @@ class ChatBaseCell: UITableViewCell {
         
         indicatorView = UIButton(type: .Custom)
         indicatorView.tag = indicatorTag
-        indicatorView.setBackgroundImage(UIImage(named: "share_auth_fail"), forState: .Normal)
+        indicatorView.setBackgroundImage(UIImage(asset: .Chat_fail), forState: .Normal)
         indicatorView.hidden = true
         
         indicatorView.setTitleColor(UIColor.blackColor(), forState: .Normal)
