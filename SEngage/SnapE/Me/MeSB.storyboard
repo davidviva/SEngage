@@ -269,7 +269,7 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="Photo" id="uZl-nk-Aq2">
-                        <barButtonItem key="rightBarButtonItem" title="· · ·" id="Io3-60-Y6f">
+                        <barButtonItem key="rightBarButtonItem" image="barbuttonicon_more" id="Io3-60-Y6f">
                             <connections>
                                 <action selector="moreAction:" destination="bf2-fx-p63" id="g4H-tX-cEm"/>
                             </connections>
@@ -285,6 +285,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="barbuttonicon_more" width="30" height="30"/>
         <image name="defaultPhoto" width="540" height="540"/>
     </resources>
 </document>
