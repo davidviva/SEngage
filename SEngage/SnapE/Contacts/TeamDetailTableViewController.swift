@@ -23,6 +23,7 @@ class TeamDetailTableViewController: UITableViewController {
         
         nameLabel.text = group?.name
         memberCountLabel.text = "\(group.contacts.count)"
+        
         messageBtn.backgroundColor = AppTheme.AVAYA_RED_COLOR
         deleteBtn.backgroundColor = AppTheme.AVAYA_RED_COLOR
     }

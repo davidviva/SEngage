@@ -40,6 +40,7 @@ class ContactDetailTableViewController: UITableViewController {
             emailLabel.text = contact.email
             phoneLabel.text = contact.phone
         }
+        
         messageBtn.backgroundColor = AppTheme.AVAYA_RED_COLOR
         scopiaBtn.backgroundColor = AppTheme.AVAYA_RED_COLOR
         deleteBtn.backgroundColor = AppTheme.AVAYA_RED_COLOR

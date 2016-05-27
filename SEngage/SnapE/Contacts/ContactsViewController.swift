@@ -71,6 +71,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     func initNavigationBarItem() {
         let button: UIButton = UIButton(type: UIButtonType.Custom)
         button.setImage(UIImage(asset:.Barbuttonicon_addfriends), forState: .Normal)
+//        button.setTitle("➕", forState: .Normal)
         button.frame = CGRectMake(0, 0, 40, 30)
         button.imageView!.contentMode = .ScaleAspectFit;
         button.contentHorizontalAlignment = .Right
