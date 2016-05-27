@@ -185,13 +185,13 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
             cell.nameLabel.text = contact.name
             cell.photoImageView.image = contact.photo
             if contact.status == "idle" {
-                cell.statusImageView.backgroundColor = UIColor.yellowColor()
+                cell.statusImageView.backgroundColor = AppTheme.STATUS_IDEL_COLOR
             } else if contact.status == "available" {
-                cell.statusImageView.backgroundColor = UIColor.greenColor()
+                cell.statusImageView.backgroundColor = AppTheme.STATUS_ONLINE_COLOR 
             } else if contact.status == "busy" {
-                cell.statusImageView.backgroundColor = UIColor.redColor()
+                cell.statusImageView.backgroundColor = AppTheme.STATUS_BUSY_COLOR
             } else {
-                cell.statusImageView.backgroundColor = UIColor.grayColor()
+                cell.statusImageView.backgroundColor = AppTheme.STATUS_OFFLINE_COLOR
             }
             retCell = cell
         } else {
@@ -211,7 +211,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 60.0
+        return AppTheme.CONTACT_CELL_HEIGHT
     }
     
 //    //right side index bar: "A" ... "Z"

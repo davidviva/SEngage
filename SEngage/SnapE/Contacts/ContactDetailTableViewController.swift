@@ -16,9 +16,6 @@ class ContactDetailTableViewController: UITableViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var messageBtn: UIButton!
-    @IBOutlet weak var scopiaBtn: UIButton!
-    @IBOutlet weak var deleteBtn: UIButton!
     @IBAction func scopiaAction(sender: UIButton) {
     }
 
@@ -40,10 +37,6 @@ class ContactDetailTableViewController: UITableViewController {
             emailLabel.text = contact.email
             phoneLabel.text = contact.phone
         }
-        
-        messageBtn.backgroundColor = AppTheme.AVAYA_RED_COLOR
-        scopiaBtn.backgroundColor = AppTheme.AVAYA_RED_COLOR
-        deleteBtn.backgroundColor = AppTheme.AVAYA_RED_COLOR
     }
     
     @IBAction func messageAction(sender: AnyObject) {

@@ -413,9 +413,7 @@
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <connections>
-                        <outlet property="deleteBtn" destination="dup-u4-tkm" id="dRM-DJ-LXc"/>
                         <outlet property="memberCountLabel" destination="Yls-ed-Fwf" id="Xer-n9-hKD"/>
-                        <outlet property="messageBtn" destination="LTG-LG-0cb" id="aWz-eZ-tT1"/>
                         <outlet property="nameLabel" destination="112-lH-Ydr" id="EEX-UI-SUa"/>
                     </connections>
                 </tableViewController>
@@ -553,7 +551,7 @@
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="5"/>
+                                                            <integer key="value" value="10"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
@@ -886,13 +884,10 @@
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <connections>
-                        <outlet property="deleteBtn" destination="7xh-qr-C6z" id="ceM-Vp-uNt"/>
                         <outlet property="emailLabel" destination="lNH-ny-d9b" id="NHv-ZZ-GNU"/>
                         <outlet property="imageView" destination="OGY-pP-a7g" id="fd1-V4-yIa"/>
-                        <outlet property="messageBtn" destination="7gm-9C-xNG" id="dDV-iH-cJl"/>
                         <outlet property="nameLabel" destination="j5S-sL-hPM" id="nfU-uh-NYC"/>
                         <outlet property="phoneLabel" destination="ZxK-XM-Vj0" id="t0O-2p-377"/>
-                        <outlet property="scopiaBtn" destination="Non-wc-C89" id="TZd-Ab-Dlq"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CmX-X6-0Nz" userLabel="First Responder" sceneMemberID="firstResponder"/>
