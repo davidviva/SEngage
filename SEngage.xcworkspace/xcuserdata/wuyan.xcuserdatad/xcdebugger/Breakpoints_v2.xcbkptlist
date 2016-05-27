@@ -24,13 +24,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SEngage/SnapE/Contacts/ContactDetailTableViewController.swift"
-            timestampString = "486057940.86704"
+            timestampString = "486063459.174958"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "ContactDetailTableViewController"
-            landmarkType = "3">
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "skipToChat()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
