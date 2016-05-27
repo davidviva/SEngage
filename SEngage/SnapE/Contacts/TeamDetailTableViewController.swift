@@ -14,6 +14,8 @@ class TeamDetailTableViewController: UITableViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var memberCountLabel: UILabel!
+    @IBOutlet weak var messageBtn: UIButton!
+    @IBOutlet weak var deleteBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,8 @@ class TeamDetailTableViewController: UITableViewController {
         
         nameLabel.text = group?.name
         memberCountLabel.text = "\(group.contacts.count)"
+        messageBtn.backgroundColor = AppTheme.AVAYA_RED_COLOR
+        deleteBtn.backgroundColor = AppTheme.AVAYA_RED_COLOR
     }
 
     override func didReceiveMemoryWarning() {
